@@ -33,9 +33,17 @@ loadData().then(() => {
 
 // Load component HTML
 async function loadComponent(id, file) {
-   const res = await fetch(`${basePath}${file}`);
-   const html = await res.text();
-   document.getElementById(id).innerHTML = html;
+    let path = file;
+    if (file.startsWith('/')) {
+       path = basePath + file;
+    } else if (file.startsWith('./')) {
+       path = basePath + file.slice(1);
+    } else {
+       path = basePath + '/' + file;
+    }
+    const res = await fetch(path);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
 
    if (id === "header") {
       const themeToggle = document.getElementById("theme-toggle");
@@ -89,5 +97,5 @@ async function loadComponent(id, file) {
    }
 }
 
-loadComponent("header", "/src/components/header.html");
-loadComponent("footer", "/src/components/footer.html");
+loadComponent("header", "./src/components/header.html");
+loadComponent("footer", "./src/components/footer.html");
