@@ -3,13 +3,13 @@ let hocbaData = {};
 let tohopData = {};
 
 async function loadData() {
-   const vsatRes = await fetch("/CTU_StudentsTools/public/data/vsat-data.json");
+   const vsatRes = await fetch("/public/data/vsat-data.json");
    vsatData = await vsatRes.json();
 
-   const hocbaRes = await fetch("/CTU_StudentsTools/public/data/hocba-data.json");
+   const hocbaRes = await fetch("/public/data/hocba-data.json");
    hocbaData = await hocbaRes.json();
 
-   const tohopRes = await fetch("/CTU_StudentsTools/public/data/tohop-data.json");
+   const tohopRes = await fetch("/public/data/tohop-data.json");
    tohopData = await tohopRes.json();
 
    console.log("Dữ liệu VSAT:", vsatData);
@@ -84,5 +84,5 @@ async function loadComponent(id, file) {
       }
    }
 }
-loadComponent("header", "/CTU_StudentsTools/src/components/header.html");
-loadComponent("footer", "/CTU_StudentsTools/src/components/footer.html");
+loadComponent("header", "/src/components/header.html");
+loadComponent("footer", "/src/components/footer.html");
