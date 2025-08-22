@@ -1,0 +1,122 @@
+{
+  "Toan": [
+    { "rank": "3%", "vsat": { "min": 132.0, "max": 150.0 }, "thpt": { "min": 8.5, "max": 10.0 } },
+    { "rank": "5%", "vsat": { "min": 128.5, "max": 132.0 }, "thpt": { "min": 8.1, "max": 8.5 } },
+    { "rank": "10%", "vsat": { "min": 122.5, "max": 128.5 }, "thpt": { "min": 7.75, "max": 8.1 } },
+    { "rank": "20%", "vsat": { "min": 114.5, "max": 122.5 }, "thpt": { "min": 7.0, "max": 7.75 } },
+    { "rank": "30%", "vsat": { "min": 108.0, "max": 114.5 }, "thpt": { "min": 6.5, "max": 7.0 } },
+    { "rank": "40%", "vsat": { "min": 102.5, "max": 108.0 }, "thpt": { "min": 6.25, "max": 6.5 } },
+    { "rank": "50%", "vsat": { "min": 97.0, "max": 102.5 }, "thpt": { "min": 6.0, "max": 6.25 } },
+    { "rank": "60%", "vsat": { "min": 91.0, "max": 97.0 }, "thpt": { "min": 5.6, "max": 6.0 } },
+    { "rank": "70%", "vsat": { "min": 85.0, "max": 91.0 }, "thpt": { "min": 5.3, "max": 5.6 } },
+    { "rank": "80%", "vsat": { "min": 77.0, "max": 85.0 }, "thpt": { "min": 5.0, "max": 5.3 } },
+    { "rank": "90%", "vsat": { "min": 68.0, "max": 77.0 }, "thpt": { "min": 4.5, "max": 5.0 } },
+    { "rank": ">90%", "vsat": { "min": 6.0, "max": 68.0 }, "thpt": { "min": 1.5, "max": 4.5 } }
+  ],
+
+  "VatLy": [
+    { "rank": "3%", "vsat": { "min": 123.0, "max": 147.0 }, "thpt": { "min": 9.5, "max": 10.0 } },
+    { "rank": "5%", "vsat": { "min": 118.5, "max": 123.0 }, "thpt": { "min": 9.25, "max": 9.5 } },
+    { "rank": "10%", "vsat": { "min": 112.5, "max": 118.5 }, "thpt": { "min": 9.0, "max": 9.25 } },
+    { "rank": "20%", "vsat": { "min": 105.0, "max": 112.5 }, "thpt": { "min": 8.5, "max": 9.0 } },
+    { "rank": "30%", "vsat": { "min": 99.5, "max": 105.0 }, "thpt": { "min": 8.0, "max": 8.5 } },
+    { "rank": "40%", "vsat": { "min": 94.5, "max": 99.5 }, "thpt": { "min": 7.75, "max": 8.0 } },
+    { "rank": "50%", "vsat": { "min": 90.0, "max": 94.5 }, "thpt": { "min": 7.5, "max": 7.75 } },
+    { "rank": "60%", "vsat": { "min": 85.0, "max": 90.0 }, "thpt": { "min": 7.25, "max": 7.5 } },
+    { "rank": "70%", "vsat": { "min": 80.0, "max": 85.0 }, "thpt": { "min": 6.75, "max": 7.25 } },
+    { "rank": "80%", "vsat": { "min": 74.0, "max": 80.0 }, "thpt": { "min": 6.25, "max": 6.75 } },
+    { "rank": "90%", "vsat": { "min": 66.5, "max": 74.0 }, "thpt": { "min": 5.75, "max": 6.25 } },
+    { "rank": ">90%", "vsat": { "min": 17.0, "max": 66.5 }, "thpt": { "min": 3.05, "max": 5.75 } }
+  ],
+
+  "HoaHoc": [
+    { "rank": "3%", "vsat": { "min": 129.0, "max": 150.0 }, "thpt": { "min": 9.5, "max": 10.0 } },
+    { "rank": "5%", "vsat": { "min": 124.5, "max": 129.0 }, "thpt": { "min": 9.25, "max": 9.5 } },
+    { "rank": "10%", "vsat": { "min": 117.0, "max": 124.5 }, "thpt": { "min": 8.75, "max": 9.25 } },
+    { "rank": "20%", "vsat": { "min": 107.5, "max": 117.0 }, "thpt": { "min": 7.75, "max": 8.75 } },
+    { "rank": "30%", "vsat": { "min": 100.5, "max": 107.5 }, "thpt": { "min": 7.25, "max": 7.75 } },
+    { "rank": "40%", "vsat": { "min": 94.0, "max": 100.5 }, "thpt": { "min": 7.0, "max": 7.25 } },
+    { "rank": "50%", "vsat": { "min": 88.0, "max": 94.0 }, "thpt": { "min": 6.75, "max": 7.0 } },
+    { "rank": "60%", "vsat": { "min": 81.5, "max": 88.0 }, "thpt": { "min": 6.25, "max": 6.75 } },
+    { "rank": "70%", "vsat": { "min": 75.5, "max": 81.5 }, "thpt": { "min": 5.75, "max": 6.25 } },
+    { "rank": "80%", "vsat": { "min": 68.5, "max": 75.5 }, "thpt": { "min": 5.25, "max": 5.75 } },
+    { "rank": "90%", "vsat": { "min": 59.5, "max": 68.5 }, "thpt": { "min": 4.6, "max": 5.25 } },
+    { "rank": ">90%", "vsat": { "min": 20.0, "max": 59.5 }, "thpt": { "min": 1.35, "max": 4.6 } }
+  ],
+
+  "SinhHoc": [
+    { "rank": "3%", "vsat": { "min": 130.5, "max": 150.0 }, "thpt": { "min": 9.0, "max": 9.75 } },
+    { "rank": "5%", "vsat": { "min": 126.5, "max": 130.5 }, "thpt": { "min": 8.75, "max": 9.0 } },
+    { "rank": "10%", "vsat": { "min": 120.5, "max": 126.5 }, "thpt": { "min": 8.34, "max": 8.75 } },
+    { "rank": "20%", "vsat": { "min": 112.5, "max": 120.5 }, "thpt": { "min": 7.85, "max": 8.34 } },
+    { "rank": "30%", "vsat": { "min": 105.5, "max": 112.5 }, "thpt": { "min": 7.5, "max": 7.85 } },
+    { "rank": "40%", "vsat": { "min": 100.0, "max": 105.5 }, "thpt": { "min": 7.25, "max": 7.5 } },
+    { "rank": "50%", "vsat": { "min": 94.5, "max": 100.0 }, "thpt": { "min": 7.0, "max": 7.25 } },
+    { "rank": "60%", "vsat": { "min": 88.5, "max": 94.5 }, "thpt": { "min": 6.5, "max": 7.0 } },
+    { "rank": "70%", "vsat": { "min": 82.5, "max": 88.5 }, "thpt": { "min": 6.25, "max": 6.5 } },
+    { "rank": "80%", "vsat": { "min": 76.0, "max": 82.5 }, "thpt": { "min": 5.85, "max": 6.25 } },
+    { "rank": "90%", "vsat": { "min": 66.5, "max": 76.0 }, "thpt": { "min": 5.25, "max": 5.85 } },
+    { "rank": ">90%", "vsat": { "min": 26.5, "max": 66.5 }, "thpt": { "min": 2.8, "max": 5.25 } }
+  ],
+
+  "LichSu": [
+    { "rank": "3%", "vsat": { "min": 133.5, "max": 150.0 }, "thpt": { "min": 9.75, "max": 10.0 } },
+    { "rank": "5%", "vsat": { "min": 131.0, "max": 133.5 }, "thpt": { "min": 9.5, "max": 9.75 } },
+    { "rank": "10%", "vsat": { "min": 126.5, "max": 131.0 }, "thpt": { "min": 9.25, "max": 9.5 } },
+    { "rank": "20%", "vsat": { "min": 120.5, "max": 126.5 }, "thpt": { "min": 9.0, "max": 9.25 } },
+    { "rank": "30%", "vsat": { "min": 115.0, "max": 120.5 }, "thpt": { "min": 8.5, "max": 9.0 } },
+    { "rank": "40%", "vsat": { "min": 110.0, "max": 115.0 }, "thpt": { "min": 8.25, "max": 8.5 } },
+    { "rank": "50%", "vsat": { "min": 105.5, "max": 110.0 }, "thpt": { "min": 8.0, "max": 8.25 } },
+    { "rank": "60%", "vsat": { "min": 101.0, "max": 105.5 }, "thpt": { "min": 7.75, "max": 8.0 } },
+    { "rank": "70%", "vsat": { "min": 95.5, "max": 101.0 }, "thpt": { "min": 7.5, "max": 7.75 } },
+    { "rank": "80%", "vsat": { "min": 88.5, "max": 95.5 }, "thpt": { "min": 7.0, "max": 7.5 } },
+    { "rank": "90%", "vsat": { "min": 79.5, "max": 88.5 }, "thpt": { "min": 6.3, "max": 7.0 } },
+    { "rank": ">90%", "vsat": { "min": 36.5, "max": 79.5 }, "thpt": { "min": 2.95, "max": 6.3 } }
+  ],
+
+  "DiaLy": [
+    { "rank": "3%", "vsat": { "min": 124.0, "max": 141.0 }, "thpt": { "min": 10.0, "max": 10.0 } },
+    { "rank": "5%", "vsat": { "min": 120.5, "max": 124.0 }, "thpt": { "min": 10.0, "max": 10.0 } },
+    { "rank": "10%", "vsat": { "min": 115.5, "max": 120.5 }, "thpt": { "min": 9.75, "max": 10.0 } },
+    { "rank": "20%", "vsat": { "min": 108.5, "max": 115.5 }, "thpt": { "min": 9.25, "max": 9.75 } },
+    { "rank": "30%", "vsat": { "min": 103.0, "max": 108.5 }, "thpt": { "min": 9.0, "max": 9.25 } },
+    { "rank": "40%", "vsat": { "min": 98.5, "max": 103.0 }, "thpt": { "min": 8.75, "max": 9.0 } },
+    { "rank": "50%", "vsat": { "min": 94.0, "max": 98.5 }, "thpt": { "min": 8.5, "max": 8.75 } },
+    { "rank": "60%", "vsat": { "min": 89.5, "max": 94.0 }, "thpt": { "min": 8.25, "max": 8.5 } },
+    { "rank": "70%", "vsat": { "min": 84.5, "max": 89.5 }, "thpt": { "min": 7.75, "max": 8.25 } },
+    { "rank": "80%", "vsat": { "min": 79.0, "max": 84.5 }, "thpt": { "min": 7.25, "max": 7.75 } },
+    { "rank": "90%", "vsat": { "min": 71.0, "max": 79.0 }, "thpt": { "min": 6.5, "max": 7.25 } },
+    { "rank": ">90%", "vsat": { "min": 31.0, "max": 71.0 }, "thpt": { "min": 3.0, "max": 6.5 } }
+  ],
+
+   "TiengAnh": [
+   { "rank": "3%",  "vsat": { "min": 131.0, "max": 150.0 }, "thpt": { "min": 7.75, "max": 9.75 } },
+   { "rank": "5%",  "vsat": { "min": 127.5, "max": 131.0 }, "thpt": { "min": 7.5,  "max": 7.75 } },
+   { "rank": "10%", "vsat": { "min": 120.5, "max": 127.5 }, "thpt": { "min": 7.0,  "max": 7.5 } },
+   { "rank": "20%", "vsat": { "min": 112.0, "max": 120.5 }, "thpt": { "min": 6.5,  "max": 7.0 } },
+   { "rank": "30%", "vsat": { "min": 105.0, "max": 112.0 }, "thpt": { "min": 6.0,  "max": 6.5 } },
+   { "rank": "40%", "vsat": { "min": 98.5,  "max": 105.0 }, "thpt": { "min": 5.75, "max": 6.0 } },
+   { "rank": "50%", "vsat": { "min": 92.0,  "max": 98.5 },  "thpt": { "min": 5.5,  "max": 5.75 } },
+   { "rank": "60%", "vsat": { "min": 85.5,  "max": 92.0 },  "thpt": { "min": 5.25, "max": 5.5 } },
+   { "rank": "70%", "vsat": { "min": 78.5,  "max": 85.5 },  "thpt": { "min": 5.0,  "max": 5.25 } },
+   { "rank": "80%", "vsat": { "min": 70.5,  "max": 78.5 },  "thpt": { "min": 4.5,  "max": 5.0 } },
+   { "rank": "90%", "vsat": { "min": 60.0,  "max": 70.5 },  "thpt": { "min": 4.0,  "max": 4.5 } },
+   { "rank": ">90%","vsat": { "min": 20.5,  "max": 60.0 },  "thpt": { "min": 1.25, "max": 4.0 } }
+   ],
+
+   "NguVan": [
+   { "rank": "3%",  "vsat": { "min": 129.5, "max": 146.0 }, "thpt": { "min": 9.25, "max": 9.75 } },
+   { "rank": "5%",  "vsat": { "min": 127.5, "max": 129.5 }, "thpt": { "min": 9.0,  "max": 9.25 } },
+   { "rank": "10%", "vsat": { "min": 124.0, "max": 127.5 }, "thpt": { "min": 9.0,  "max": 9.0 } },
+   { "rank": "20%", "vsat": { "min": 119.5, "max": 124.0 }, "thpt": { "min": 8.75, "max": 9.0 } },
+   { "rank": "30%", "vsat": { "min": 115.5, "max": 119.5 }, "thpt": { "min": 8.5,  "max": 8.75 } },
+   { "rank": "40%", "vsat": { "min": 112.5, "max": 115.5 }, "thpt": { "min": 8.25, "max": 8.5 } },
+   { "rank": "50%", "vsat": { "min": 109.0, "max": 112.5 }, "thpt": { "min": 8.0,  "max": 8.25 } },
+   { "rank": "60%", "vsat": { "min": 106.0, "max": 109.0 }, "thpt": { "min": 7.75, "max": 8.0 } },
+   { "rank": "70%", "vsat": { "min": 102.0, "max": 106.0 }, "thpt": { "min": 7.5,  "max": 7.75 } },
+   { "rank": "80%", "vsat": { "min": 97.0,  "max": 102.0 }, "thpt": { "min": 7.25, "max": 7.5 } },
+   { "rank": "90%", "vsat": { "min": 90.0,  "max": 97.0 },  "thpt": { "min": 6.75, "max": 7.25 } },
+   { "rank": ">90%","vsat": { "min": 5.0,   "max": 90.0 },  "thpt": { "min": 3.5,  "max": 6.75 } }
+   ]
+}
+
