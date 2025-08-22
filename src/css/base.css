@@ -10,6 +10,7 @@
 body {
   width: 100vw;
   min-height: 100vh;
+  transition: all 0.2s ease;
 }
 
 :root {
@@ -19,7 +20,8 @@ body {
 }
 
 .dark-theme {
-  --color-bg: gray;
+  background-color: #001d3d;
+  --color-bg: #1f5ca9;
   --color-bg-light: #00afef;
   --color-text: #fff;
 }

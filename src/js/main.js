@@ -37,11 +37,48 @@ async function loadComponent(id, file) {
       if (themeToggle) {
          themeToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark-theme");
-
             if (document.body.classList.contains("dark-theme")) {
                themeToggle.innerHTML = "<i class='fas fa-sun'></i>";
             } else {
                themeToggle.innerHTML = "<i class='fas fa-moon'></i>";
+            }
+         });
+      }
+
+      // Responsive nav toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      if (navToggle && navMenu) {
+         navToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("open");
+         });
+         navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+               if (window.innerWidth <= 768) {
+                  navMenu.classList.remove("open");
+               }
+            });
+         });
+      }
+
+      const toolsMenu = document.querySelector('.menu__tools');
+      const toolsList = toolsMenu ? toolsMenu.querySelector('.menu_tools__list') : null;
+      if (toolsMenu && toolsList) {
+         // Only for mobile: click to toggle dropdown
+         const toolsToggle = toolsMenu.querySelector('div');
+         toolsToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+               e.preventDefault();
+               toolsList.classList.toggle('open');
+               toolsList.classList.toggle('hidden');
+            }
+         });
+         // Close dropdown when clicking outside
+         document.addEventListener('click', function(e) {
+            if (window.innerWidth > 768) return;
+            if (!toolsMenu.contains(e.target)) {
+               toolsList.classList.remove('open');
+               toolsList.classList.add('hidden');
             }
          });
       }
