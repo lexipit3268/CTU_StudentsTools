@@ -82,9 +82,25 @@ export async function loadComponent(id, file) {
    }
 }
 
+export function convertNameSubject(mon) {
+   const mapping = {
+      Toan: "Toán",
+      NguVan: "Ngữ Văn",
+      VatLy: "Vật Lý",
+      HoaHoc: "Hóa Học",
+      SinhHoc: "Sinh Học",
+      TiengAnh: "Tiếng Anh",
+      LichSu: "Lịch Sử",
+      DiaLy: "Địa Lý",
+      TiengPhap: "Tiếng Pháp",
+      TinHoc: "Tin học",
+      CNCN: "Công nghệ Công nghiệp",
+      GDKTPL: "Giáo dục kinh tế và pháp luật",
+      GDCD: "Giáo dục công dân"
+   };
+
+   return mapping[mon] || mon;
+}
 
 loadComponent("header", "./src/components/header.html");
 loadComponent("footer", "./src/components/footer.html");
-
-
-// VSAT CONVERT
