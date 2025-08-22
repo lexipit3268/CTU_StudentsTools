@@ -1,4 +1,56 @@
-.responsive-nav {
+.card {
+   background-color: #fff;
+   width: auto;
+   padding: 20px;
+   margin: 20px;
+   border-radius: 35px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card .container__form {
+   width: auto;
+   padding: 1.5rem;
+   background-color: var(--bs-color-bg);
+   border-radius: 35px;
+}
+
+.form__body div {
+   margin: 10px 0px;
+}
+
+.container__form label {
+   font-weight: 600;
+   margin-bottom: 10px;
+   display: block;
+}
+
+.form__select select,
+.form__input input {
+   border: 1px solid var(--color-border);
+   border-radius: var(--bs-bor-ras);
+   padding: 1rem 1.1rem;
+   outline: none;
+   width: 100%;
+   transition: var(--bs-transition);
+   background-color: #fff;
+}
+
+
+
+.form__select option {
+   font-weight: 500;
+   font-size: 14px;
+
+}
+
+.form__select select:hover,
+.form__select select:active,
+.form__input input:hover,
+.form__input input:active {
+   border: 1px solid var(--color-border-hover);
+}
+
+.form__input .responsive-nav {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -6,6 +58,58 @@
    padding: 0 1rem;
 }
 
+.form__body button#convert-btn {
+   padding: 1rem 1.2rem;
+   font-size: 1rem;
+   transition: var(--bs-transition);
+}
+
+.form__body button#convert-btn:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.form__body button#convert-btn:active {
+   transform: scale(0.98);
+}
+
+.result-content {
+   background-color: var(--color-bg-light);
+   border-radius: 35px;
+   min-width: 600px;
+   /* display: none; */
+}
+
+.result-header {
+   font-size: 1.5rem;
+   line-height: 3.5rem;
+   color: var(--color-text);
+   margin: 10px 0px;
+}
+
+.result-item {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 24px;
+   padding: 10px;
+   color: var(--color-text);
+}
+
+.result-item h5{
+   font-size: 1.3rem;
+   font-weight: 500;
+}
+
+.result-item h2{
+   font-weight: 600;
+   font-size: 2rem;
+   line-height: 2.5rem;
+}
+
+.result-footer{
+   margin: 10px 0;
+}
+/* NAV MENU */
 #nav-toggle {
    display: block;
    background: none;

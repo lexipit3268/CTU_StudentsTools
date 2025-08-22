@@ -14,17 +14,22 @@ body {
 }
 
 :root {
+  background-color: #f5f5f9;
+  --bs-color-bg: #f5f5f9;
   --color-bg: #1f5ca9;
   --color-bg-light: #00afef;
   --color-text: #fff;
+  --color-border: #3d3d3d38;
+  --color-border-hover: #1f5ca9;
+  --bs-bor-ras: 8px;
+  --bs-transition: all 0.2s ease;
 }
 
 .dark-theme {
-  background-color: #001d3d;
+  background-color: black;
   --color-bg: #1f5ca9;
   --color-bg-light: #00afef;
   --color-text: #fff;
+  --color-border: #3d3d3d38;
+  --color-border-hover: #1f5ca9;
 }
-
-
-

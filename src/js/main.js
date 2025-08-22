@@ -1,12 +1,12 @@
-let vsatData = {};
-let hocbaData = {};
-let tohopData = {};
+export let vsatData = {};
+export let hocbaData = {};
+export let tohopData = {};
 
-const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+export const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
   ? ""
   : "/CTU_StudentsTools";
 
-async function loadData() {
+export async function loadData() {
    const vsatRes = await fetch(`${basePath}/public/data/vsat-data.json`);
    vsatData = await vsatRes.json();
 
@@ -16,49 +16,35 @@ async function loadData() {
    const tohopRes = await fetch(`${basePath}/public/data/tohop-data.json`);
    tohopData = await tohopRes.json();
 
-   console.log("Dữ liệu VSAT:", vsatData);
-   console.log("Dữ liệu HOCBA:", hocbaData);
-   console.log("Dữ liệu TOHOP:", tohopData);
-   return true;
+   return { vsatData, hocbaData, tohopData };
 }
-
-async function test() {
-   console.log("TEST TEST TEST");
-}
-test();
-
-loadData().then(() => {
-   console.log("TEST ", hocbaData?.Toan?.[12]?.note);
-});
 
 // Load component HTML
-async function loadComponent(id, file) {
-    let path = file;
-    if (file.startsWith('/')) {
-       path = basePath + file;
-    } else if (file.startsWith('./')) {
-       path = basePath + file.slice(1);
-    } else {
-       path = basePath + '/' + file;
-    }
-    const res = await fetch(path);
-    const html = await res.text();
-    document.getElementById(id).innerHTML = html;
+export async function loadComponent(id, file) {
+   let path = file;
+   if (file.startsWith('/')) {
+      path = basePath + file;
+   } else if (file.startsWith('./')) {
+      path = basePath + file.slice(1);
+   } else {
+      path = basePath + '/' + file;
+   }
+
+   const res = await fetch(path);
+   const html = await res.text();
+   document.getElementById(id).innerHTML = html;
 
    if (id === "header") {
       const themeToggle = document.getElementById("theme-toggle");
       if (themeToggle) {
          themeToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark-theme");
-            if (document.body.classList.contains("dark-theme")) {
-               themeToggle.innerHTML = "<i class='fas fa-sun'></i>";
-            } else {
-               themeToggle.innerHTML = "<i class='fas fa-moon'></i>";
-            }
+            themeToggle.innerHTML = document.body.classList.contains("dark-theme")
+               ? "<i class='fas fa-sun'></i>"
+               : "<i class='fas fa-moon'></i>";
          });
       }
 
-      // Responsive nav toggle
       const navToggle = document.getElementById("nav-toggle");
       const navMenu = document.getElementById("nav-menu");
       if (navToggle && navMenu) {
@@ -74,7 +60,6 @@ async function loadComponent(id, file) {
          });
       }
 
-      // Dropdown cho mobile
       const toolsMenu = document.querySelector('.menu__tools');
       const toolsList = toolsMenu ? toolsMenu.querySelector('.menu_tools__list') : null;
       if (toolsMenu && toolsList) {
@@ -97,5 +82,9 @@ async function loadComponent(id, file) {
    }
 }
 
+
 loadComponent("header", "./src/components/header.html");
 loadComponent("footer", "./src/components/footer.html");
+
+
+// VSAT CONVERT
