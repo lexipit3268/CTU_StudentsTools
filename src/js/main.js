@@ -86,3 +86,15 @@ async function loadComponent(id, file) {
 }
 loadComponent("header", "/src/components/header.html");
 loadComponent("footer", "/src/components/footer.html");
+
+
+const basePath = window.location.hostname === "127.0.0.1" 
+  ? "" 
+  : "/CTU_StudentsTools";
+
+document.write(`
+  <link rel="stylesheet" href="${basePath}/src/css/base.css">
+  <link rel="stylesheet" href="${basePath}/src/css/components.css">
+  <link rel="stylesheet" href="${basePath}/src/css/main.css">
+  <script src="${basePath}/src/js/main.js"></script>
+`);
