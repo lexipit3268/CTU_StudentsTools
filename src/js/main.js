@@ -2,14 +2,18 @@ let vsatData = {};
 let hocbaData = {};
 let tohopData = {};
 
+const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+  ? ""
+  : "/CTU_StudentsTools";
+
 async function loadData() {
-   const vsatRes = await fetch("/public/data/vsat-data.json");
+   const vsatRes = await fetch(`${basePath}/public/data/vsat-data.json`);
    vsatData = await vsatRes.json();
 
-   const hocbaRes = await fetch("/public/data/hocba-data.json");
+   const hocbaRes = await fetch(`${basePath}/public/data/hocba-data.json`);
    hocbaData = await hocbaRes.json();
 
-   const tohopRes = await fetch("/public/data/tohop-data.json");
+   const tohopRes = await fetch(`${basePath}/public/data/tohop-data.json`);
    tohopData = await tohopRes.json();
 
    console.log("Dữ liệu VSAT:", vsatData);
@@ -24,14 +28,15 @@ async function test() {
 test();
 
 loadData().then(() => {
-   console.log("TEST ", hocbaData.Toan[12].note);
+   console.log("TEST ", hocbaData?.Toan?.[12]?.note);
 });
 
 // Load component HTML
 async function loadComponent(id, file) {
-   const res = await fetch(file);
+   const res = await fetch(`${basePath}${file}`);
    const html = await res.text();
    document.getElementById(id).innerHTML = html;
+
    if (id === "header") {
       const themeToggle = document.getElementById("theme-toggle");
       if (themeToggle) {
@@ -61,10 +66,10 @@ async function loadComponent(id, file) {
          });
       }
 
+      // Dropdown cho mobile
       const toolsMenu = document.querySelector('.menu__tools');
       const toolsList = toolsMenu ? toolsMenu.querySelector('.menu_tools__list') : null;
       if (toolsMenu && toolsList) {
-         // Only for mobile: click to toggle dropdown
          const toolsToggle = toolsMenu.querySelector('div');
          toolsToggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
@@ -73,7 +78,6 @@ async function loadComponent(id, file) {
                toolsList.classList.toggle('hidden');
             }
          });
-         // Close dropdown when clicking outside
          document.addEventListener('click', function(e) {
             if (window.innerWidth > 768) return;
             if (!toolsMenu.contains(e.target)) {
@@ -84,16 +88,6 @@ async function loadComponent(id, file) {
       }
    }
 }
+
 loadComponent("header", "/src/components/header.html");
 loadComponent("footer", "/src/components/footer.html");
-
-const basePath = window.location.hostname === "127.0.0.1" 
-  ? "" 
-  : "/CTU_StudentsTools";
-
-document.write(`
-  <link rel="stylesheet" href="${basePath}/src/css/base.css">
-  <link rel="stylesheet" href="${basePath}/src/css/components.css">
-  <link rel="stylesheet" href="${basePath}/src/css/main.css">
-  <script src="${basePath}/src/js/main.js"></script>
-`);
