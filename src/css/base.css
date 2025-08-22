@@ -12,3 +12,17 @@ body {
   min-height: 100vh;
 }
 
+:root {
+  --color-bg: #1f5ca9;
+  --color-bg-light: #00afef;
+  --color-text: #fff;
+}
+
+.dark-theme {
+  --color-bg: gray;
+  --color-bg-light: #00afef;
+  --color-text: #fff;
+}
+
+
+

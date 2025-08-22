@@ -1,0 +1,42 @@
+header, footer {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: all 0.2s ease;
+  padding: 20px;
+}
+
+header #theme-toggle {
+  width: 40px;
+  height: 40px;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .menu{
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 50px;
+}
+
+header .menu .menu_tools__list{
+   width: 220px;
+}
+
+header .menu_tools__list li{
+   padding: 5px;
+   border-radius: 5px;
+}
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
