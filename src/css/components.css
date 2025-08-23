@@ -90,7 +90,7 @@ footer {
 
 .toast i{
    margin: 0 20px;
-   font-size: 35px;
+   font-size: 1.8rem;
    color: green;
 }
 
@@ -129,4 +129,15 @@ footer {
    100%{
       width: 0;
    } 
+}
+
+@media (max-width: 768px) {
+  .toast{
+    width: 250px;
+    height: 60px;
+    margin: 5px 0px;
+  }
+  .toast i{
+    font-size: 1.3rem;
+  }
 }
