@@ -1,4 +1,4 @@
-import { loadData, loadComponent, vsatData, hocbaData, tohopData, convertNameSubject } from "./main.js";
+import { loadData, loadComponent, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult } from "./main.js";
 (async () => {
    await loadData();
    await loadComponent("header", "./src/components/header.html");
@@ -41,23 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
    selectToHop.addEventListener("change", () => {
       const selectValue = selectToHop.value;
-      inputContainer.innerHTML = "";
-      if (tohopData[selectValue]) {
-         const subjects = tohopData[selectValue];
-
-         subjects.forEach(mon => {
-            const div = document.createElement("div");
-            div.classList.add("form__input");
-            div.innerHTML =
-               `
-               <label for="${mon}">${convertNameSubject(mon)}</label>
-               <input type="number" name="" id="${mon}" placeholder="Nhập điểm V-Sat (0-150)">
-            `;
-
-            inputContainer.appendChild(div);
-         });
+      const subjects = tohopData[selectValue];
+      if (subjects) {
+         renderInput(subjects, inputContainer, convertNameSubject);
       }
    })
+
+   document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+         e.preventDefault();
+         convertBtn.click();
+      }
+   });
 
    // Xu ly diem VSAT
    const convertBtn = document.getElementById("convert-btn");
@@ -84,26 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (diem.score === 0 || diem.rank === null) {
                invalid = true;
             } else {
-               console.log(convertVsatToThpt(mon, val))
                total += diem.score;
-
-               const div = document.createElement("div");
-               div.classList.add("result-item");
-               div.innerHTML =
-                  `
-               <div class="text-center">
-                  <h5 class="text-sm">Điểm V-SAT</h5>
-                  <h2 class="text-2xl font-bold">${val}</h2>
-                  <small class="block">${convertNameSubject(mon)}</small>
-               </div>
-
-               <div class="text-center">
-                  <h5 class="text-sm">Điểm THPT</h5>
-                  <h2 class="text-2xl font-bold">${diem.score}</h2>
-                  <small class="block">Thứ hạng ${diem.rank}</small>
-               </div>
-            `;
-               resultContainer.appendChild(div);
+               renderResult(mon, val, diem, resultContainer, convertNameSubject);
             }
          }
       })
@@ -118,9 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
          return;
       }
 
+      resultContent.classList.add("slideIn");
       resultContent.style.display = "block";
-      resultTotal.innerHTML = total;
+      resultTotal.innerHTML = `${total.toFixed(2)}`;
+      setTimeout(() => {
+         resultContent.classList.remove("slideIn");
+      }, 1000);
 
-   })
-})
+   });
+});
 

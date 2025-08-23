@@ -3,8 +3,8 @@ export let hocbaData = {};
 export let tohopData = {};
 
 export const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
-  ? ""
-  : "/CTU_StudentsTools";
+   ? ""
+   : "/CTU_StudentsTools";
 
 export async function loadData() {
    const vsatRes = await fetch(`${basePath}/public/data/vsat-data.json`);
@@ -64,14 +64,14 @@ export async function loadComponent(id, file) {
       const toolsList = toolsMenu ? toolsMenu.querySelector('.menu_tools__list') : null;
       if (toolsMenu && toolsList) {
          const toolsToggle = toolsMenu.querySelector('div');
-         toolsToggle.addEventListener('click', function(e) {
+         toolsToggle.addEventListener('click', function (e) {
             if (window.innerWidth <= 768) {
                e.preventDefault();
                toolsList.classList.toggle('open');
                toolsList.classList.toggle('hidden');
             }
          });
-         document.addEventListener('click', function(e) {
+         document.addEventListener('click', function (e) {
             if (window.innerWidth > 768) return;
             if (!toolsMenu.contains(e.target)) {
                toolsList.classList.remove('open');
@@ -100,6 +100,39 @@ export function convertNameSubject(mon) {
    };
 
    return mapping[mon] || mon;
+}
+
+export function renderInput(subjects, container, convertNameSubject) {
+   container.innerHTML = "";
+   subjects.forEach(mon => {
+      const div = document.createElement("div");
+      div.classList.add("form__input");
+      div.innerHTML = `
+         <label for="${mon}">${convertNameSubject(mon)}</label>
+         <input type="number" id="${mon}" placeholder="Nhập điểm V-SAT (0-150)">
+      `;
+      container.appendChild(div);
+   });
+}
+
+export function renderResult(mon, val, diem, container, convertNameSubject) {
+   const div = document.createElement("div");
+   div.classList.add("result-item");
+   div.innerHTML =
+   `
+      <div class="text-center">
+         <h5 class="text-sm">Điểm V-SAT</h5>
+         <h2 class="text-2xl font-bold">${val}</h2>
+         <small class="block">${convertNameSubject(mon)}</small>
+      </div>
+
+      <div class="text-center">
+         <h5 class="text-sm">Điểm THPT</h5>
+         <h2 class="text-2xl font-bold">${diem.score}</h2>
+         <small class="block">Thứ hạng ${diem.rank}</small>
+      </div>
+   `;
+   container.appendChild(div);
 }
 
 loadComponent("header", "./src/components/header.html");
