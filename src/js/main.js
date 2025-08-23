@@ -82,6 +82,30 @@ export async function loadComponent(id, file) {
    }
 }
 
+export function renderToast(message, type) {
+   let toastBox = document.getElementById("toast-box");
+   let errorMsg = `<i class="fa-solid fa-circle-xmark"></i> ${message}`;
+   let invalidMsg = `<i class="fa-solid fa-circle-exclamation"></i>${message}`;
+   let toast = document.createElement('div');
+   toast.classList.add("toast");
+   if (type === "error") {
+      toast.classList.add("error");
+      toast.innerHTML = errorMsg;
+   }
+
+   if (type === "invalid") {
+      toast.classList.add("invalid");
+      toast.innerHTML = invalidMsg;
+
+   }
+
+   toastBox.appendChild(toast);
+
+   setTimeout(() => {
+      toast.remove();
+   }, 5000);
+}
+
 export function convertNameSubject(mon) {
    const mapping = {
       Toan: "Toán",
@@ -119,7 +143,7 @@ export function renderResult(mon, val, diem, container, convertNameSubject) {
    const div = document.createElement("div");
    div.classList.add("result-item");
    div.innerHTML =
-   `
+      `
       <div class="text-center">
          <h5 class="text-sm">Điểm V-SAT</h5>
          <h2 class="text-2xl font-bold">${val}</h2>

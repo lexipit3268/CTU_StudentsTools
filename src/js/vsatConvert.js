@@ -1,4 +1,4 @@
-import { loadData, loadComponent, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult } from "./main.js";
+import { loadData, loadComponent, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast } from "./main.js";
 (async () => {
    await loadData();
    await loadComponent("header", "./src/components/header.html");
@@ -14,7 +14,8 @@ function convertVsatToThpt(mon, x) {
 
    const row = data.find(item => x >= item.vsat.min && x <= item.vsat.max);
    if (!row) {
-      alert("Điểm của môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ (0-150)");
+      let msg = "Điểm của môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ (0-150)";
+      renderToast(msg, "error");
       return { score: 0, rank: null };
    }
 
@@ -59,7 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
    convertBtn.addEventListener("click", () => {
       const selectValue = selectToHop.value;
       if (!tohopData[selectValue]) {
-         alert("Vui lòng chọn tổ hợp!");
+         let message = "Vui lòng chọn tổ hợp!";
+         renderToast(message, "invalid");
          return;
       }
 
@@ -86,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
 
       if (missing) {
-         alert("Vui lòng nhập đủ điểm cho tất cả môn!");
+         let message = "Vui lòng nhập đủ điểm cho tất cả môn!";
+         renderToast(message, "invalid");
          return;
       }
 
