@@ -1,4 +1,24 @@
-header, footer {
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+header,
+footer {
   background-color: var(--color-bg);
   color: var(--color-text);
   transition: all 0.2s ease;
@@ -10,31 +30,33 @@ header #theme-toggle {
   height: 40px;
 }
 
-header nav{
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header .menu{
+header .menu#nav-menu {
   display: flex;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  gap: 50px;
+  gap: 2rem;
+  align-items: center;
+  transition: max-height 0.3s ease;
 }
 
-header .menu .menu_tools__list{
-   width: 220px;
+header .menu .menu_tools__list {
+  width: 220px;
 }
 
-header .menu_tools__list li{
-   padding: 5px;
-   border-radius: 5px;
+header .menu_tools__list li {
+  padding: 5px;
+  border-radius: 5px;
 }
 
 
-footer{
+footer {
   display: flex;
   align-items: center;
   justify-content: center;

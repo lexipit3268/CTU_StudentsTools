@@ -109,7 +109,7 @@ export function renderInput(subjects, container, convertNameSubject) {
       div.classList.add("form__input");
       div.innerHTML = `
          <label for="${mon}">${convertNameSubject(mon)}</label>
-         <input type="number" id="${mon}" placeholder="Nhập điểm V-SAT (0-150)">
+         <input type="number" id="${mon}" placeholder="Nhập điểm của bạn...">
       `;
       container.appendChild(div);
    });

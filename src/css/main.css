@@ -136,13 +136,6 @@
    cursor: pointer;
 }
 
-#nav-menu {
-   display: flex;
-   gap: 2rem;
-   align-items: center;
-   transition: max-height 0.3s ease;
-}
-
 @media (max-width: 768px) {
 
 

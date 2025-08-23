@@ -14,7 +14,7 @@ function convertVsatToThpt(mon, x) {
 
    const row = data.find(item => x >= item.vsat.min && x <= item.vsat.max);
    if (!row) {
-      alert("Điểm của môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ");
+      alert("Điểm của môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ (0-150)");
       return { score: 0, rank: null };
    }
 
