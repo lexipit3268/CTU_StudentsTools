@@ -74,70 +74,73 @@ footer {
   padding: 20px;
 }
 
-.toast{
-   width: 400px;
-   height: 80px;
-   background-color: #fff;
-   font-weight: 500;
-   margin: 15px 0;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-   display: flex;
-   align-items: center;
-   position: relative;
-   transform: translateX(100%);
-   animation: moveleft 0.5s linear forwards;
+.toast {
+  width: 400px;
+  height: 80px;
+  background-color: #fff;
+  font-weight: 500;
+  margin: 15px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  position: relative;
+  transform: translateX(100%);
+  animation: moveleft 0.5s linear forwards;
 }
 
-.toast i{
-   margin: 0 20px;
-   font-size: 1.8rem;
-   color: green;
+.toast i {
+  margin: 0 20px;
+  font-size: 1.8rem;
+  color: green;
 }
 
-.toast.error i{
-   color: red;
+.toast.error i {
+  color: red;
 }
 
-.toast.invalid i{
-   color: orange;
+.toast.invalid i {
+  color: orange;
 }
 
-.toast::after{
-   content: '';
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 5px;
-   background-color: green;
-   animation: anim 5s linear forwards;
-}
-.toast.error::after{
-   background-color: red;
-}
-.toast.invalid::after{
-   background-color: orange;
+.toast::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: green;
+  animation: anim 5s linear forwards;
 }
 
-@keyframes moveleft{
-   100%{
-      transform: translateX(0);
-   }
+.toast.error::after {
+  background-color: red;
 }
 
-@keyframes anim{
-   100%{
-      width: 0;
-   } 
+.toast.invalid::after {
+  background-color: orange;
+}
+
+@keyframes moveleft {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
 }
 
 @media (max-width: 768px) {
-  .toast{
+  .toast {
     width: 250px;
     height: 60px;
     margin: 5px 0px;
   }
-  .toast i{
+
+  .toast i {
     font-size: 1.3rem;
   }
 }
