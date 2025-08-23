@@ -1,4 +1,4 @@
-import { loadData, loadComponent, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast } from "./main.js";
+import { loadData, loadComponent, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo } from "./main.js";
 (async () => {
    await loadData();
    await loadComponent("header", "./src/components/header.html");
@@ -27,7 +27,7 @@ function convertVsatToThpt(mon, x) {
    const y = c + ((x - a) / (b - a)) * (d - c);
 
    return {
-      score: parseFloat(y.toFixed(2)),
+      score: roundToTwo(y),
       rank: row.rank
    };
 }
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
                invalid = true;
             } else {
                total += diem.score;
-               renderResult(mon, val, diem, resultContainer, convertNameSubject);
+               renderResult(mon, val, diem, resultContainer, convertNameSubject, true);
             }
          }
       })
@@ -100,7 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       resultContent.classList.add("slideIn");
       resultContent.style.display = "block";
-      resultTotal.innerHTML = `${total.toFixed(2)}`;
+      resultTotal.innerHTML = `${roundToTwo(total)}`;
+      resultContent.scrollIntoView({
+         behavior: 'smooth', 
+         block: 'start'     
+      });
       setTimeout(() => {
          resultContent.classList.remove("slideIn");
       }, 1000);

@@ -39,9 +39,12 @@
                         <option value="C01">C01: Ngữ Văn, Toán, Vật Lý</option>
                         <option value="C02">C02: Ngữ Văn, Toán, Hóa Học</option>
                         <option value="C04">C04: Ngữ Văn, Toán, Địa Lý</option>
-                        <option value="C14">C14: Ngữ Văn, Toán, GDCD, GDKTPL</option>
-                        <option value="C19">C19: Ngữ Văn, Lịch Sử, GDCD, GDKTPL</option>
-                        <option value="C20">C20: Ngữ Văn, Địa Lý, GDCD, GDKTPL</option>
+                        <option value="C14">C14: Ngữ Văn, Toán, GDCD</option>
+                        <option value="C14_2">C14: Ngữ Văn, Toán, GDKTPL</option>
+                        <option value="C19">C19: Ngữ Văn, Lịch Sử, GDCD</option>
+                        <option value="C19_2">C19: Ngữ Văn, Lịch Sử, GDKTPL</option>
+                        <option value="C20">C20: Ngữ Văn, Địa Lý, GDCD</option>
+                        <option value="C20_2">C20: Ngữ Văn, Địa Lý, GDKTPL</option>
 
                         <option value="D01">D01: Ngữ Văn, Toán, Anh Văn</option>
                         <option value="D03">D03: Ngữ Văn, Toán, Tiếng Pháp</option>
@@ -53,23 +56,11 @@
                         <option value="D29">D29: Toán, Vật Lý, Tiếng Pháp</option>
                         <option value="D44">D44: Ngữ Văn, Địa Lý, Tiếng Pháp</option>
                         <option value="D64">D64: Ngữ Văn, Lịch Sử, Tiếng Pháp</option>
-                        <option value="D66">D66: Ngữ Văn, GDCD, GDKTPL, Anh Văn</option>
+                        <option value="D66">D66: Ngữ Văn, GDCD, GDKTPL</option>
+                        <option value="D66_2">D66: Ngữ Văn, GDCD, Anh Văn</option>
                      </select>
                   </div>
-                  <div class="container__form__input" id="subject-inputs">
-                     <!-- <div class="form__input">
-                        <label for="toan">Toán</label>
-                        <input type="number" name="" id="toan">
-                     </div>
-                     <div class="form__input">
-                        <label for="vatly">Vật lý</label>
-                        <input type="number" name="" id="vatly">
-                     </div>
-                     <div class="form__input">
-                        <label for="hoahoc">Hóa học</label>
-                        <input type="number" name="" id="hoahoc">
-                     </div> -->
-                  </div>
+                  <div class="container__form__input" id="subject-inputs"></div>
                   <button id="convert-btn" type="button"
                      class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center">
                      Quy đổi điểm
@@ -82,7 +73,8 @@
 
             <h1 class="result-header text-xl font-bold text-center">Kết quả quy đổi</h1>
 
-            <div class="result flex flex-col gap-6" id="result">
+            <div class="result flex flex-col gap-3" id="result">
+
             </div>
 
             <div class="result-footer text-center mt-4 text-white">

@@ -132,8 +132,8 @@ export function renderInput(subjects, container, convertNameSubject, isVsat) {
       subjects.forEach(mon => {
          const div = document.createElement("div");
          div.classList.add("form__input");
-         div.innerHTML = 
-         `
+         div.innerHTML =
+            `
             <label for="${mon}">${convertNameSubject(mon)}</label>
             <input type="number" id="${mon}" placeholder="Nhập điểm của bạn...">
          `;
@@ -146,9 +146,11 @@ export function renderInput(subjects, container, convertNameSubject, isVsat) {
          div.classList.add("hocba-input");
          div.innerHTML = `
             <label for="${mon}">${convertNameSubject(mon)}</label>
-            <input type="number" id="${mon}10" placeholder="Nhập điểm TB lớp 10 của bạn...">
-            <input type="number" id="${mon}11" placeholder="Nhập điểm TB lớp 11 của bạn...">
-            <input type="number" id="${mon}12" placeholder="Nhập điểm TB lớp 12 của bạn...">
+            <div class="flex flex-row gap-1">
+               <input type="number" id="${mon}10" min="0" max="10" step="0.1" placeholder="Lớp 10...">
+               <input type="number" id="${mon}11" min="0" max="10" step="0.1" placeholder="Lớp 11...">
+               <input type="number" id="${mon}12" min="0" max="10" step="0.1" placeholder="Lớp 12...">
+            </div>
          `;
          container.appendChild(div);
       })
@@ -156,14 +158,20 @@ export function renderInput(subjects, container, convertNameSubject, isVsat) {
 
 }
 
-export function renderResult(mon, val, diem, container, convertNameSubject) {
+export function renderResult(mon, val, diem, container, convertNameSubject, isVsat) {
    const div = document.createElement("div");
    div.classList.add("result-item");
+   let typeScore = "";
+   if (isVsat) {
+      typeScore = "V-SAT";
+   } else {
+      typeScore = "học bạ"
+   }
    div.innerHTML =
       `
       <div class="text-center">
-         <h5 class="text-sm">Điểm V-SAT</h5>
-         <h2 class="text-2xl font-bold">${val}</h2>
+         <h5 class="text-sm">Điểm ${typeScore}</h5>
+         <h2 class="text-2xl font-bold">${roundToTwo(val)}</h2>
          <small class="block">${convertNameSubject(mon)}</small>
       </div>
 
@@ -173,8 +181,15 @@ export function renderResult(mon, val, diem, container, convertNameSubject) {
          <small class="block">Thứ hạng ${diem.rank}</small>
       </div>
    `;
+
    container.appendChild(div);
 }
+
+export function roundToTwo(num) {
+  const factor = 100;
+  return Math.round((num + 1e-10) * factor) / factor;
+}
+
 
 loadComponent("header", "./src/components/header.html");
 loadComponent("footer", "./src/components/footer.html");

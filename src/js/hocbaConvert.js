@@ -1,4 +1,4 @@
-import { loadData, loadComponent, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast } from "./main.js";
+import { loadData, loadComponent, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo } from "./main.js";
 (async () => {
    await loadData();
    await loadComponent("header", "./src/components/header.html");
@@ -6,8 +6,8 @@ import { loadData, loadComponent, hocbaData, tohopData, convertNameSubject, rend
 
 })();
 
-function getAvg(input10, input11, input12){
-   return parseFloat((input10 + input11 + input12)/3);
+function getAvg(input10, input11, input12) {
+   return (input10 + input11 + input12) / 3;
 }
 
 function convertHocBaToThpt(mon, x) {
@@ -16,9 +16,9 @@ function convertHocBaToThpt(mon, x) {
       return { score: 0, rank: null };
    }
 
-   const row = data.find(item => x >= item.hocba.min && x <= item.hocba.max);
+   const row = data.find(item => x > item.hocba.min && x <= item.hocba.max);
    if (!row) {
-      let msg = "Điểm của môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ (0-10)";
+      let msg = "Điểm trung bình môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ";
       renderToast(msg, "error");
       return { score: 0, rank: null };
    }
@@ -28,12 +28,18 @@ function convertHocBaToThpt(mon, x) {
    const d = row.thpt.max;
 
    const y = c + ((x - a) / (b - a)) * (d - c);
+   console.log("AVG exact =", x, "| AVG 2dp =", roundToTwo(x), "| y (raw) =", y, "| y (rounded) =", roundToTwo(y));
 
    return {
-      score: parseFloat(y.toFixed(2)),
+      score: roundToTwo(y),
       rank: row.rank
    }
 }
+
+function isInvalidValue(value) {
+   return value < 0 || value > 10;
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
    const selectToHop = document.getElementById("tohop");
@@ -70,21 +76,36 @@ document.addEventListener("DOMContentLoaded", () => {
       let invalid = false;
       resultContainer.innerHTML = "";
       subjects.forEach(mon => {
-         const input10 = document.getElementById(mon+"10");
-         const input11 = document.getElementById(mon+"11");
-         const input12 = document.getElementById(mon+"12");
+         const input10 = document.getElementById(mon + "10");
+         const input11 = document.getElementById(mon + "11");
+         const input12 = document.getElementById(mon + "12");
 
-         const inputAvg = getAvg(input10, input11, input12);
-         const val = parseFloat(inputAvg.value);
-         if (isNaN(val)) {
+         const val10 = parseFloat(input10.value);
+         const val11 = parseFloat(input11.value);
+         const val12 = parseFloat(input12.value);
+
+         if (isNaN(val10) || isNaN(val11) || isNaN(val12)) {
+            missing = true;
+         }
+
+
+         if (isInvalidValue(val10) || isInvalidValue(val11) || isInvalidValue(val12)) {
+            invalid = true;
+            let message = "Điểm môn " + convertNameSubject(mon) + " không hợp lệ!";
+            renderToast(message, "error");
+            return;
+         }
+
+         const inputAvg = getAvg(val10, val11, val12);
+         if (isNaN(inputAvg)) {
             missing = true;
          } else {
-            const diem = convertHocBaToThpt(mon, val);
+            const diem = convertHocBaToThpt(mon, inputAvg);
             if (diem.rank === null || diem.score === 0) {
                invalid = true;
             } else {
                total += diem.score;
-               renderResult(mon, val, diem, resultContainer, convertNameSubject);
+               renderResult(mon, roundToTwo(inputAvg), diem, resultContainer, convertNameSubject, false);
             }
          }
       });
@@ -92,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (missing) {
          let message = "Vui lòng nhập đủ điểm tất cả các môn!";
          renderToast(message, "invalid");
+         return;
       }
 
       if (invalid) {
@@ -101,7 +123,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       resultContent.classList.add("slideIn");
       resultContent.style.display = "block";
-      resultTotal.innerHTML = `${total.toFixed(2)}`;
+      resultTotal.innerHTML = `${roundToTwo(total)}`;
+      resultContent.scrollIntoView({
+         behavior: 'smooth',
+         block: 'start'
+      });
       setTimeout(() => {
          resultContent.classList.remove("slideIn");
       }, 1000);
