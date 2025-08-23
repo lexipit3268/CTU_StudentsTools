@@ -114,6 +114,13 @@
    animation: slideIn 0.8s forwards ease;
 }
 
+
+.hocba-input{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
 @keyframes slideIn {
    from {
       opacity: 0;

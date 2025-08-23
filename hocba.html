@@ -57,7 +57,7 @@
                      </select>
                   </div>
                   <div class="container__form__input" id="subject-inputs">
-                     <div class="form__input">
+                     <!-- <div class="form__input">
                         <label for="toan">Toán</label>
                         <input type="number" name="" id="toan">
                      </div>
@@ -68,70 +68,33 @@
                      <div class="form__input">
                         <label for="hoahoc">Hóa học</label>
                         <input type="number" name="" id="hoahoc">
-                     </div>
+                     </div> -->
                   </div>
-                  <button id="convert-btn"
+                  <button id="convert-btn" type="button"
                      class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center">
                      Quy đổi điểm
                   </button>
                </div>
             </form>
          </div>
-         <div class="result-content bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col gap-2 flex-1">
+         <div class="result-content slideIn bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col gap-2 flex-1"
+            id="result-content">
 
             <h1 class="result-header text-xl font-bold text-center">Kết quả quy đổi</h1>
 
-            <div class="result flex flex-col gap-6">
-               <div class="result-item">
-                  <div class="text-center">
-                     <h5 class="text-sm">Điểm V-SAT</h5>
-                     <h2 class="text-2xl font-bold">100</h2>
-                     <small class="block">Toán</small>
-                  </div>
-
-                  <div class="text-center">
-                     <h5 class="text-sm">Điểm THPT</h5>
-                     <h2 class="text-2xl font-bold">9</h2>
-                     <small class="block">Thứ hạng 40%</small>
-                  </div>
-               </div>
-
-               <div class="result-item">
-                  <div class="text-center">
-                     <h5 class="text-sm">Điểm V-SAT</h5>
-                     <h2 class="text-2xl font-bold">100</h2>
-                     <small class="block">Vật lý</small>
-                  </div>
-                  <div class="text-center">
-                     <h5 class="text-sm">Điểm THPT</h5>
-                     <h2 class="text-2xl font-bold">9</h2>
-                     <small class="block">Thứ hạng 40%</small>
-                  </div>
-               </div>
-
-               <div class="result-item">
-                  <div class="text-center">
-                     <h5 class="text-sm">Điểm V-SAT</h5>
-                     <h2 class="text-2xl font-bold">100</h2>
-                     <small class="block">Hóa học</small>
-                  </div>
-                  <div class="text-center">
-                     <h5 class="text-sm">Điểm THPT</h5>
-                     <h2 class="text-2xl font-bold">9</h2>
-                     <small class="block">Thứ hạng 40%</small>
-                  </div>
-               </div>
+            <div class="result flex flex-col gap-6" id="result">
             </div>
 
             <div class="result-footer text-center mt-4 text-white">
                <h5 class="text-sm">Tổng điểm tổ hợp</h5>
-               <h2 class="text-3xl font-bold">28.4</h2>
+               <h2 class="text-3xl font-bold" id="result-total">28.4</h2>
             </div>
          </div>
    </main>
    <footer id="footer"></footer>
+   <div id="toast-box"></div>
    <script src="./src/js/main.js" type="module"></script>
-   <script src="./src/js/vsatConvert.js" type="module"></script>
+   <script src="./src/js/hocbaConvert.js" type="module"></script>
 </body>
 
 </html>

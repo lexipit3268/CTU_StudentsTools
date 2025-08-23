@@ -126,17 +126,34 @@ export function convertNameSubject(mon) {
    return mapping[mon] || mon;
 }
 
-export function renderInput(subjects, container, convertNameSubject) {
+export function renderInput(subjects, container, convertNameSubject, isVsat) {
    container.innerHTML = "";
-   subjects.forEach(mon => {
-      const div = document.createElement("div");
-      div.classList.add("form__input");
-      div.innerHTML = `
-         <label for="${mon}">${convertNameSubject(mon)}</label>
-         <input type="number" id="${mon}" placeholder="Nhập điểm của bạn...">
-      `;
-      container.appendChild(div);
-   });
+   if (isVsat) {
+      subjects.forEach(mon => {
+         const div = document.createElement("div");
+         div.classList.add("form__input");
+         div.innerHTML = 
+         `
+            <label for="${mon}">${convertNameSubject(mon)}</label>
+            <input type="number" id="${mon}" placeholder="Nhập điểm của bạn...">
+         `;
+         container.appendChild(div);
+      });
+   } else {
+      subjects.forEach(mon => {
+         const div = document.createElement("div");
+         div.classList.add("form__input");
+         div.classList.add("hocba-input");
+         div.innerHTML = `
+            <label for="${mon}">${convertNameSubject(mon)}</label>
+            <input type="number" id="${mon}10" placeholder="Nhập điểm TB lớp 10 của bạn...">
+            <input type="number" id="${mon}11" placeholder="Nhập điểm TB lớp 11 của bạn...">
+            <input type="number" id="${mon}12" placeholder="Nhập điểm TB lớp 12 của bạn...">
+         `;
+         container.appendChild(div);
+      })
+   }
+
 }
 
 export function renderResult(mon, val, diem, container, convertNameSubject) {
