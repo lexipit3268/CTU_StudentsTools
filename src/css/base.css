@@ -7,10 +7,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html,
 body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  transition: all 0.2s ease;
+  transition: background-color 0.8s ease;
 }
 
 :root {
@@ -26,8 +35,8 @@ body {
 }
 
 .dark-theme {
-  background-color: black;
-  --color-bg: #1f5ca9;
+  background-color: #1c1c1c;
+  --color-bg: #14407d;
   --color-bg-light: #00afef;
   --color-text: #fff;
   --color-border: #3d3d3d38;

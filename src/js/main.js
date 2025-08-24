@@ -40,7 +40,7 @@ export async function loadComponent(id, file) {
          themeToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark-theme");
             themeToggle.innerHTML = document.body.classList.contains("dark-theme")
-               ? "<i class='fas fa-sun'></i>"
+               ? "<i class='ri-sun-fill'></i>"
                : "<i class='fas fa-moon'></i>";
          });
       }
@@ -100,7 +100,9 @@ export function renderToast(message, type) {
    }
 
    toastBox.appendChild(toast);
-
+   toast.addEventListener("click", () => {
+      toast.remove();
+   })
    setTimeout(() => {
       toast.remove();
    }, 5000);
@@ -189,6 +191,6 @@ export function roundToTwo(num) {
   return +(Math.round(num + "e+2")  + "e-2");
 }
 
-
+// loadComponent("head", "./src/components/head.html");
 loadComponent("header", "./src/components/header.html");
 loadComponent("footer", "./src/components/footer.html");
