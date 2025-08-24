@@ -186,8 +186,7 @@ export function renderResult(mon, val, diem, container, convertNameSubject, isVs
 }
 
 export function roundToTwo(num) {
-  const factor = 100;
-  return Math.round((num + 1e-10) * factor) / factor;
+  return +(Math.round(num + "e+2")  + "e-2");
 }
 
 

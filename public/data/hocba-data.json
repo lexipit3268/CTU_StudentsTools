@@ -74,7 +74,7 @@
   { "rank": ">90%", "hocba": { "min": 5.10, "max": 6.97 }, "thpt": { "min": 2.00, "max": 5.35 } },
   { "rank": ">90%", "hocba": { "min": 0.00, "max": 5.10 }, "thpt": { "min": 0.00, "max": 2.00 }, "note": "special" }
 ],
-"DiaLi": [
+"DiaLy": [
   { "rank": "3%",  "hocba": { "min": 9.50, "max": 10.00 }, "thpt": { "min": 10.00, "max": 10.00 } },
   { "rank": "5%",  "hocba": { "min": 9.37, "max": 9.50 },  "thpt": { "min": 9.75, "max": 10.00 } },
   { "rank": "10%", "hocba": { "min": 9.13, "max": 9.37 },  "thpt": { "min": 9.50, "max": 9.75 } },

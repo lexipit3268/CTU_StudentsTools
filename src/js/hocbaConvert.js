@@ -26,12 +26,14 @@ function convertHocBaToThpt(mon, x) {
    const b = row.hocba.max;
    const c = row.thpt.min;
    const d = row.thpt.max;
+   console.log(mon, a, b, c, d);
+   const y = c + (((x - a) / (b - a)) * (d - c));
 
-   const y = c + ((x - a) / (b - a)) * (d - c);
-   console.log("AVG exact =", x, "| AVG 2dp =", roundToTwo(x), "| y (raw) =", y, "| y (rounded) =", roundToTwo(y));
+   const roundedY = Math.ceil(y * 100) / 100;
+   console.log("rounded Y = ",roundedY);
 
    return {
-      score: roundToTwo(y),
+      score: roundedY,
       rank: row.rank
    }
 }
@@ -96,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
          }
 
-         const inputAvg = getAvg(val10, val11, val12);
+         const inputAvg = roundToTwo(getAvg(val10, val11, val12));
          if (isNaN(inputAvg)) {
             missing = true;
          } else {
