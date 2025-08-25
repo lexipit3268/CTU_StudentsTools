@@ -61,11 +61,13 @@ footer {
   flex-direction: column;
   overflow: hidden;
   padding: 20px;
+  height: fit-content;
 }
 
 .toast {
   width: 400px;
   height: 80px;
+  min-height: fit-content;
   background-color: #fff;
   font-weight: 500;
   margin: 15px 0;
@@ -110,6 +112,7 @@ footer {
   background-color: orange;
 }
 
+
 @keyframes moveleft {
   100% {
     transform: translateX(0);
@@ -123,6 +126,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #toast-box{
+    top: 10%;
+    align-items: flex-start;
+  }
+
   .toast {
     width: 250px;
     height: 60px;
