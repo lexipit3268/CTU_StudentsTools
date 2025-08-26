@@ -6,7 +6,7 @@ footer {
   flex-shrink: 0;
 }
 
-header,
+/* header,
 footer {
   background: linear-gradient(135deg, #1f5ca9, #00afef);
   color: var(--color-text);
@@ -42,15 +42,7 @@ header .menu .menu_tools__list {
 header .menu_tools__list li {
   padding: 5px;
   border-radius: 5px;
-}
-
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-}
+} */
 
 #toast-box {
   position: absolute;

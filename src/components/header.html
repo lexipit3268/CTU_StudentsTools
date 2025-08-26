@@ -1,14 +1,11 @@
-<nav class="responsive-nav">
-  <!-- Logo -->
+<!-- <nav class="responsive-nav">
   <div class="flex items-center space-x-2">
     <span class="font-semibold text-lg">CTU Student's Tools</span>
   </div>
-  <!-- Menu -->
   <ul class="menu" id="nav-menu">
     <li class="flex items-center space-x-1 hover:text-sky-500 cursor-pointer">
     <a href="./index.html">Trang chủ</a>
     </li>
-    <!-- Dropdown menu -->
     <li class="menu__tools group relative">
       <div class="flex items-center space-x-1 hover:text-sky-500 cursor-pointer">
         <span>Công cụ</span>
@@ -34,9 +31,56 @@
     <button id="nav-toggle" class="block md:hidden text-2xl p-2 ml-2 rounded hover:bg-sky-500 transition">
       <i class="fas fa-bars"></i>
     </button>
-    <!-- Toggle theme -->
     <button id="theme-toggle" class="text-xl p-2 rounded-full hover:bg-sky-500 transition cursor-pointer">
       <i class="fas fa-moon"></i>
     </button>
+  </div>
+</nav> -->
+
+<nav
+  class="bg-gradient-to-r !p-4 from-[#1f5ca9] to-[#00afef] flex justify-between items-center w-full !mx-auto text-white">
+  <div>
+    <a href="./index.html" class="flex items-center gap-2" title="Trang chủ">
+      <img class="w-10 md:w-14" src="https://www.ctu.edu.vn/images/branding/logo/CTU_logo.png" alt="">
+      <span class="font-semibold md:text-lg text-sm">CTU Student's Tools</span>
+    </a>
+  </div>
+  <div
+    class="nav-links fixed md:static bg-gray-700/80 backdrop-blur-sm md:bg-transparent md:backdrop-blur-none md:min-h-fit min-h-[60vh] md:translate-x-0 translate-x-full  top-18 right-0 md:w-auto w-full flex items-center !px-5 !py-2 transition-all duration-300">
+    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-12">
+      <li>
+        <a class="hover:text-sky-300" href="./index.html">Trang chủ</a>
+      </li>
+      <li class="relative group">
+        <a class="hover:text-sky-300 cursor-pointer" id="tools-toggle">
+          <span>Công cụ</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </a>
+        <ul id="tools-submenu"
+          class="max-h-0 overflow-hidden flex-col md:absolute !md:mt-2 md:bg-[#1f5ca9] md:rounded md:shadow-lg md:pl-0 md:min-w-[180px] transition-all duration-300 ease-in-out">
+          <li class="block !px-4 !py-2 hover:bg-sky-400"><a href="./hocba.html" class="">Quy đổi học bạ</a></li>
+          <li class="block !px-4 !py-2 hover:bg-sky-400"><a href="./vsat.html" class="">Quy đổi V-SAT</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="hover:text-sky-300" href="./huongdan.html">Hướng dẫn</a>
+      </li>
+      <li>
+        <a class="hover:text-sky-300" href="./lienhe.html">Liên hệ</a>
+      </li>
+    </ul>
+  </div>
+  <div class="flex items-center gap-2 md:gap-5">
+    <button id="login-btn"
+      class="bg-[#1f5ca9] md:!px-5 md:!py-2 !p-2 h-10 rounded-full hover:bg-sky-400 cursor-pointer transition-all duration-300 flex items-center justify-center gap-2">
+      <span class="hidden md:block">Đăngnhập</span>
+      <i class="fa-regular fa-user text-xl"></i>
+    </button>
+    <button id="theme-toggle"
+      class="w-10 h-10 p-2 text-xl rounded-full bg-[#1f5ca9] hover:bg-sky-400 transition cursor-pointer  duration-300">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button><i class="ri-menu-line text-2xl cursor-pointer md:hidden transition-all duration-300"
+        id="nav-toggle-btn"></i></button>
   </div>
 </nav>

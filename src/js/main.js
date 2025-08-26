@@ -20,6 +20,11 @@ export async function loadData() {
 }
 
 // Load component HTML
+let isLoadFinished = false;
+document.addEventListener("DOMContentLoaded", () => {
+   isLoadFinished = true;
+})
+
 export async function loadComponent(id, file) {
    let path = file;
    if (file.startsWith('/')) {
@@ -45,40 +50,67 @@ export async function loadComponent(id, file) {
          });
       }
 
-      const navToggle = document.getElementById("nav-toggle");
-      const navMenu = document.getElementById("nav-menu");
-      if (navToggle && navMenu) {
-         navToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("open");
-         });
-         navMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-               if (window.innerWidth <= 768) {
-                  navMenu.classList.remove("open");
-               }
-            });
-         });
-      }
+      // const navToggle = document.getElementById("nav-toggle");
+      // const navMenu = document.getElementById("nav-menu");
+      // if (navToggle && navMenu) {
+      //    navToggle.addEventListener("click", () => {
+      //       navMenu.classList.toggle("open");
+      //    });
+      //    navMenu.querySelectorAll("a").forEach(link => {
+      //       link.addEventListener("click", () => {
+      //          if (window.innerWidth <= 768) {
+      //             navMenu.classList.remove("open");
+      //          }
+      //       });
+      //    });
+      // }
 
-      const toolsMenu = document.querySelector('.menu__tools');
-      const toolsList = toolsMenu ? toolsMenu.querySelector('.menu_tools__list') : null;
-      if (toolsMenu && toolsList) {
-         const toolsToggle = toolsMenu.querySelector('div');
-         toolsToggle.addEventListener('click', function (e) {
-            if (window.innerWidth <= 768) {
-               e.preventDefault();
-               toolsList.classList.toggle('open');
-               toolsList.classList.toggle('hidden');
-            }
-         });
-         document.addEventListener('click', function (e) {
-            if (window.innerWidth > 768) return;
-            if (!toolsMenu.contains(e.target)) {
-               toolsList.classList.remove('open');
-               toolsList.classList.add('hidden');
-            }
-         });
-      }
+      // const toolsMenu = document.querySelector('.menu__tools');
+      // const toolsList = toolsMenu ? toolsMenu.querySelector('.menu_tools__list') : null;
+      // if (toolsMenu && toolsList) {
+      //    const toolsToggle = toolsMenu.querySelector('div');
+      //    toolsToggle.addEventListener('click', function (e) {
+      //       if (window.innerWidth <= 768) {
+      //          e.preventDefault();
+      //          toolsList.classList.toggle('open');
+      //          toolsList.classList.toggle('hidden');
+      //       }
+      //    });
+      //    document.addEventListener('click', function (e) {
+      //       if (window.innerWidth > 768) return;
+      //       if (!toolsMenu.contains(e.target)) {
+      //          toolsList.classList.remove('open');
+      //          toolsList.classList.add('hidden');
+      //       }
+      //    });
+      // }
+      const navToggleBtn = document.getElementById("nav-toggle-btn");
+      const navLinks = document.querySelector(".nav-links");
+      navToggleBtn.addEventListener("click", function (e) {
+         e.preventDefault();
+         navToggleBtn.classList.toggle("ri-menu-line");
+         navToggleBtn.classList.toggle("ri-close-line");
+
+         navLinks.classList.toggle("translate-x-full");
+         navLinks.classList.toggle("translate-x-0");
+      });
+
+      const toolsToggle = document.getElementById("tools-toggle");
+      const toolsSubmenu = document.getElementById("tools-submenu");
+
+
+      toolsToggle.addEventListener("click", (e) => {
+         e.preventDefault();
+         toolsSubmenu.classList.toggle("max-h-40");
+         toolsSubmenu.classList.toggle("max-h-0");
+      });
+
+      document.addEventListener("click", (e) => {
+         if (!toolsToggle.contains(e.target)) {
+            toolsSubmenu.classList.remove("max-h-40");
+            toolsSubmenu.classList.add("max-h-0");
+         }
+      });
    }
 }
 
@@ -188,8 +220,10 @@ export function renderResult(mon, val, diem, container, convertNameSubject, isVs
 }
 
 export function roundToTwo(num) {
-  return +(Math.round(num + "e+2")  + "e-2");
+   return +(Math.round(num + "e+2") + "e-2");
 }
+
+
 
 // loadComponent("head", "./src/components/head.html");
 loadComponent("header", "./src/components/header.html");
