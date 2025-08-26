@@ -1,9 +1,6 @@
-import { loadData, loadComponent, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo } from "./main.js";
+import { loadData, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo } from "./main.js";
 (async () => {
    await loadData();
-   await loadComponent("header", "./src/components/header.html");
-   await loadComponent("footer", "./src/components/footer.html");
-
    console.log("VSAT Data:", vsatData);
    console.log("To hop mon: ", tohopData);
 })();
@@ -15,7 +12,7 @@ function convertVsatToThpt(mon, x) {
    const row = data.find(item => x >= item.vsat.min && x <= item.vsat.max);
    if (!row) {
       let msg = "Điểm của môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ (0-150)";
-      renderToast(msg, "error");
+      renderToast(msg, "invalid");
       return { score: 0, rank: null };
    }
 
@@ -61,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selectValue = selectToHop.value;
       if (!tohopData[selectValue]) {
          let message = "Vui lòng chọn tổ hợp!";
-         renderToast(message, "invalid");
+         renderToast(message, "error");
          return;
       }
 
@@ -89,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (missing) {
          let message = "Vui lòng nhập đủ điểm cho tất cả môn!";
-         renderToast(message, "invalid");
+         renderToast(message, "error");
          return;
       }
 
@@ -101,9 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
       resultContent.classList.add("slideIn");
       resultContent.style.display = "block";
       resultTotal.innerHTML = `${roundToTwo(total)}`;
+      let scrollBlockStyle = "start";
+      if(window.innerWidth >= 768){
+         scrollBlockStyle = "end";
+      }
       resultContent.scrollIntoView({
-         behavior: 'smooth', 
-         block: 'start'     
+         behavior: 'smooth',
+         block: scrollBlockStyle
       });
       setTimeout(() => {
          resultContent.classList.remove("slideIn");

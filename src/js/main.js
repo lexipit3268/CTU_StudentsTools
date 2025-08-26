@@ -1,6 +1,7 @@
 export let vsatData = {};
 export let hocbaData = {};
 export let tohopData = {};
+import { authenticate } from "./login.js";
 
 export const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
    ? ""
@@ -20,10 +21,11 @@ export async function loadData() {
 }
 
 // Load component HTML
-let isLoadFinished = false;
-document.addEventListener("DOMContentLoaded", () => {
-   isLoadFinished = true;
-})
+
+document.addEventListener("DOMContentLoaded", async () => {
+   await loadComponent("header", "./src/components/header.html");
+   await loadComponent("footer", "./src/components/footer.html");
+});
 
 export async function loadComponent(id, file) {
    let path = file;
@@ -111,6 +113,11 @@ export async function loadComponent(id, file) {
             toolsSubmenu.classList.add("max-h-0");
          }
       });
+
+      const loginBtn = document.getElementById("login-btn");
+      if (loginBtn) {
+         authenticate(loginBtn);
+      }
    }
 }
 
@@ -223,8 +230,3 @@ export function roundToTwo(num) {
    return +(Math.round(num + "e+2") + "e-2");
 }
 
-
-
-// loadComponent("head", "./src/components/head.html");
-loadComponent("header", "./src/components/header.html");
-loadComponent("footer", "./src/components/footer.html");

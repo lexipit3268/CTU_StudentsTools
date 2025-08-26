@@ -19,7 +19,7 @@ function convertHocBaToThpt(mon, x) {
    const row = data.find(item => x > item.hocba.min && x <= item.hocba.max);
    if (!row) {
       let msg = "Điểm trung bình môn " + convertNameSubject(mon) + " không nằm trong khoản hợp lệ";
-      renderToast(msg, "error");
+      renderToast(msg, "invalid");
       return { score: 0, rank: null };
    }
    const a = row.hocba.min;
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
          if (isInvalidValue(val10) || isInvalidValue(val11) || isInvalidValue(val12)) {
             invalid = true;
             let message = "Điểm môn " + convertNameSubject(mon) + " không hợp lệ!";
-            renderToast(message, "error");
+            renderToast(message, "invalid");
             return;
          }
 
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (missing) {
          let message = "Vui lòng nhập đủ điểm tất cả các môn!";
-         renderToast(message, "invalid");
+         renderToast(message, "error");
          return;
       }
 
@@ -126,9 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
       resultContent.classList.add("slideIn");
       resultContent.style.display = "block";
       resultTotal.innerHTML = `${roundToTwo(total)}`;
+
+      let scrollBlockStyle = "start";
+      if(window.innerWidth >= 768){
+         scrollBlockStyle = "end";
+      }
       resultContent.scrollIntoView({
          behavior: 'smooth',
-         block: 'start'
+         block: scrollBlockStyle
       });
       setTimeout(() => {
          resultContent.classList.remove("slideIn");
