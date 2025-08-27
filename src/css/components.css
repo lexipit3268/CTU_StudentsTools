@@ -2,52 +2,20 @@ main {
   flex: 1 0 auto;
 }
 
-footer {
+footer{
   flex-shrink: 0;
 }
 
-/* header,
-footer {
-  background: linear-gradient(135deg, #1f5ca9, #00afef);
+nav,
+footer > div  {
+  background: var(--bs-gradient-bg);
   color: var(--color-text);
-  transition: all 0.2s ease;
-  padding: 20px;
 }
-
-header #theme-toggle {
-  width: 40px;
-  height: 40px;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .menu#nav-menu {
-  display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 2rem;
-  align-items: center;
-  transition: max-height 0.3s ease;
-}
-
-header .menu .menu_tools__list {
-  width: 220px;
-}
-
-header .menu_tools__list li {
-  padding: 5px;
-  border-radius: 5px;
-} */
 
 #toast-box {
   position: absolute;
   bottom: 30px;
-  right: 30px;
+  right: 10px;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -60,7 +28,7 @@ header .menu_tools__list li {
   width: 400px;
   height: 80px;
   min-height: fit-content;
-  background-color: #fff;
+  background: var(--bs-color-card);
   font-weight: 500;
   margin: 15px 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -69,6 +37,7 @@ header .menu_tools__list li {
   position: relative;
   transform: translateX(100%);
   animation: moveleft 0.5s linear forwards;
+  color: var(--color-text-card);
 }
 
 .toast i {
@@ -118,7 +87,7 @@ header .menu_tools__list li {
 }
 
 @media (max-width: 768px) {
-  #toast-box{
+  #toast-box {
     top: 10%;
     align-items: flex-start;
   }

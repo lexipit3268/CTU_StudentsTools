@@ -11,6 +11,7 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
+  transition: background-color 0.8s ease;
 }
 
 body {
@@ -19,11 +20,11 @@ body {
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  transition: background-color 0.8s ease;
+  background: var(--bs-color-bg);
 }
 
 :root {
-  background-color: #f5f5f9;
+  --bs-gradient-bg: linear-gradient(to right, #1f5ca9, #00afef);
   --bs-color-bg: #f5f5f9;
   --color-bg: #1f5ca9;
   --color-bg-light: #00afef;
@@ -31,14 +32,23 @@ body {
   --color-border: #3d3d3d38;
   --color-border-hover: #1f5ca9;
   --bs-bor-ras: 8px;
-  --bs-transition: all 0.2s ease;
+  --bs-transition: all 0.3s ease;
+  --bs-color-card: #fff;
+  --color-text-card: #333;
+  --bs-color-input-bg: #fff;
 }
 
-.dark-theme {
-  background-color: #1c1c1c;
-  --color-bg: #14407d;
+.dark {
+  --bs-gradient-bg: linear-gradient(to right, #1E293B, #334155);
+  --bs-color-bg: #1E293B;
+  --color-bg: #1f5ca9;
   --color-bg-light: #00afef;
-  --color-text: #fff;
-  --color-border: #3d3d3d38;
-  --color-border-hover: #1f5ca9;
+  --color-text: #F8FAFC;
+  --color-border: #64748B;
+  --color-border-hover: #60A5FA;
+  --bs-bor-ras: 8px;
+  --bs-transition: all 0.2s ease;
+  --bs-color-card: #334155;
+  --color-text-card: #fff;
+  --bs-color-input-bg: #475569;
 }

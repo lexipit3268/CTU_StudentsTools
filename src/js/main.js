@@ -43,49 +43,25 @@ export async function loadComponent(id, file) {
 
    if (id === "header") {
       const themeToggle = document.getElementById("theme-toggle");
+      const savedTheme = localStorage.getItem("theme");
+      const htmlElement = document.documentElement;
+      if (savedTheme === "dark") {
+         htmlElement.classList.add("dark");
+      } else {
+         htmlElement.classList.remove("dark");
+      }
       if (themeToggle) {
          themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-theme");
-            themeToggle.innerHTML = document.body.classList.contains("dark-theme")
-               ? "<i class='ri-sun-fill'></i>"
-               : "<i class='fas fa-moon'></i>";
+            htmlElement.classList.toggle("dark");
+            if(htmlElement.classList.contains("dark")){
+               themeToggle.innerHTML = "<i class='ri-sun-fill'></i>"
+               localStorage.setItem("theme", "dark");
+            } else {
+               themeToggle.innerHTML = "<i class='fas fa-moon'></i>"
+               localStorage.setItem("theme", "light");
+            }
          });
       }
-
-      // const navToggle = document.getElementById("nav-toggle");
-      // const navMenu = document.getElementById("nav-menu");
-      // if (navToggle && navMenu) {
-      //    navToggle.addEventListener("click", () => {
-      //       navMenu.classList.toggle("open");
-      //    });
-      //    navMenu.querySelectorAll("a").forEach(link => {
-      //       link.addEventListener("click", () => {
-      //          if (window.innerWidth <= 768) {
-      //             navMenu.classList.remove("open");
-      //          }
-      //       });
-      //    });
-      // }
-
-      // const toolsMenu = document.querySelector('.menu__tools');
-      // const toolsList = toolsMenu ? toolsMenu.querySelector('.menu_tools__list') : null;
-      // if (toolsMenu && toolsList) {
-      //    const toolsToggle = toolsMenu.querySelector('div');
-      //    toolsToggle.addEventListener('click', function (e) {
-      //       if (window.innerWidth <= 768) {
-      //          e.preventDefault();
-      //          toolsList.classList.toggle('open');
-      //          toolsList.classList.toggle('hidden');
-      //       }
-      //    });
-      //    document.addEventListener('click', function (e) {
-      //       if (window.innerWidth > 768) return;
-      //       if (!toolsMenu.contains(e.target)) {
-      //          toolsList.classList.remove('open');
-      //          toolsList.classList.add('hidden');
-      //       }
-      //    });
-      // }
       const navToggleBtn = document.getElementById("nav-toggle-btn");
       const navLinks = document.querySelector(".nav-links");
       navToggleBtn.addEventListener("click", function (e) {
