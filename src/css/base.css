@@ -36,6 +36,9 @@ body {
   --bs-color-card: #fff;
   --color-text-card: #333;
   --bs-color-input-bg: #fff;
+  --bs-result-bg: #2a80ff;
+  --bs-result-bg-light: #00b8db;
+  --bs-result-gradient: linear-gradient(to right, var(--bs-result-bg-light), var(--bs-result-bg));
 }
 
 .dark {
@@ -51,4 +54,6 @@ body {
   --bs-color-card: #334155;
   --color-text-card: #fff;
   --bs-color-input-bg: #475569;
+  --bs-result-bg: #2a80ff;
+  --bs-result-bg-light: #00b8db;
 }

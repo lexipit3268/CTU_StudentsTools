@@ -46,34 +46,18 @@
                         <option value="D15">D15: Ngữ Văn, Địa Lý, Tiếng Anh</option>
                      </select>
                   </div>
-                  <div class="container__form__input" id="subject-inputs">
-                     <!-- <div class="form__input">
-                        <label for="toan">Toán</label>
-                        <input type="number" name="" id="toan">
-                     </div>
-                     <div class="form__input">
-                        <label for="vatly">Vật lý</label>
-                        <input type="number" name="" id="vatly">
-                     </div>
-                     <div class="form__input">
-                        <label for="hoahoc">Hóa học</label>
-                        <input type="number" name="" id="hoahoc">
-                     </div> -->
-                  </div>
+                  <div class="container__form__input" id="subject-inputs"></div>
                   <button id="convert-btn" type="button"
                      class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center">
                      Quy đổi điểm
                   </button>
+                  <button id="save-image-button" type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center">Lưu ảnh kết quả</button>
                </div>
             </form>
          </div>
-         <div class="result-content slideIn bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col gap-2 flex-1"
-            id="result-content">
-
+         <div class="result-content slideIn flex flex-col gap-2 flex-1" id="result-content">
             <h1 class="result-header text-xl font-bold text-center">Kết quả quy đổi</h1>
-
             <div class="result flex flex-col gap-4" id="result"></div>
-
             <div class="result-footer text-center mt-4 text-white">
                <h5 class="text-sm">Tổng điểm tổ hợp</h5>
                <h2 class="text-3xl font-bold" id="result-total">28.4</h2>
@@ -86,6 +70,7 @@
    <div id="toast-box"></div>
    <script src="./src/js/main.js" type="module"></script>
    <script src="./src/js/vsatConvert.js" type="module"></script>
+   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </body>
 
 </html>

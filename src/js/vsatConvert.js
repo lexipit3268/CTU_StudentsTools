@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       resultContent.style.display = "block";
       resultTotal.innerHTML = `${roundToTwo(total)}`;
       let scrollBlockStyle = "start";
-      if(window.innerWidth >= 768){
+      if (window.innerWidth >= 768) {
          scrollBlockStyle = "end";
       }
       resultContent.scrollIntoView({

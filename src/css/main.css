@@ -79,7 +79,7 @@
 }
 
 .result-content {
-   background-color: var(--color-bg-light);
+   background: var(--bs-result-gradient);
    border-radius: 35px;
    min-width: 600px;
    display: none;
