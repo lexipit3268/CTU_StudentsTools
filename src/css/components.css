@@ -2,15 +2,60 @@ main {
   flex: 1 0 auto;
 }
 
-footer{
+footer {
   flex-shrink: 0;
 }
 
 nav,
-footer > div  {
+footer>div {
   background: var(--bs-gradient-bg);
   color: var(--color-text);
 }
+
+.links-items li a {
+  position: relative;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.links-items li a::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  position: absolute;
+  background: var(--color-text-hover);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s ease;
+}
+
+.links-items li a:hover {
+  color: var(--color-text-hover);
+}
+
+.links-items li a:hover::after {
+  width: 100%;
+}
+
+/* ===================================== */
+/* HOME PAGE SECTION */
+.accordion-content {
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.accordion-content.active {
+  max-height: 1000px;
+  padding: 1rem;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* ===================================== */
 
 #toast-box {
   position: absolute;

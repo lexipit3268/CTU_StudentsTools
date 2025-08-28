@@ -20,8 +20,25 @@ export async function loadData() {
    return { vsatData, hocbaData, tohopData };
 }
 
-// Load component HTML
+//FAQ Function
+document.addEventListener('DOMContentLoaded', () => {
+   const faqItems = document.querySelectorAll('.accordion-item button');
+   faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+         const content = item.nextElementSibling;
+         const parent = item.parentElement;
+         const isActive = parent.classList.toggle('active');
 
+         if (isActive) {
+            content.classList.add('active');
+         } else {
+            content.classList.remove('active');
+         }
+      });
+   });
+});
+
+// Load component HTML
 document.addEventListener("DOMContentLoaded", async () => {
    await loadComponent("header", "./src/components/header.html");
    await loadComponent("footer", "./src/components/footer.html");
@@ -152,8 +169,8 @@ export function renderImage(node) {
 
       renderToast("Tạo ảnh thành công", "success");
    } catch (error) {
-      console.error("Xảy ra lỗi khi tạo hình ảnh: ",error);
-      renderToast(error,"error");
+      console.error("Xảy ra lỗi khi tạo hình ảnh: ", error);
+      renderToast(error, "error");
    }
 }
 

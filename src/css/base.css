@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: var(--bs-color-bg);
 }
@@ -38,6 +38,7 @@ body {
   --bs-color-input-bg: #fff;
   --bs-result-bg: #2a80ff;
   --bs-result-bg-light: #00b8db;
+  --color-text-hover: #00b8db;
   --bs-result-gradient: linear-gradient(to right, var(--bs-result-bg-light), var(--bs-result-bg));
 }
 
