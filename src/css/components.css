@@ -12,13 +12,13 @@ footer>div {
   color: var(--color-text);
 }
 
-.links-items li a {
+.links-items .item-header {
   position: relative;
   transition: 0.3s ease;
   font-weight: 600;
 }
 
-.links-items li a::after {
+.links-items .item-header::after {
   content: '';
   width: 0;
   height: 4px;
@@ -29,11 +29,11 @@ footer>div {
   transition: 0.3s ease;
 }
 
-.links-items li a:hover {
+.links-items .item-header:hover {
   color: var(--color-text-hover);
 }
 
-.links-items li a:hover::after {
+.links-items .item-header:hover::after {
   width: 100%;
 }
 
