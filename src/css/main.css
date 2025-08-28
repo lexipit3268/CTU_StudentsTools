@@ -63,18 +63,26 @@
    padding: 0 1rem;
 }
 
-.form__body button#convert-btn {
+.form__body button#convert-btn,
+#save-image-button {
    padding: 1rem 1.2rem;
    font-size: 1rem;
    transition: var(--bs-transition);
+   width: 100%;
 }
 
-.form__body button#convert-btn:hover {
+#save-image-button{
+   display: none;
+}
+
+.form__body button#convert-btn:hover,
+#save-image-button:hover {
    transform: translateY(-5px);
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-.form__body button#convert-btn:active {
+.form__body button#convert-btn:active,
+#save-image-button:active {
    transform: scale(0.98);
 }
 

@@ -53,7 +53,7 @@ export async function loadComponent(id, file) {
       if (themeToggle) {
          themeToggle.addEventListener("click", () => {
             htmlElement.classList.toggle("dark");
-            if(htmlElement.classList.contains("dark")){
+            if (htmlElement.classList.contains("dark")) {
                themeToggle.innerHTML = "<i class='ri-sun-fill'></i>"
                localStorage.setItem("theme", "dark");
             } else {
@@ -121,6 +121,27 @@ export function renderToast(message, type) {
    setTimeout(() => {
       toast.remove();
    }, 5000);
+}
+
+export function renderImage(node) {
+   html2canvas(node, {
+      useCORS: true,
+      allowTaint: true,
+      scale: 2,
+      backgroundColor: null,
+      logging: false,
+      onclone: (clonedDoc) => {
+         const originalStyles = document.querySelectorAll('style, link[rel="stylesheet"]');
+         originalStyles.forEach(style => {
+            clonedDoc.head.appendChild(style.cloneNode(true));
+         });
+      }
+   }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'ket-qua-quy-doi.png';
+      link.href = canvas.toDataURL('image/png', 1.0);
+      link.click();
+   })
 }
 
 export function convertNameSubject(mon) {

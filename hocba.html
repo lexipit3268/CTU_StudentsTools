@@ -4,8 +4,12 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="stylesheet" href="./src/css/base.css">
    <link rel="stylesheet" href="./src/css/components.css">
    <link rel="stylesheet" href="./src/css/main.css">
@@ -24,7 +28,7 @@
                   <div class="form__select">
                      <label for="tohop">Chọn tổ hợp</label>
                      <select name="tohop" id="tohop" class="">
-                        <option selected>--Chọn tổ hợp--</option>
+                        <option selected value="none">--Chọn tổ hợp--</option>
 
                         <option value="A00">A00: Toán, Vật Lý, Hóa Học</option>
                         <option value="A01">A01: Toán, Vật Lý, Anh Văn</option>
@@ -59,11 +63,16 @@
                         <option value="D66_2">D66: Ngữ Văn, GDCD, Anh Văn</option>
                      </select>
                   </div>
-                  <div class="container__form__input" id="subject-inputs"></div>
-                  <button id="convert-btn" type="button"
-                     class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center">
-                     Quy đổi điểm
-                  </button>
+                  <div class="form__input" id="subject-inputs"></div>
+                  <div class="button-container flex flex-col items-center gap-2 w-full">
+                     <button id="convert-btn" type="button"
+                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center cursor-pointer">
+                        Quy đổi điểm
+                     </button>
+                     <button id="save-image-button" type="button"
+                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center cursor-pointer">Lưu
+                        ảnh kết quả</button>
+                  </div>
                </div>
             </form>
          </div>
@@ -81,6 +90,7 @@
    <div id="toast-box"></div>
    <script src="./src/js/main.js" type="module"></script>
    <script src="./src/js/hocbaConvert.js" type="module"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
 
 </html>

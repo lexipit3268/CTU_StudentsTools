@@ -1,4 +1,4 @@
-import { loadData, loadComponent, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo } from "./main.js";
+import { loadData, loadComponent, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo, renderImage } from "./main.js";
 (async () => {
    await loadData();
    await loadComponent("header", "./src/components/header.html");
@@ -26,11 +26,9 @@ function convertHocBaToThpt(mon, x) {
    const b = row.hocba.max;
    const c = row.thpt.min;
    const d = row.thpt.max;
-   console.log(mon, a, b, c, d);
    const y = c + (((x - a) / (b - a)) * (d - c));
 
    const roundedY = Math.ceil(y * 100) / 100;
-   console.log("rounded Y = ",roundedY);
 
    return {
       score: roundedY,
@@ -50,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
    const resultContainer = document.getElementById("result");
    const resultTotal = document.getElementById("result-total");
    const convertBtn = document.getElementById("convert-btn");
+   const saveImgBtn = document.getElementById("save-image-button");
+
    document.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
          e.preventDefault();
@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
    selectToHop.addEventListener("change", () => {
       const selectValue = selectToHop.value;
       const subjects = tohopData[selectValue];
+      if (selectValue === "none") inputContainer.innerHTML = "";
       if (subjects) {
          renderInput(subjects, inputContainer, convertNameSubject, false);
       }
@@ -128,13 +129,20 @@ document.addEventListener("DOMContentLoaded", () => {
       resultTotal.innerHTML = `${roundToTwo(total)}`;
 
       let scrollBlockStyle = "start";
-      if(window.innerWidth >= 768){
+      if (window.innerWidth >= 768) {
          scrollBlockStyle = "end";
       }
+
       resultContent.scrollIntoView({
          behavior: 'smooth',
          block: scrollBlockStyle
       });
+
+      saveImgBtn.style.display = "block";
+      saveImgBtn.addEventListener("click", () => {
+         renderImage(resultContent);
+      });
+
       setTimeout(() => {
          resultContent.classList.remove("slideIn");
       }, 1000);

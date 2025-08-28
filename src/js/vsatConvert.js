@@ -1,4 +1,4 @@
-import { loadData, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo } from "./main.js";
+import { loadData, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo, renderImage } from "./main.js";
 (async () => {
    await loadData();
    console.log("VSAT Data:", vsatData);
@@ -29,17 +29,18 @@ function convertVsatToThpt(mon, x) {
    };
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
    const selectToHop = document.getElementById("tohop");
    const inputContainer = document.getElementById("subject-inputs");
    const resultContent = document.getElementById("result-content");
    const resultContainer = document.getElementById("result");
    const resultTotal = document.getElementById("result-total");
+   const saveImgBtn = document.getElementById("save-image-button");
 
    selectToHop.addEventListener("change", () => {
       const selectValue = selectToHop.value;
       const subjects = tohopData[selectValue];
+      if(selectValue === "none") inputContainer.innerHTML = "";
       if (subjects) {
          renderInput(subjects, inputContainer, convertNameSubject, true);
       }
@@ -98,14 +99,23 @@ document.addEventListener("DOMContentLoaded", () => {
       resultContent.classList.add("slideIn");
       resultContent.style.display = "block";
       resultTotal.innerHTML = `${roundToTwo(total)}`;
+
       let scrollBlockStyle = "start";
       if (window.innerWidth >= 768) {
          scrollBlockStyle = "end";
       }
+
       resultContent.scrollIntoView({
          behavior: 'smooth',
          block: scrollBlockStyle
       });
+      
+      saveImgBtn.style.display = "block";
+      saveImgBtn.addEventListener("click", () => {
+         renderImage(resultContent);
+      });
+
+
       setTimeout(() => {
          resultContent.classList.remove("slideIn");
       }, 1000);

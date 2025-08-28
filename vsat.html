@@ -28,7 +28,7 @@
                   <div class="form__select">
                      <label for="tohop">Chọn tổ hợp</label>
                      <select name="tohop" id="tohop" class="">
-                        <option selected>--Chọn tổ hợp--</option>
+                        <option selected value="none">--Chọn tổ hợp--</option>
                         <option value="A00">A00: Toán, Vật Lý, Hóa Học</option>
                         <option value="A01">A01: Toán, Vật Lý, Tiếng Anh</option>
                         <option value="A02">A02: Toán, Vật Lý, Sinh Học</option>
@@ -46,12 +46,16 @@
                         <option value="D15">D15: Ngữ Văn, Địa Lý, Tiếng Anh</option>
                      </select>
                   </div>
-                  <div class="container__form__input" id="subject-inputs"></div>
-                  <button id="convert-btn" type="button"
-                     class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center">
-                     Quy đổi điểm
-                  </button>
-                  <button id="save-image-button" type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center">Lưu ảnh kết quả</button>
+                  <div class="form__input" id="subject-inputs"></div>
+                  <div class="button-container flex flex-col items-center gap-2 w-full">
+                     <button id="convert-btn" type="button"
+                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center cursor-pointer">
+                        Quy đổi điểm
+                     </button>
+                     <button id="save-image-button" type="button"
+                        class=" text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center cursor-pointer">Lưu
+                        ảnh kết quả</button>
+                  </div>
                </div>
             </form>
          </div>
@@ -71,6 +75,7 @@
    <script src="./src/js/main.js" type="module"></script>
    <script src="./src/js/vsatConvert.js" type="module"></script>
    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
 
 </html>
