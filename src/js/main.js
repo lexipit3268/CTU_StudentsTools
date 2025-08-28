@@ -99,6 +99,7 @@ export async function loadComponent(id, file) {
 
 export function renderToast(message, type) {
    let toastBox = document.getElementById("toast-box");
+   let successMsg = `<i class="fa-solid fa-circle-check"></i> ${message}`;
    let errorMsg = `<i class="fa-solid fa-circle-xmark"></i> ${message}`;
    let invalidMsg = `<i class="fa-solid fa-circle-exclamation"></i>${message}`;
    let toast = document.createElement('div');
@@ -111,7 +112,11 @@ export function renderToast(message, type) {
    if (type === "invalid") {
       toast.classList.add("invalid");
       toast.innerHTML = invalidMsg;
+   }
 
+   if (type === "success") {
+      toast.classList.add("success");
+      toast.innerHTML = successMsg;
    }
 
    toastBox.appendChild(toast);
@@ -124,24 +129,32 @@ export function renderToast(message, type) {
 }
 
 export function renderImage(node) {
-   html2canvas(node, {
-      useCORS: true,
-      allowTaint: true,
-      scale: 2,
-      backgroundColor: null,
-      logging: false,
-      onclone: (clonedDoc) => {
-         const originalStyles = document.querySelectorAll('style, link[rel="stylesheet"]');
-         originalStyles.forEach(style => {
-            clonedDoc.head.appendChild(style.cloneNode(true));
-         });
-      }
-   }).then(canvas => {
-      const link = document.createElement('a');
-      link.download = 'ket-qua-quy-doi.png';
-      link.href = canvas.toDataURL('image/png', 1.0);
-      link.click();
-   })
+   try {
+      html2canvas(node, {
+         useCORS: true,
+         allowTaint: true,
+         scale: 2,
+         backgroundColor: null,
+         logging: false,
+         onclone: (clonedDoc) => {
+            const originalStyles = document.querySelectorAll('style, link[rel="stylesheet"]');
+            originalStyles.forEach(style => {
+               clonedDoc.head.appendChild(style.cloneNode(true));
+            });
+         }
+      }).then(canvas => {
+         const link = document.createElement('a');
+         link.download = 'ket-qua-quy-doi.png';
+         link.href = canvas.toDataURL('image/png', 1.0);
+         link.click();
+         link.remove();
+      })
+
+      renderToast("Tạo ảnh thành công", "success");
+   } catch (error) {
+      console.error("Xảy ra lỗi khi tạo hình ảnh: ",error);
+      renderToast(error,"error");
+   }
 }
 
 export function convertNameSubject(mon) {
