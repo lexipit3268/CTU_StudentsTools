@@ -40,6 +40,7 @@ body {
   --bs-result-bg-light: #00b8db;
   --color-text-hover: #00b8db;
   --bs-result-gradient: linear-gradient(to right, var(--bs-result-bg-light), var(--bs-result-bg));
+  --bs-box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
 .dark {
@@ -47,7 +48,7 @@ body {
   --bs-color-bg: #1E293B;
   --color-bg: #1f5ca9;
   --color-bg-light: #00afef;
-  --color-text: #F8FAFC;
+  --color-text: #f6f6f6;
   --color-border: #64748B;
   --color-border-hover: #60A5FA;
   --bs-bor-ras: 8px;
@@ -57,4 +58,5 @@ body {
   --bs-color-input-bg: #475569;
   --bs-result-bg: #2a80ff;
   --bs-result-bg-light: #00b8db;
+  --bs-box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }

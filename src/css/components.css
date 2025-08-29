@@ -39,6 +39,95 @@ footer>div {
 
 /* ===================================== */
 /* HOME PAGE SECTION */
+main section {
+  width: 100%;
+}
+
+section#hero {
+  min-height: 90vh;
+}
+
+section#hero>div {
+  background: #ffffff08;
+  border-radius: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section#hero,
+.hero-bg {
+  background: var(--bs-color-bg);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+section#hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  color: var(--color-text-card);
+}
+
+section#hero p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-text-card);
+}
+
+
+
+section#hero lord-icon {
+  width: 400px;
+  height: 400px;
+}
+
+.landing-btn {
+  padding: 0.8rem 1.2rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  box-shadow: var(--bs-box-shadow);
+  transition: var(--bs-transition);
+}
+
+.landing-btn:hover {
+  transform: translateY(-5px);
+}
+
+.watch-guide-btn {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.flash-btn {
+  position: relative;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+
+.flash-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%);
+  transform: skewX(-30deg);
+  transition: all 0.8s ease;
+  z-index: 1;
+}
+
+.flash-btn:hover::after {
+  left: 200%;
+}
+
+.text-shadow-cus {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .accordion-content {
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
   max-height: 0;
@@ -129,6 +218,21 @@ footer>div {
   100% {
     width: 0;
   }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
 }
 
 @media (max-width: 768px) {
