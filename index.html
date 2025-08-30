@@ -18,51 +18,51 @@
    <title>Tiện ích sinh viên CTU</title>
 </head>
 
-<body>
+<body class="">
    <header id="header" class="sticky top-0 z-50 shadow-lg"></header>
    <main class="transition-colors duration-300">
-      <section id="hero" class="hero-bg !py-16 !md:py-20 flex items-center transition-colors duration-300">
-         <div class="flex flex-col md:flex-row items-center justify-between gap-15 !px-15 !mx-auto">
-            <div class="flex-1 !space-y-8">
+      <section id="hero" class="hero-bg h-screen !py-16 !px-10  transition-colors duration-300">
+         <div class="flex flex-col md:flex-row items-center justify-center container !px-10 !sm:px-14 !lg:px-15 !py-4 !md:py-0 !mx-auto !md:space-x-8 !space-y-8 md:space-y-0">
+            <div class="flex-auto !space-y-8">
                <div class="block !space-y-4">
-                  <h1 class="text-shadow-cus">CTU Student's Tools</h1>
-                  <p class="text-shadow-cus">Bộ công cụ hỗ trợ học tập miễn phí</p>
+                  <h1 class="text-shadow-cus text-xl md:text-7xl">CTU Student's Tools</h1>
+                  <p class="text-shadow-cus text-lg md:text-2xl">Bộ công cụ hỗ trợ học tập trực quan và thân thiện. Nhanh chóng, chính xác và hoàn toàn TÍNH PHÍ</p>
                </div>
-               <div class="flex flex-row gap-4">
-                  <a href="#tools-preview" class="landing-btn flash-btn rounded-full">Bắt đầu ngay</a>
-                  <a href="./huongdan.html" class="landing-btn watch-guide-btn rounded-full">Xem hướng dẫn</a>
+               <div class="flex flex-col md:flex-row gap-4">
+                  <a href="#tools-preview" class="landing-btn flash-btn hover-transform-cus rounded-full text-center ">Bắt đầu ngay</a>
+                  <a href="./huongdan.html" class="landing-btn watch-guide-btn  hover-transform-cus rounded-full text-center ">Xem hướng dẫn</a>
                </div>
             </div>
-            <div>
+            <div class="flex-1">
                <lord-icon src="https://cdn.lordicon.com/ienbfpxp.json" trigger="loop" class=""></lord-icon>
             </div>
          </div>
       </section>
 
-      <section id="features" class="container w-full">
-         <div class="flex items-center w-full">
-            <h2>Tính năng nổi bật</h2>
-            <div class="feature-items">
-               <div>
-                  <div class="flex items-center space-x-4 mb-4">
-                     <span class="">📊</span>
-                     <h3 class="">Quy đổi điểm V-SAT</h3>
+      <section id="features" class="w-full !py-16 !sm:py-24">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 !sm:px-6 !lg:px-8">
+            <h2 class="section__title text-3xl">Tính năng nổi bật</h2>
+            <div class="section__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div class="feature__box section__box hover-transform-cus hover-shadow-cus">
+                  <div class="flex items-center space-x-4 !mb-4">
+                     <span class="text-4xl">📊</span>
+                     <h3 class="text-xl">Quy đổi điểm V-SAT</h3>
                   </div>
                   <p class="">Nhanh chóng quy đổi điểm V-SAT sang thang điểm THPT.</p>
                </div>
 
-               <div>
-                  <div class="flex items-center space-x-4 mb-4">
-                     <span class="">📝</span>
-                     <h3 class="">Quy đổi điểm học bạ</h3>
+               <div class="feature__box section__box hover-transform-cus hover-shadow-cus">
+                  <div class="flex items-center space-x-4 !mb-4">
+                     <span class="text-4xl">📝</span>
+                     <h3 class="text-xl">Quy đổi điểm học bạ</h3>
                   </div>
                   <p class="">Nhanh chóng quy đổi điểm học bạ sang thang điểm THPT.</p>
                </div>
 
-               <div>
-                  <div class="flex items-center space-x-4 mb-4">
-                     <span class="">🛠️</span>
-                     <h3 class="">Các tiện ích khác</h3>
+               <div class="feature__box section__box hover-transform-cus hover-shadow-cus">
+                  <div class="flex items-center space-x-4 !mb-4">
+                     <span class="text-4xl">🛠️</span>
+                     <h3 class="text-xl">Các tiện ích khác</h3>
                   </div>
                   <p class="">Cập nhật liên tục các công cụ mới: tra cứu thông tin, hỗ trợ học tập, đăng ký học phần và
                      nhiều tiện ích khác.</p>
@@ -71,24 +71,24 @@
          </div>
       </section>
 
-      <section id="tools-preview" class="">
-         <div>
-            <h2>Khám phá các công cụ</h2>
-            <div>
-               <div>
-                  <h3>Quy đổi điểm V-SAT</h3>
-                  <p>Tiện ích quy đổi điểm thi V-SAT sang thang điểm thi THPT một cách dễ dàng.</p>
-                  <button>Dùng thử</button>
+      <section id="tools-preview" class="w-full !py-16 !sm:py-24">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 !sm:px-6 !lg:px-8">
+            <h2 class="section__title text-3xl">Khám phá các công cụ</h2>
+            <div class="section__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col">
+                  <h3 class="text-xl !mb-4">Quy đổi điểm V-SAT</h3>
+                  <p class="text-base !mb-4">Tiện ích quy đổi điểm thi V-SAT sang thang điểm thi THPT một cách dễ dàng.</p>
+                  <button class="tools-btn landing-btn hover-transform-cus tools-btn-active rounded-full">Dùng thử</button>
                </div>
-               <div>
-                  <h3>Quy đổi điểm học bạ</h3>
-                  <p>Chuyển đổi điểm trung bình học bạ lớp 10, 11, 12 của bạn một cách nhanh chóng và chính xác.</p>
-                  <button>Dùng thử</button>
+               <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col">
+                  <h3 class="text-xl !mb-4">Quy đổi điểm học bạ</h3>
+                  <p class="text-base !mb-4">Chuyển đổi điểm trung bình học bạ lớp 10, 11, 12 của bạn một cách nhanh chóng và chính xác.</p>
+                  <button class="tools-btn landing-btn hover-transform-cus tools-btn-active rounded-full">Dùng thử</button>
                </div>
-               <div>
-                  <h3>Quy đổi điểm học bạ</h3>
-                  <p>Chuyển đổi điểm trung bình học bạ lớp 10, 11, 12 của bạn một cách nhanh chóng và chính xác.</p>
-                  <button>Sắp ra mắt</button>
+               <div class="section__box hover-transform-cus hover-shadow-cus ">
+                  <h3 class="text-xl !mb-4">Tính GPA CTU</h3>
+                  <p class="text-base !mb-4">Công cụ đang được phát triển để tính điểm trung bình tích lũy (GPA) theo quy định của Đại học Cần Thơ</p>
+                  <button class="tools-btn landing-btn hover-transform-cus tools-btn-inactive rounded-full">Sắp ra mắt</button>
                </div>
             </div>
          </div>

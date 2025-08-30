@@ -38,38 +38,37 @@ footer>div {
 }
 
 /* ===================================== */
-/* HOME PAGE SECTION */
+
+/* SECTION HOME PAGE */
 main section {
   width: 100%;
 }
 
 section#hero {
-  min-height: 90vh;
+  min-height: 600px;
 }
 
 section#hero>div {
-  background: #ffffff08;
+  background: var(--bs-color-bg);
   border-radius: 35px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section#hero,
 .hero-bg {
-  background: var(--bs-color-bg);
+  background: var(--bs-section-hero-bg);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
 }
 
 section#hero h1 {
-  font-size: 4rem;
   font-weight: 700;
-  line-height: 4.5rem;
   color: var(--color-text-card);
+  transition: var(--bs-transition);
 }
 
 section#hero p {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-text-card);
 }
 
@@ -86,15 +85,17 @@ section#hero lord-icon {
   color: var(--color-text);
   box-shadow: var(--bs-box-shadow);
   transition: var(--bs-transition);
+  cursor: pointer;
 }
 
-.landing-btn:hover {
-  transform: translateY(-5px);
+.landing-btn:hover{
+  background: var(--secondary);
 }
 
 .watch-guide-btn {
   background: var(--color-text);
   color: var(--color-bg);
+  border: 1px solid var(--color-bg);
 }
 
 .flash-btn {
@@ -128,6 +129,29 @@ section#hero lord-icon {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.section__title {
+  font-weight: 700;
+  color: var(--color-section-title);
+}
+
+.section__box h3{
+  font-weight: 600;
+}
+
+/* SECTION FEATURES */
+
+.section__box{
+  background: var(--bs-color-card);
+  padding: 1rem;
+  border-top: 6px solid var(--color-border-section-card);
+  border-radius: 15px;
+  color: var(--color-text-card);
+}
+
+
+
+/* SECTION TOOLS PREVIEW */
+
 .accordion-content {
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
   max-height: 0;
@@ -135,6 +159,14 @@ section#hero lord-icon {
   padding: 0 1rem;
 }
 
+.tools-btn{
+  width: max-content;
+}
+
+.tools-btn.tools-btn-inactive  {
+  background: #9ca3af;
+}
+/* SECTION FAQ */
 .accordion-content.active {
   max-height: 1000px;
   padding: 1rem;
@@ -249,5 +281,10 @@ section#hero lord-icon {
 
   .toast i {
     font-size: 1.3rem;
+  }
+
+  section#hero lord-icon {
+    width: 200px;
+    height: 200px;
   }
 }
