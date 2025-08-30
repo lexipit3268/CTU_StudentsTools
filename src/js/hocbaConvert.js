@@ -139,13 +139,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       saveImgBtn.style.display = "block";
-      saveImgBtn.addEventListener("click", () => {
-         renderImage(resultContent);
-      });
+
 
       setTimeout(() => {
          resultContent.classList.remove("slideIn");
       }, 1000);
 
    })
+
+   saveImgBtn.addEventListener("click", () => {
+      renderImage(resultContent);
+   });
 })

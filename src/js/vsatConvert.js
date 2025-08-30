@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
    selectToHop.addEventListener("change", () => {
       const selectValue = selectToHop.value;
       const subjects = tohopData[selectValue];
-      if(selectValue === "none") inputContainer.innerHTML = "";
+      if (selectValue === "none") inputContainer.innerHTML = "";
       if (subjects) {
          renderInput(subjects, inputContainer, convertNameSubject, true);
       }
@@ -109,17 +109,17 @@ document.addEventListener("DOMContentLoaded", () => {
          behavior: 'smooth',
          block: scrollBlockStyle
       });
-      
-      saveImgBtn.style.display = "block";
-      saveImgBtn.addEventListener("click", () => {
-         renderImage(resultContent);
-      });
 
+      saveImgBtn.style.display = "block";
 
       setTimeout(() => {
          resultContent.classList.remove("slideIn");
       }, 1000);
 
+   });
+
+   saveImgBtn.addEventListener("click", () => {
+      renderImage(resultContent);
    });
 });
 
