@@ -149,6 +149,10 @@ section#hero lord-icon {
   color: var(--color-text-card);
 }
 
+.feature__box:hover{
+  animation: none;
+}
+
 .feature__box:nth-child(1) {
   animation-range: entry 0% cover 40%;
 }
@@ -179,6 +183,9 @@ section#hero lord-icon {
   background: #9ca3af;
 }
 
+.tools__box:hover{
+  animation: none;
+}
 .tools__box:nth-child(1) {
   animation-range: entry 0% cover 40%;
 }
