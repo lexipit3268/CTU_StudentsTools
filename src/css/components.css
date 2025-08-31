@@ -88,8 +88,9 @@ section#hero lord-icon {
   cursor: pointer;
 }
 
-.landing-btn:hover{
+.landing-btn:hover {
   background: var(--secondary);
+  animation: none;
 }
 
 .watch-guide-btn {
@@ -134,13 +135,13 @@ section#hero lord-icon {
   color: var(--color-section-title);
 }
 
-.section__box h3{
+.section__box h3 {
   font-weight: 600;
 }
 
 /* SECTION FEATURES */
 
-.section__box{
+.section__box {
   background: var(--bs-color-card);
   padding: 1rem;
   border-top: 6px solid var(--color-border-section-card);
@@ -148,6 +149,17 @@ section#hero lord-icon {
   color: var(--color-text-card);
 }
 
+.feature__box:nth-child(1) {
+  animation-range: entry 0% cover 40%;
+}
+
+.feature__box:nth-child(2) {
+  animation-range: entry 10% cover 50%;
+}
+
+.feature__box:nth-child(3) {
+  animation-range: entry 20% cover 60%;
+}
 
 
 /* SECTION TOOLS PREVIEW */
@@ -159,13 +171,26 @@ section#hero lord-icon {
   padding: 0 1rem;
 }
 
-.tools-btn{
+.tools-btn {
   width: max-content;
 }
 
-.tools-btn.tools-btn-inactive  {
+.tools-btn.tools-btn-inactive {
   background: #9ca3af;
 }
+
+.tools__box:nth-child(1) {
+  animation-range: entry 0% cover 40%;
+}
+
+.tools__box:nth-child(2) {
+  animation-range: entry 10% cover 50%;
+}
+
+.tools__box:nth-child(3) {
+  animation-range: entry 20% cover 60%;
+}
+
 /* SECTION FAQ */
 .accordion-content.active {
   max-height: 1000px;
@@ -237,54 +262,4 @@ section#hero lord-icon {
 
 .toast.invalid::after {
   background-color: #ffca3a;
-}
-
-
-@keyframes moveleft {
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes anim {
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-
-}
-
-@media (max-width: 768px) {
-  #toast-box {
-    top: 10%;
-    align-items: flex-start;
-  }
-
-  .toast {
-    width: 250px;
-    height: 60px;
-    margin: 5px 0px;
-  }
-
-  .toast i {
-    font-size: 1.3rem;
-  }
-
-  section#hero lord-icon {
-    width: 200px;
-    height: 200px;
-  }
 }

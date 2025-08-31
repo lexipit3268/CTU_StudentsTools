@@ -139,36 +139,34 @@
    gap: 5px;
 }
 
-@keyframes slideIn {
-   from {
-      opacity: 0;
-      transform: translateX(-200px) scale(0);
-   }
 
-   to {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-   }
-}
-
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
-   .card {
-      flex-direction: column;
-   }
+  #toast-box {
+    top: 10%;
+    align-items: flex-start;
+  }
 
-   .result-content {
-      min-width: 200px;
-   }
+  .toast {
+    width: 250px;
+    height: 60px;
+    margin: 5px 0px;
+  }
 
-   @keyframes slideIn {
-      from {
-         opacity: 0;
-         transform: translateY(-200px) scale(0);
-      }
+  .toast i {
+    font-size: 1.3rem;
+  }
 
-      to {
-         opacity: 1;
-         transform: translateY(0) scale(1);
-      }
-   }
+  section#hero lord-icon {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .result-content {
+    min-width: 200px;
+  }
 }
