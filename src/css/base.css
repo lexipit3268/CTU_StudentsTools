@@ -70,6 +70,7 @@ main {
   --color-border-section-card: var(--primary);
   --color-border-hover: var(--primary);
   --bs-bor-ras: 8px;
+  --color-border-section-card-light: var(--secondary);
 
   /* OTHER */
   --bs-transition: all 0.3s ease;
@@ -108,6 +109,7 @@ main {
   --color-border-section-card: var(--dark-tertiary);
   --color-border-hover: #60A5FA;
   --bs-bor-ras: 8px;
+  --color-border-section-card-light: var(--dark-tertiary);
 
   /* OTHER */
   --bs-transition: all 0.2s ease;

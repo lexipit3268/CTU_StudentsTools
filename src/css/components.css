@@ -147,9 +147,49 @@ section#hero lord-icon {
   border-top: 6px solid var(--color-border-section-card);
   border-radius: 15px;
   color: var(--color-text-card);
+  position: relative;
 }
 
-.feature__box:hover{
+.feature__box .section__box {
+  border: none;
+  overflow: hidden;
+}
+
+.feature__box .section__dot {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 100%;
+  top: 15px;
+  right: 15px;
+  background: var(--color-border-section-card-light);
+  transform: translateX(50%) translateY(-50%);
+}
+
+.feature__box .section__box::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: var(--color-border-section-card-light);
+  position: absolute;
+  border-radius: 100%;
+  top: 15px;
+  right: 15px;
+  transition: all 0.5s;
+  transform: translateX(50%) translateY(-50%);
+  z-index: -1;
+}
+
+.feature__box .section__box:hover::after {
+  height: 300%;
+  width: 300%;
+}
+
+.feature__box .section__box:hover {
+  color: white !important;
+}
+
+.feature__box:hover {
   animation: none;
 }
 
@@ -181,11 +221,13 @@ section#hero lord-icon {
 
 .tools-btn.tools-btn-inactive {
   background: #9ca3af;
+  cursor: not-allowed;
 }
 
-.tools__box:hover{
+.tools__box:hover {
   animation: none;
 }
+
 .tools__box:nth-child(1) {
   animation-range: entry 0% cover 40%;
 }
