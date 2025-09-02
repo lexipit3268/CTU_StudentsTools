@@ -253,7 +253,7 @@ section#hero lord-icon {
 /* ===================================== */
 
 #toast-box {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 10px;
   display: flex;
