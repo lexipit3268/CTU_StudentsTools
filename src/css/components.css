@@ -48,18 +48,20 @@ section#hero {
   min-height: 600px;
 }
 
-section#hero>div {
-  background: var(--bs-color-bg);
-  border-radius: 35px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 section#hero,
 .hero-bg {
   background: var(--bs-section-hero-bg);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
 }
+
+section#hero>div {
+  background: var(--bs-color-bg);
+  border-radius: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
 section#hero h1 {
   font-weight: 700;
@@ -228,6 +230,51 @@ section#hero lord-icon {
 
 .tools__box:nth-child(3) {
   animation-range: entry 20% cover 60%;
+}
+
+/* SECTION HOW IT WORK */
+section#how-it-work {
+  background: var(--bs-section-hiw-bg);
+  transition: var(--bs-transition);
+}
+
+.step__container {
+  border-radius: 20px;
+  min-height: 250px;
+  color: var(--color-text-card);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step__behind {
+  background: var(--color-bg-light);
+  border-radius: 20px;
+  min-height: 250px;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 0;
+}
+
+.step__container:hover > .step__box {
+  transform: translateX(40px);
+}
+
+.step__container:hover > .step__behind {
+  min-height: 300px;
+}
+
+.step__box{
+  background: var(--bs-color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  height: 250px;
+  z-index: 10;
+}
+
+.step__box h3 {
+  font-weight: 600;
 }
 
 /* SECTION FAQ */

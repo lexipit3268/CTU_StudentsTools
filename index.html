@@ -21,7 +21,7 @@
 <body class="">
    <header id="header" class="sticky top-0 z-50 shadow-lg"></header>
    <main class="transition-colors duration-300">
-      <section id="hero" class="hero-bg h-screen !py-10 md:!py-16 !px-5 md:!px-10  transition-colors duration-300">
+      <section id="hero" class="hero-bg h-screen !py-10 md:!py-16 !px-5 md:!px-10  transition-colors duration-30">
          <div
             class="flex flex-col md:flex-row items-center justify-center container !px-10 sm:!px-14 lg:!px-15 !py-4 md:!py-0 !mx-auto md:!space-x-8 !space-y-8 md:space-y-0">
             <div class="flex-auto !space-y-8 fadeIn">
@@ -44,7 +44,7 @@
          </div>
       </section>
 
-      <section id="features" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24">
+      <section id="features" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen">
          <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
             <h2 class="section__title text-3xl textAppear">Tính năng nổi bật</h2>
 
@@ -86,13 +86,12 @@
          </div>
       </section>
 
-      <section id="tools-preview" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24">
+      <section id="tools-preview" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen">
          <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
             <h2 class="section__title text-3xl textAppear">Khám phá các công cụ</h2>
             <div class="section__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                <div class="tools__box scrollBlur">
-                  <div
-                     class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
+                  <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
                      <h3 class="text-xl !mb-4">Quy đổi điểm V-SAT</h3>
                      <p class="text-base !mb-4">Tiện ích quy đổi điểm thi V-SAT sang thang điểm thi THPT một cách dễ
                         dàng.
@@ -102,8 +101,7 @@
                   </div>
                </div>
                <div class="tools__box scrollBlur">
-                  <div
-                     class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
+                  <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
                      <h3 class="text-xl !mb-4">Quy đổi điểm học bạ</h3>
                      <p class="text-base !mb-4">Chuyển đổi điểm trung bình học bạ lớp 10, 11, 12 của bạn một cách nhanh
                         chóng và chính xác.</p>
@@ -112,10 +110,10 @@
                   </div>
                </div>
                <div class="tools__box scrollBlur">
-                  <div
-                     class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
+                  <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
                      <h3 class="text-xl !mb-4">Tính GPA CTU</h3>
-                     <p class="text-base !mb-4">Công cụ đang được phát triển để tính số tín chỉ, điểm cần thiết để đạt GPA người dùng mong muốn theo
+                     <p class="text-base !mb-4">Công cụ đang được phát triển để tính số tín chỉ, điểm cần thiết để đạt
+                        GPA người dùng mong muốn theo
                         quy định của Đại học Cần Thơ</p>
                      <button class="tools-btn landing-btn hover-transform-cus tools-btn-inactive rounded-full">Sắp ra
                         mắt</button>
@@ -125,30 +123,48 @@
          </div>
       </section>
 
-      <section id="how-it-work" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24">
-         <div>
-            <h2>Hướng dẫn nhanh</h2>
-            <div>
-               <div>
-                  <div class="guide-step">1</div>
-                  <h3>Chọn công cụ và nhập điểm</h3>
-                  <p>Truy cập công cụ bạn cần và nhập điểm V-SAT hoặc điểm trung bình Học bạ của bạn.</p>
+      <section id="how-it-work" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen  overflow-hidden">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+            <h2 class="section__title text-3xl textAppear">Hướng dẫn nhanh</h2>
+            <div class="section__items w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-24">
+               <div class="step__container flex justify-center items-center">
+                  <div class="step__behind"></div>
+                  <div class="step__box flex justify-center items-center flex-col h-full gap-5 text-center">
+                     <div class="step__number text-3xl">
+                        <h2>1</h2>
+                     </div>
+                     <h3 class="text-xl">Chọn công cụ và nhập điểm</h3>
+                     <p class="text-base">Truy cập công cụ bạn cần và nhập điểm V-SAT hoặc điểm trung bình Học bạ của
+                        bạn.</p>
+                  </div>
                </div>
-               <div>
-                  <div class="guide-step">2</div>
-                  <h3>Hệ thống xử lý</h3>
-                  <p>Hệ thống sẽ tự động xử lý và tính toán dựa trên quy định mới nhất của Bộ GD&DT.</p>
+               <div class="step__container flex justify-center items-center">
+                  <div class="step__behind"></div>
+                  <div class="step__box flex justify-center items-center flex-col h-full gap-5 text-center">
+                     <div class="step__number text-3xl">
+                        <h2>2</h2>
+                     </div>
+                     <h3 class="text-xl">Hệ thống xử lý</h3>
+                     <p class="text-base">Hệ thống sẽ tự động xử lý và tính toán dựa trên quy định mới nhất của Bộ
+                        GD&DT.</p>
+                  </div>
                </div>
-               <div>
-                  <div class="guide-step">3</div>
-                  <h3>Nhận kết quả</h3>
-                  <p>Kết quả quy đổi điểm sẽ được hiển thị ngay lập tức, giúp bạn dễ dàng tra cứu.</p>
+               <div class="step__container flex justify-center items-center">
+                  <div class="step__behind"></div>
+                  <div class="step__box flex justify-center items-center flex-col h-full gap-5 text-center">
+                     <div class="step__number text-3xl">
+                        <h2>3</h2>
+                     </div>
+                     <h3 class="text-xl">Nhận kết quả</h3>
+                     <p class="text-base">Kết quả quy đổi điểm sẽ được hiển thị ngay lập tức, giúp bạn dễ dàng tra cứu.
+                     </p>
+                  </div>
                </div>
             </div>
          </div>
       </section>
 
-      <section id="testimonials" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24">
+      <section id="testimonials" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full">
          <div>
             <h2>Mọi người nói gì về chúng tôi?</h2>
             <div>
@@ -183,11 +199,88 @@
                      </div>
                   </div>
                </div>
+
+               <div>
+                  <p>"Ứng dụng giúp mình tiết kiệm rất nhiều thời gian khi chuẩn bị hồ sơ đăng ký học phần."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Lê Hoàng Nhi</p>
+                        <small>Sinh viên Khoa Kinh tế</small>
+                     </div>
+                  </div>
+               </div>
+
+               <div>
+                  <p>"Mọi thao tác đều rõ ràng, dễ sử dụng. Đây là công cụ mà sinh viên nào cũng nên biết."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Võ Thành Nam</p>
+                        <small>Sinh viên Trường CNTT&TT</small>
+                     </div>
+                  </div>
+               </div>
+
+               <div>
+                  <p>"Mình cảm thấy an tâm hơn nhiều khi tính điểm, không còn lo lắng bị sai sót nữa."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Trần Văn Nghĩa</p>
+                        <small>Sinh viên Khoa Sư phạm</small>
+                     </div>
+                  </div>
+               </div>
+
+               <div>
+                  <p>"Tính năng quy đổi rất tiện lợi, đặc biệt cho những bạn cần ước tính nhanh để xét tuyển."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Dương Hoàng Huynh</p>
+                        <small>Sinh viên Khoa Nông nghiệp</small>
+                     </div>
+                  </div>
+               </div>
+
+               <div>
+                  <p>"Mình đánh giá cao sự chính xác và tốc độ xử lý của ứng dụng này."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Trương Hồng Nhật</p>
+                        <small>Sinh viên Khoa Y Dược</small>
+                     </div>
+                  </div>
+               </div>
+
+               <div>
+                  <p>"Nhờ công cụ này mà việc quản lý điểm và đăng ký học phần trở nên dễ dàng hơn bao giờ hết."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Đào Quốc Việt</p>
+                        <small>Sinh viên Khoa Luật</small>
+                     </div>
+                  </div>
+               </div>
+
+               <div>
+                  <p>"Ứng dụng thật sự hữu ích, giao diện hiện đại, phù hợp với sinh viên Đại học Cần Thơ."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Đoàn Tài Lộc</p>
+                        <small>Sinh viên Trường CNTT&TT</small>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
 
-      <section id="faq" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24">
+      <section id="faq" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen">
          <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-center">Các câu hỏi thường gặp</h2>
             <div class="space-y-4">
