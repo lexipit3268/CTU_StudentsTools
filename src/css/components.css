@@ -163,7 +163,6 @@ section#hero lord-icon {
   top: 15px;
   right: 15px;
   background: var(--color-border-section-card-light);
-  transform: translateX(50%) translateY(-50%);
 }
 
 .feature__box .section__box::after {
@@ -175,14 +174,12 @@ section#hero lord-icon {
   border-radius: 100%;
   top: 15px;
   right: 15px;
-  transition: all 0.5s;
-  transform: translateX(50%) translateY(-50%);
+  transition: all 0.5s ease-in-out;
   z-index: -1;
 }
 
 .feature__box .section__box:hover::after {
-  height: 300%;
-  width: 300%;
+  transform: scale(90);
 }
 
 .feature__box .section__box:hover {
@@ -207,13 +204,6 @@ section#hero lord-icon {
 
 
 /* SECTION TOOLS PREVIEW */
-
-.accordion-content {
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 1rem;
-}
 
 .tools-btn {
   width: max-content;
@@ -241,6 +231,13 @@ section#hero lord-icon {
 }
 
 /* SECTION FAQ */
+.accordion-content {
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
 .accordion-content.active {
   max-height: 1000px;
   padding: 1rem;
