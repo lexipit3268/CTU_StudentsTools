@@ -15,6 +15,8 @@
    <link rel="stylesheet" href="./src/css/main.css">
    <link rel="shortcut icon" href="./public/assets/images/CTU_logo.png" type="image/x-icon">
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
    <title>Tiện ích sinh viên CTU</title>
 </head>
 
@@ -46,10 +48,10 @@
 
       <section id="features" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen">
          <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
-            <h2 class="section__title text-3xl textAppear">Tính năng nổi bật</h2>
+            <h2 class="section__title text-3xl" data-aos="flip-up">Tính năng nổi bật</h2>
 
             <div class="section__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-               <div class="feature__box scrollBlur">
+               <div class="feature__box" data-aos="fade-up" data-aos-delay="0">
                   <div class="section__box hover-transform-cus hover-shadow-cus h-full ">
                      <div class="section__dot"></div>
                      <div class="flex items-center space-x-4 !mb-4">
@@ -60,7 +62,7 @@
                   </div>
                </div>
 
-               <div class="feature__box scrollBlur">
+               <div class="feature__box" data-aos="fade-up" data-aos-delay="250">
                   <div class="section__box hover-transform-cus hover-shadow-cus h-full ">
                      <div class="section__dot"></div>
                      <div class="flex items-center space-x-4 !mb-4">
@@ -70,7 +72,7 @@
                      <p class="">Nhanh chóng quy đổi điểm học bạ sang thang điểm THPT.</p>
                   </div>
                </div>
-               <div class="feature__box scrollBlur">
+               <div class="feature__box" data-aos="fade-up" data-aos-delay="500">
                   <div class="section__box hover-transform-cus hover-shadow-cus h-full ">
                      <div class="section__dot"></div>
                      <div class="flex items-center space-x-4 !mb-4">
@@ -88,9 +90,9 @@
 
       <section id="tools-preview" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen">
          <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
-            <h2 class="section__title text-3xl textAppear">Khám phá các công cụ</h2>
+            <h2 class="section__title text-3xl" data-aos="flip-up">Khám phá các công cụ</h2>
             <div class="section__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-               <div class="tools__box scrollBlur">
+               <div class="tools__box" data-aos="fade-up" data-aos-delay="0">
                   <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
                      <h3 class="text-xl !mb-4">Quy đổi điểm V-SAT</h3>
                      <p class="text-base !mb-4">Tiện ích quy đổi điểm thi V-SAT sang thang điểm thi THPT một cách dễ
@@ -100,7 +102,7 @@
                         thử</button>
                   </div>
                </div>
-               <div class="tools__box scrollBlur">
+               <div class="tools__box" data-aos="fade-up" data-aos-delay="250">
                   <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
                      <h3 class="text-xl !mb-4">Quy đổi điểm học bạ</h3>
                      <p class="text-base !mb-4">Chuyển đổi điểm trung bình học bạ lớp 10, 11, 12 của bạn một cách nhanh
@@ -109,7 +111,7 @@
                         thử</button>
                   </div>
                </div>
-               <div class="tools__box scrollBlur">
+               <div class="tools__box" data-aos="fade-up" data-aos-delay="500">
                   <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
                      <h3 class="text-xl !mb-4">Tính GPA CTU</h3>
                      <p class="text-base !mb-4">Công cụ đang được phát triển để tính số tín chỉ, điểm cần thiết để đạt
@@ -125,37 +127,37 @@
 
       <section id="how-it-work" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen  overflow-hidden">
          <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
-            <h2 class="section__title text-3xl textAppear">Hướng dẫn nhanh</h2>
-            <div class="section__items w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-24">
-               <div class="step__container flex justify-center items-center">
+            <h2 class="section__title text-3xl" data-aos="flip-up">Hướng dẫn nhanh</h2>
+            <div class="section__items w-full flex flex-col md:flex-row justify-center items-center gap-10 md:gap-32">
+               <div class="step__container flex justify-center items-center" data-aos="fade-right" data-aos-delay="0">
                   <div class="step__behind"></div>
-                  <div class="step__box flex justify-center items-center flex-col h-full gap-5 text-center">
-                     <div class="step__number text-3xl">
-                        <h2>1</h2>
+                  <div class="step__box flex justify-center flex-col h-full gap-5">
+                     <div class="step__number flex items-center justify-center">
+                        <h2 class="text-xl text-center">Bước 01</h2>
                      </div>
-                     <h3 class="text-xl">Chọn công cụ và nhập điểm</h3>
+                     <h3 class="text-xl !mt-10">Chọn công cụ và nhập điểm</h3>
                      <p class="text-base">Truy cập công cụ bạn cần và nhập điểm V-SAT hoặc điểm trung bình Học bạ của
                         bạn.</p>
                   </div>
                </div>
-               <div class="step__container flex justify-center items-center">
+               <div class="step__container flex justify-center items-center" data-aos="fade-right" data-aos-delay="250">
                   <div class="step__behind"></div>
-                  <div class="step__box flex justify-center items-center flex-col h-full gap-5 text-center">
-                     <div class="step__number text-3xl">
-                        <h2>2</h2>
+                  <div class="step__box flex justify-center flex-col h-full gap-5">
+                     <div class="step__number flex items-center justify-center">
+                        <h2 class="text-xl text-center">Bước 02</h2>
                      </div>
-                     <h3 class="text-xl">Hệ thống xử lý</h3>
+                     <h3 class="text-xl !mt-10">Hệ thống xử lý</h3>
                      <p class="text-base">Hệ thống sẽ tự động xử lý và tính toán dựa trên quy định mới nhất của Bộ
                         GD&DT.</p>
                   </div>
                </div>
-               <div class="step__container flex justify-center items-center">
+               <div class="step__container flex justify-center items-center" data-aos="fade-right" data-aos-delay="500">
                   <div class="step__behind"></div>
-                  <div class="step__box flex justify-center items-center flex-col h-full gap-5 text-center">
-                     <div class="step__number text-3xl">
-                        <h2>3</h2>
+                  <div class="step__box flex justify-center flex-col h-full gap-5">
+                     <div class="step__number flex items-center justify-center">
+                        <h2 class="text-xl text-center">Bước 03</h2>
                      </div>
-                     <h3 class="text-xl">Nhận kết quả</h3>
+                     <h3 class="text-xl !mt-10">Nhận kết quả</h3>
                      <p class="text-base">Kết quả quy đổi điểm sẽ được hiển thị ngay lập tức, giúp bạn dễ dàng tra cứu.
                      </p>
                   </div>
@@ -164,9 +166,12 @@
          </div>
       </section>
 
-      <section id="testimonials" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full">
-         <div>
-            <h2>Mọi người nói gì về chúng tôi?</h2>
+      <section id="testimonials" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen overflow-hidden">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+            <div class="flex flex-col items-center">
+               <h2 class="section__title text-3xl" data-aos="flip-up">Mọi người nói gì về CTU Student's Tools</h2>
+               <p>Tổng hợp những đánh giá thực</p>
+            </div>
             <div>
                <div>
                   <p>"Công cụ quy đổi điểm học bạ cực kỳ nhanh và chính xác. Mình không còn phải lo lắng về việc tính
@@ -196,6 +201,17 @@
                      <div class="person__about">
                         <p>Nguyễn Ngọc Đức Phát</p>
                         <small>Thí sinh thi THPT</small>
+                     </div>
+                  </div>
+               </div>
+
+               <div>
+                  <p>"Mình rất hài lòng với công cụ này, mọi thứ đều rõ ràng và dễ sử dụng cho sinh viên."</p>
+                  <div class="person">
+                     <div class="person__avt"></div>
+                     <div class="person__about">
+                        <p>Nguyễn Tấn Sang</p>
+                        <small>Sinh viên Trường Sư phạm Tin Học</small>
                      </div>
                   </div>
                </div>
@@ -364,6 +380,7 @@
    </main>
    <footer id="footer"></footer>
    <div id="toast-box"></div>
+   <script> AOS.init();</script>
    <script src="https://cdn.lordicon.com/lordicon.js"></script>
    <script src="./src/js/main.js" type="module"></script>
 </body>

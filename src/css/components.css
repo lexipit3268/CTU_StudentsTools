@@ -176,7 +176,7 @@ section#hero lord-icon {
   border-radius: 100%;
   top: 15px;
   right: 15px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
   z-index: -1;
 }
 
@@ -240,7 +240,8 @@ section#how-it-work {
 
 .step__container {
   border-radius: 20px;
-  min-height: 250px;
+  min-height: 300px;
+  max-width: 250px;
   color: var(--color-text-card);
   transition: all 0.3s ease;
   position: relative;
@@ -249,32 +250,46 @@ section#how-it-work {
 .step__behind {
   background: var(--color-bg-light);
   border-radius: 20px;
-  min-height: 250px;
+  min-height: 300px;
   width: 100%;
   transition: all 0.3s ease;
   position: absolute;
   z-index: 0;
 }
 
-.step__container:hover > .step__box {
-  transform: translateX(40px);
+.step__container:hover>.step__box {
+  transform: translateX(30px);
 }
 
-.step__container:hover > .step__behind {
-  min-height: 300px;
+.step__container:hover>.step__behind {
+  min-height: 350px;
 }
 
-.step__box{
+.step__box {
   background: var(--bs-color-bg);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   transition: all 0.3s ease;
-  height: 250px;
+  height: 300px;
   z-index: 10;
+  position: relative;
 }
 
 .step__box h3 {
   font-weight: 600;
+}
+
+.step__number {
+  width: 150px; 
+  height: 50px;
+  background: var(--color-bg-light);
+  position: absolute; 
+  top: 50px; 
+  right: 75px;
+  transform: translate(50%, -50%);
+  padding: 0.5rem 0.8rem;
+  color: var(--color-text);
+  border-radius: 35px 0 0 35px;
 }
 
 /* SECTION FAQ */

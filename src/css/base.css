@@ -132,7 +132,7 @@ main {
   animation: pulse 1.5s both infinite alternate;
 }
 
-.textAppear{
+/* .textAppear{
   animation: textAppear both;
   animation-timeline: view(5% 10%);
 }
@@ -170,7 +170,7 @@ main {
     opacity: 1;
     transform: translateY(0) rotateX(0deg);
   }
-}
+} */
 
 @keyframes pulse {
   from {
