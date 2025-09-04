@@ -204,6 +204,22 @@ section#hero lord-icon {
   animation-range: entry 20% cover 60%;
 }
 
+/*  SECTION TESTIMONIALS*/
+
+.section__subtitle {
+  color: var(--color-text-card);
+}
+
+.testimonial__card {
+  border-radius: 15px;
+  border: 1px solid red;
+  break-inside: avoid;
+}
+
+.person p {
+  font-weight: 600;
+}
+
 
 /* SECTION TOOLS PREVIEW */
 
@@ -280,11 +296,11 @@ section#how-it-work {
 }
 
 .step__number {
-  width: 150px; 
+  width: 150px;
   height: 50px;
   background: var(--color-bg-light);
-  position: absolute; 
-  top: 50px; 
+  position: absolute;
+  top: 50px;
   right: 75px;
   transform: translate(50%, -50%);
   padding: 0.5rem 0.8rem;
