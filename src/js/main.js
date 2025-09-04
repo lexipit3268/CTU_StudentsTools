@@ -1,6 +1,7 @@
 export let vsatData = {};
 export let hocbaData = {};
 export let tohopData = {};
+export let testimonialsData = [];
 import { authenticate } from "./login.js";
 
 export const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
@@ -17,26 +18,16 @@ export async function loadData() {
    const tohopRes = await fetch(`${basePath}/public/data/tohop-data.json`);
    tohopData = await tohopRes.json();
 
-   return { vsatData, hocbaData, tohopData };
+   const testimonialsRes = await fetch(`${basePath}/public/data/testimonials-data.json`);
+   testimonialsData = await testimonialsRes.json();
+
+   return { vsatData, hocbaData, tohopData, testimonialsData };
 }
 
-//FAQ Function
-document.addEventListener('DOMContentLoaded', () => {
-   const faqItems = document.querySelectorAll('.accordion-item button');
-   faqItems.forEach(item => {
-      item.addEventListener('click', () => {
-         const content = item.nextElementSibling;
-         const parent = item.parentElement;
-         const isActive = parent.classList.toggle('active');
-
-         if (isActive) {
-            content.classList.add('active');
-         } else {
-            content.classList.remove('active');
-         }
-      });
-   });
-});
+export function getVsatData() { return vsatData;}
+export function getHocbaData() { return hocbaData;}
+export function getToHopData() { return tohopData;}
+export function getTestimonialsData() { return testimonialsData;}
 
 // Load component HTML
 document.addEventListener("DOMContentLoaded", async () => {

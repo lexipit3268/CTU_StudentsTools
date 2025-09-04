@@ -210,10 +210,27 @@ section#hero lord-icon {
   color: var(--color-text-card);
 }
 
+div#testimonials-container > *{
+  transition: var(--bs-transition);
+}
+
 .testimonial__card {
   border-radius: 15px;
-  border: 1px solid red;
   break-inside: avoid;
+  background: var(--bs-color-card);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--color-text-card);
+}
+
+.person__avt {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-border-section-card-light);
+  color: var(--color-text);
 }
 
 .person p {

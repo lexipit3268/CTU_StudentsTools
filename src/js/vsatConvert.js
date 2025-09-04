@@ -1,12 +1,12 @@
-import { loadData, vsatData, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo, renderImage } from "./main.js";
+import { loadData, getVsatData, getToHopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo, renderImage } from "./main.js";
 (async () => {
    await loadData();
-   console.log("VSAT Data:", vsatData);
-   console.log("To hop mon: ", tohopData);
+   console.log("VSAT Data:", getVsatData());
+   console.log("To hop mon: ", getToHopData());
 })();
 
 function convertVsatToThpt(mon, x) {
-   const data = vsatData[mon];
+   const data = getVsatData()[mon];
    if (!data) return { score: 0, rank: null };
 
    const row = data.find(item => x >= item.vsat.min && x <= item.vsat.max);
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    selectToHop.addEventListener("change", () => {
       const selectValue = selectToHop.value;
-      const subjects = tohopData[selectValue];
+      const subjects = getToHopData()[selectValue];
       if (selectValue === "none") inputContainer.innerHTML = "";
       if (subjects) {
          renderInput(subjects, inputContainer, convertNameSubject, true);
@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
    const convertBtn = document.getElementById("convert-btn");
    convertBtn.addEventListener("click", () => {
       const selectValue = selectToHop.value;
-      if (!tohopData[selectValue]) {
+      if (!getToHopData()[selectValue]) {
          let message = "Vui lòng chọn tổ hợp!";
          renderToast(message, "error");
          return;
       }
 
-      const subjects = tohopData[selectValue];
+      const subjects = getToHopData()[selectValue];
       let total = 0;
       let missing = false;
       let invalid = false;

@@ -1,9 +1,8 @@
-import { loadData, loadComponent, hocbaData, tohopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo, renderImage } from "./main.js";
+import { loadData, loadComponent, getHocbaData, getToHopData, convertNameSubject, renderInput, renderResult, renderToast, roundToTwo, renderImage } from "./main.js";
 (async () => {
    await loadData();
    await loadComponent("header", "./src/components/header.html");
    await loadComponent("footer", "./src/components/footer.html");
-
 })();
 
 function getAvg(input10, input11, input12) {
@@ -11,7 +10,7 @@ function getAvg(input10, input11, input12) {
 }
 
 function convertHocBaToThpt(mon, x) {
-   const data = hocbaData[mon];
+   const data = getHocbaData()[mon];
    if (!data) {
       return { score: 0, rank: null };
    }
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    selectToHop.addEventListener("change", () => {
       const selectValue = selectToHop.value;
-      const subjects = tohopData[selectValue];
+      const subjects = getToHopData()[selectValue];
       if (selectValue === "none") inputContainer.innerHTML = "";
       if (subjects) {
          renderInput(subjects, inputContainer, convertNameSubject, false);
@@ -68,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    convertBtn.addEventListener("click", () => {
       const selectValue = selectToHop.value;
-      const subjects = tohopData[selectValue];
+      const subjects = getToHopData()[selectValue];
       if (!subjects) {
          let message = "Vui lòng chọn tổ hợp!";
          renderToast(message, "error");
