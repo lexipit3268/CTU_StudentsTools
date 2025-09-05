@@ -146,7 +146,7 @@ section#hero lord-icon {
 .section__box {
   background: var(--bs-color-card);
   padding: 1rem;
-  border-top: 6px solid var(--color-border-section-card);
+  border-top: 5px solid var(--color-border-section-card);
   border-radius: 15px;
   color: var(--color-text-card);
   position: relative;
@@ -296,11 +296,12 @@ section#how-it-work {
 }
 
 .step__container:hover>.step__box {
-  transform: translateX(30px);
+  transform: translateX(15px);
 }
 
 .step__container:hover>.step__behind {
   min-height: 350px;
+  transform: translateX(-15px);
 }
 
 .step__box {
@@ -331,6 +332,24 @@ section#how-it-work {
 }
 
 /* SECTION FAQ */
+section#faq{
+  background: var(--bs-section-faq-bg);
+  transition: all 0.3s ease;
+}
+
+.accordion-item {
+  background: var(--bs-color-card);
+  width: 90%;
+}
+
+.accordion-item > * {
+  color: var(--color-text-card);
+}
+
+.accordion-item button {
+  padding: 1rem 1.25rem;
+}
+
 .accordion-content {
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
   max-height: 0;

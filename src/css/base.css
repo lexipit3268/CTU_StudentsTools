@@ -59,6 +59,7 @@ main {
   --bs-result-gradient: linear-gradient(to right, var(--bs-result-bg-light), var(--bs-result-bg));
   --bs-section-hero-bg: #e6f7fb;
   --bs-section-hiw-bg: #caf0f8;
+  --bs-section-faq-bg: #F0F4F8;
 
   /* FONT COLOR */
   --color-text: var(--white);
@@ -99,6 +100,7 @@ main {
   --bs-section-hero-bg: var(--dark-secondary);
   --bs-result-gradient: linear-gradient(to right, var(--bs-result-bg-light), var(--bs-result-bg));
   --bs-section-hiw-bg: var(--dark-secondary);
+  --bs-section-faq-bg: #263245;
 
   /* FONT COLOR */
   --color-text: #f6f6f6;
