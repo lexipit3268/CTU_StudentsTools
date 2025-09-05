@@ -2,7 +2,6 @@ import { loadData, getTestimonialsData } from "./main.js";
 
 (async () => {
    await loadData();
-   console.log(getTestimonialsData());
 })();
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -15,11 +14,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const lastName = String(person.name.trim().split(" ").pop());
       const charName = lastName.charAt(0);
+      const gender = person.gender;
 
       card.innerHTML = `
          <p>${person.content}</p>
          <div class="person flex flex-row items-center gap-4">
-            <div class="person__avt">${charName}</div>
+            <div class="person__avt"><img src="https://avatar.iran.liara.run/public/${gender}?username=${lastName}" alt="${charName}" style="background-size: cover"></img></div>
             <div class="person__about">
                <p>${person.name}</p> 
                <small>${person.role}</small>

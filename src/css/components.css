@@ -231,6 +231,11 @@ div#testimonials-container > *{
   align-items: center;
   background: var(--color-border-section-card-light);
   color: var(--color-text);
+  overflow: hidden;
+}
+
+.person__avt img {
+  object-fit: cover;
 }
 
 .person p {
