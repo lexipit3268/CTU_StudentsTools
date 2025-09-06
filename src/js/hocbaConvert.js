@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             missing = true;
          }
 
+         console.log(val10,val11,val12);
 
          if (isInvalidValue(val10) || isInvalidValue(val11) || isInvalidValue(val12)) {
             invalid = true;
@@ -107,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
                invalid = true;
             } else {
                total += diem.score;
-               renderResult(mon, roundToTwo(inputAvg), diem, resultContainer, convertNameSubject, false);
+               renderResult(mon, inputAvg, diem, resultContainer, convertNameSubject, false);
             }
          }
       });

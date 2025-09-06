@@ -7,7 +7,11 @@ import { loadData, getTestimonialsData } from "./main.js";
 document.addEventListener("DOMContentLoaded", async () => {
    await loadData();
    const testimonialsContainer = document.getElementById("testimonials-container");
+   let vw = window.innerWidth;
+
    getTestimonialsData().forEach((person) => {
+      if (vw <= 768 && !person.showOnMobile) return;
+
       const card = document.createElement("div");
       card.className = "testimonial__card flex justify-center flex-col-reverse !p-4 gap-2";
       card.setAttribute("data-aos", "flip-left");
@@ -17,15 +21,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       const gender = person.gender;
 
       card.innerHTML = `
-         <p>${person.content}</p>
-         <div class="person flex flex-row items-center gap-4">
-            <div class="person__avt"><img src="https://avatar.iran.liara.run/public/${gender}?username=${lastName}" alt="${charName}" style="background-size: cover"></img></div>
-            <div class="person__about">
-               <p>${person.name}</p> 
-               <small>${person.role}</small>
+            <p>${person.content}</p>
+            <div class="person flex flex-row items-center gap-4">
+               <div class="person__avt"><img src="https://avatar.iran.liara.run/public/${gender}?username=${lastName}" alt="${charName}" style="background-size: cover"></img></div>
+               <div class="person__about">
+                  <p>${person.name}</p> 
+                  <small>${person.role}</small>
+               </div>
             </div>
-         </div>
-      `;
+         `;
       testimonialsContainer.appendChild(card);
    });
 });
