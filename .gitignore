@@ -1,0 +1,4 @@
+## Skip private folder ##
+private/
+*.min.js
+temp.js

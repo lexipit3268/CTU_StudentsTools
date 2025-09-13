@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head id="head">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="./src/css/base.css">
+   <link rel="stylesheet" href="./src/css/components.css">
+   <link rel="stylesheet" href="./src/css/main.css">
+   <link rel="shortcut icon" href="./public/assets/images/CTU_logo.png" type="image/x-icon">
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+   <title>Tiện ích sinh viên CTU</title>
+</head>
+
+<body class="">
+   <div class="sticky top-0 z-[11]">
+      <header id="header" class="shadow-lg"></header>
+   </div>
+   <main class="transition-colors duration-300">
+      <section id="hero" class="hero-bg !py-10 md:!py-32 !px-5 md:!px-10  transition-colors duration-30">
+         <div
+            class="hero-container flex flex-col md:flex-row items-center justify-center container !px-10 sm:!px-14 lg:!px-15 !py-4 md:!py-0 !mx-auto md:!space-x-8 !space-y-8 md:!space-y-0">
+            <div class="flex-auto !space-y-8 fadeIn">
+               <div class="block !space-y-4">
+                  <h1 class="text-shadow-cus text-2xl md:text-6xl 2xl:text-7xl">CTU Student's Tools</h1>
+                  <p class="text-lg md:text-2xl">CTU Student's Tools (CST) - bộ công cụ hỗ trợ học tập trực quan và thân
+                     thiện.
+                     Nhanh chóng, chính xác và hoàn toàn <span class="font-bold">TÍNH PHÍ</span></p>
+               </div>
+               <div class="flex flex-col md:flex-row gap-4">
+                  <a href="#tools-preview"
+                     class="landing-btn flash-btn hover-transform-cus pulse rounded-full text-center ">Bắt đầu ngay</a>
+                  <a href="./huongdan.html"
+                     class="landing-btn watch-guide-btn  hover-transform-cus rounded-full text-center ">Xem hướng
+                     dẫn</a>
+               </div>
+            </div>
+            <div class="flex-1">
+               <lord-icon src="https://cdn.lordicon.com/ienbfpxp.json" trigger="loop" class=""></lord-icon>
+            </div>
+         </div>
+      </section>
+
+      <section id="features" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+            <h2 class="section__title base-title text-2xl md:text-3xl text-center tracking-wide" data-aos="flip-up">Tính năng nổi bật</h2>
+
+            <div class="section__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div class="feature__box" data-aos="fade-up" data-aos-delay="0">
+                  <div class="section__box hover-transform-cus hover-shadow-cus h-full ">
+                     <div class="section__dot"></div>
+                     <div class="flex items-center space-x-4 !mb-4">
+                        <span class="text-3xl md:text-4xl">📊</span>
+                        <h3 class="text-lg md:text-xl">Quy đổi điểm V-SAT</h3>
+                     </div>
+                     <p class="">Nhanh chóng quy đổi điểm V-SAT sang thang điểm THPT.</p>
+                  </div>
+               </div>
+
+               <div class="feature__box" data-aos="fade-up" data-aos-delay="250">
+                  <div class="section__box hover-transform-cus hover-shadow-cus h-full ">
+                     <div class="section__dot"></div>
+                     <div class="flex items-center space-x-4 !mb-4">
+                        <span class="text-3xl md:text-4xl">📝</span>
+                        <h3 class="text-lg md:text-xl">Quy đổi điểm học bạ</h3>
+                     </div>
+                     <p class="">Nhanh chóng quy đổi điểm học bạ sang thang điểm THPT.</p>
+                  </div>
+               </div>
+               <div class="feature__box" data-aos="fade-up" data-aos-delay="500">
+                  <div class="section__box hover-transform-cus hover-shadow-cus h-full ">
+                     <div class="section__dot"></div>
+                     <div class="flex items-center space-x-4 !mb-4">
+                        <span class="text-3xl md:text-4xl">🛠️</span>
+                        <h3 class="text-lg md:text-xl">Các tiện ích khác</h3>
+                     </div>
+                     <p class="">Cập nhật liên tục các công cụ mới: tra cứu thông tin, hỗ trợ học tập, đăng ký học phần
+                        và nhiều tiện ích khác.</p>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <section id="device-mockups" class="w-full h-auto md:h-screen !py-16 !px-1 sm:!px-20 sm:!py-24">
+         <div class="flex flex-col items-center justify-center  gap-8 md:gap-2 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+            <h2 class="section__title base-title text-2xl md:text-3xl text-center tracking-wide" data-aos="flip-up">Tối ưu trên mọi thiết bị
+            </h2>
+            <div class="blank hidden md:block h-8 md:h-0 2xl:h-32"></div>
+
+            <p class="section__subtitle text-center text-base relative md:absolute md:top-[20%] md:right-[10%] lg:top-[25%] xl:top-[30%] 2xl:top-[45%]" data-aos="flip-up" data-aos-delay="250">Bộ công cụ được
+               thiết kế để hoạt động hoàn hảo trên cả điện thoại, máy tính bảng và máy tính. Giao diện trực quan và thân
+               thiện, giúp bạn có trải nghiệm tốt nhất dù đang ở đâu.</p>
+            <div class="blank block md:hidden h-8 md:h-0 2xl:h-32"></div>
+
+            <div class="mockups__container">
+               <img class="mockup__item relative md:absolute all-devices md:-left-20" src="./public/assets/mockups/mockups.png" alt="" data-aos="zoom-in-up" data-aos-delay="250">
+            </div>
+
+         </div>
+      </section>
+
+      <section id="tools-preview" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full md:h-screen">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+            <h2 class="section__title base-title text-2xl md:text-3xl text-center tracking-wide" data-aos="flip-up">Khám phá các công cụ</h2>
+            <div class="section__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div class="tools__box" data-aos="fade-up" data-aos-delay="0">
+                  <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
+                     <h3 class="text-lg md:text-xl !mb-4">Quy đổi điểm V-SAT</h3>
+                     <p class="text-base !mb-4">Tiện ích quy đổi điểm thi V-SAT sang thang điểm thi THPT một cách dễ
+                        dàng.
+                     </p>
+                     <a href="./vsat.html"
+                        class="tools-btn landing-btn hover-transform-cus tools-btn-active rounded-full">Dùng
+                        thử</a>
+                  </div>
+               </div>
+               <div class="tools__box" data-aos="fade-up" data-aos-delay="250">
+                  <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
+                     <h3 class="text-lg md:text-xl !mb-4">Quy đổi điểm học bạ</h3>
+                     <p class="text-base !mb-4">Chuyển đổi điểm trung bình học bạ lớp 10, 11, 12 của bạn một cách nhanh
+                        chóng và chính xác.</p>
+                     <a href="./hocba.html"
+                        class="tools-btn landing-btn hover-transform-cus tools-btn-active rounded-full">Dùng
+                        thử</a>
+                  </div>
+               </div>
+               <div class="tools__box" data-aos="fade-up" data-aos-delay="500">
+                  <div class="section__box hover-transform-cus hover-shadow-cus flex justify-between flex-col h-full">
+                     <h3 class="text-lg md:text-xl !mb-4">Tính GPA CTU</h3>
+                     <p class="text-base !mb-4">Công cụ đang được phát triển để tính số tín chỉ, điểm cần thiết để đạt
+                        GPA người dùng mong muốn theo
+                        quy định của Đại học Cần Thơ</p>
+                     <a class="tools-btn landing-btn hover-transform-cus tools-btn-inactive rounded-full">Sắp ra
+                        mắt</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="how-it-work" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full overflow-hidden">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+            <h2 class="section__title base-title text-2xl md:text-3xl text-center tracking-wide" data-aos="flip-up">Hướng dẫn nhanh</h2>
+            <div class="section__items w-full flex flex-col  lg:flex-row justify-center items-center gap-10 md:gap-32">
+               <div class="step__container flex justify-center items-center w-[70%] md:w-auto" data-aos="fade-right"
+                  data-aos-delay="0">
+                  <div class="step__behind"></div>
+                  <div class="step__box flex justify-center flex-col h-full gap-5">
+                     <div class="step__number flex items-center justify-center">
+                        <h2 class="text-lg md:text-xl text-center">Bước 01</h2>
+                     </div>
+                     <h3 class="text-lg md:text-xl !mt-10">Chọn công cụ và nhập điểm</h3>
+                     <p class="text-base">Truy cập công cụ bạn cần và nhập điểm V-SAT hoặc điểm trung bình Học bạ của
+                        bạn.</p>
+                  </div>
+               </div>
+               <div class="step__container flex justify-center items-center w-[70%] md:w-auto" data-aos="fade-right"
+                  data-aos-delay="250">
+                  <div class="step__behind"></div>
+                  <div class="step__box flex justify-center flex-col h-full gap-5">
+                     <div class="step__number flex items-center justify-center">
+                        <h2 class="text-lg md:text-xl text-center">Bước 02</h2>
+                     </div>
+                     <h3 class="text-lg md:text-xl !mt-10">Hệ thống xử lý</h3>
+                     <p class="text-base">Hệ thống sẽ tự động xử lý và tính toán dựa trên quy định mới nhất của Bộ
+                        GD&DT.</p>
+                  </div>
+               </div>
+               <div class="step__container flex justify-center items-center w-[70%] md:w-auto" data-aos="fade-right"
+                  data-aos-delay="500">
+                  <div class="step__behind"></div>
+                  <div class="step__box flex justify-center flex-col h-full gap-5">
+                     <div class="step__number flex items-center justify-center">
+                        <h2 class="text-lg md:text-xl text-center">Bước 03</h2>
+                     </div>
+                     <h3 class="text-lg md:text-xl !mt-10">Nhận kết quả</h3>
+                     <p class="text-base">Kết quả quy đổi điểm sẽ được hiển thị ngay lập tức, giúp bạn dễ dàng tra cứu.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="testimonials" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+
+            <div class="flex flex-col items-center gap-2">
+               <h2 class="section__title base-title text-2xl md:text-3xl text-center tracking-wide" data-aos="flip-up">Mọi người nói gì về CTU
+                  Student's Tools?</h2>
+               <p class="section__subtitle text-center text-base" data-aos="flip-up" data-aos-delay="250">Tổng hợp những
+                  đánh giá <span class="text-center underline underline-offset-4">thực tế</span> nhất về trang web</p>
+            </div>
+
+            <div id="testimonials-container" class="columns-1 sm:columns-2 lg:columns-3 gap-3 lg:gap-8 !space-y-4">
+            </div>
+
+         </div>
+      </section>
+
+      <section id="cta" class="relative w-full !py-24 !px-2 sm:!px-10 h-full overflow-hidden">
+         <!-- ICONS FLOATING -->
+         <div class="floatingIcon floating hidden sm:flex items-center justify-center" data-aos="zoom-in"
+            data-aos-delay="500"><span class="text-center text-3xl">🏫</span></div>
+         <div class="floatingIcon floating hidden sm:flex items-center justify-center" data-aos="zoom-in"
+            data-aos-delay="0"><span class="text-center text-5xl">📖</span></div>
+         <div class="floatingIcon floating hidden sm:flex items-center justify-center" data-aos="zoom-in"
+            data-aos-delay="250"><span class="text-center text-2xl">📚</span></div>
+         <div class="floatingIcon floating hidden sm:flex items-center justify-center" data-aos="zoom-in"
+            data-aos-delay="250"><span class="text-center text-3xl">📑</span></div>
+         <div class="floatingIcon floating hidden sm:flex items-center justify-center" data-aos="zoom-in"
+            data-aos-delay="500"><span class="text-center text-4xl">👩‍🎓</span></div>
+         <div class="floatingIcon floating hidden sm:flex items-center justify-center" data-aos="zoom-in"
+            data-aos-delay="0"><span class="text-center text-6xl">💻</span></div>
+
+         <!-- MAIN CONTENT -->
+         <div class="w-full flex flex-col md:flex-row items-center justify-center container !mx-auto relative z-10">
+            <div class="flex flex-col items-center justify-center gap-10 container !mx-auto ">
+               <div class="flex flex-col items-center justify-center gap-4">
+                  <h2 class="section__title base-title text-2xl md:text-3xl text-center tracking-wide" data-aos="flip-up">
+                     Sẵn sàng để khám phá các công cụ?
+                  </h2>
+                  <p class="text-center" data-aos="flip-up" data-aos-delay="250">
+                     Hãy bắt đầu hành trình học tập hiệu quả hơn cùng với chúng tôi ngay hôm nay!
+                  </p>
+               </div>
+               <div data-aos="zoom-in-up" data-aos-delay="300">
+                  <a href="#tools-preview"
+                     class="landing-btn watch-guide-btn hover-transform-cus rounded-full text-center">
+                     Khám phá ngay
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="faq" class="w-full !py-16 !px-1 sm:!px-20 sm:!py-24 h-full">
+         <div class="flex flex-col items-center justify-center  gap-10 container !mx-auto !px-4 sm:!px-6 lg:!px-8">
+            <h2 class="section__title base-title text-2xl md:text-3xl text-center tracking-wide" data-aos="flip-up">Các câu hỏi thường gặp</h2>
+            <div class="flex flex-col items-center gap-2">
+               <!-- FAQ Item 1 -->
+               <div class="accordion-item rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+                  <button
+                     class="flex justify-between items-center w-full text-lg font-semibold text-left focus:outline-none gap-1">
+                     <span>CTU Student’s Tools có miễn phí không?</span>
+                     <i class="fa-solid fa-chevron-down transition-transform transform accordion-icon"></i>
+                  </button>
+                  <div class="accordion-content">
+                     <p>Các công cụ hiện tại đều hoàn toàn miễn phí. Chúng tôi xây dựng trang web này nhằm mục đích hỗ
+                        trợ sinh viên CTU và các bạn học sinh có nguyện vọng vào trường.</p>
+                  </div>
+               </div>
+
+               <!-- FAQ Item 2 -->
+               <div class="accordion-item rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+                  <button
+                     class="flex justify-between items-center w-full text-lg font-semibold text-left focus:outline-none gap-1">
+                     <span>Dữ liệu của tôi có được bảo mật không?</span>
+                     <i class="fa-solid fa-chevron-down transition-transform transform accordion-icon"></i>
+                  </button>
+                  <div class="accordion-content">
+                     <p>Chúng tôi không lưu trữ bất kỳ thông tin cá nhân hay điểm số nào mà bạn nhập vào. Tất cả các
+                        phép tính đều được thực hiện trực tiếp trên trình duyệt của bạn.</p>
+                  </div>
+               </div>
+
+               <!-- FAQ Item 3 -->
+               <div class="accordion-item rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+                  <button
+                     class="flex justify-between items-center w-full text-lg font-semibold text-left focus:outline-none gap-1">
+                     <span>Ứng dụng có thể sử dụng trên nhiều thiết bị không?</span>
+                     <i class="fa-solid fa-chevron-down transition-transform transform accordion-icon"></i>
+                  </button>
+                  <div class="accordion-content">
+                     <p>Có. Bạn hoàn toàn có thể sử dụng ứng dụng trên nhiều thiết bị khác nhau như điện thoại, máy tính
+                        bảng và máy tính.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- <section id="contact">
+         <div>
+            <h2>Bạn muốn đóng góp?</h2>
+            <p>Bạn có góp ý hay muốn đóng góp thêm công cụ? Hãy liên hệ với chúng tôi để cùng phát triển!</p>
+            <button><a href="./lienhe.html">Liên hệ</a></button>
+            <div>
+               <a href="https://www.facebook.com/LEXIPIT3268/" class="hover:text-[#00afef]" target="_blank"><i
+                     class="fab fa-facebook-f"></i></a>
+               <a href="#" class="hover:text-[#00afef]" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+               <a href="https://github.com/lexipit3268" class="hover:text-[#00afef]" target="_blank"><i
+                     class="fab fa-github"></i></a>
+            </div>
+         </div>
+      </section> -->
+   </main>
+   <footer id="footer"></footer>
+   <div id="toast-box"></div>
+   <script> AOS.init();</script>
+   <script src="https://cdn.lordicon.com/lordicon.js"></script>
+   <script src="./src/js/main.js" type="module"></script>
+   <script src="./src/js/landing.js" type="module"></script>
+</body>
+
+</html>

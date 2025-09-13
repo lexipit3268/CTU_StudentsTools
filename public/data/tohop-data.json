@@ -1,0 +1,55 @@
+{
+  "A00": ["Toan", "VatLy", "HoaHoc"],
+  "A01": ["Toan", "VatLy", "TiengAnh"],
+  "A02": ["Toan", "VatLy", "SinhHoc"],
+
+  "B00": ["Toan", "HoaHoc", "SinhHoc"],
+  "B03": ["Toan", "SinhHoc", "NguVan"],
+  "B08": ["Toan", "SinhHoc", "TiengAnh"],
+
+  "C00": ["NguVan", "LichSu", "DiaLy"],
+  "C01": ["NguVan", "Toan", "VatLy"],
+  "C02": ["NguVan", "Toan", "HoaHoc"],
+  "C04": ["NguVan", "Toan", "DiaLy"],
+  "C14": ["NguVan", "Toan", "GDCD"],
+  "C14_2": ["NguVan", "Toan", "GDKTPL"] ,
+  "C19": ["NguVan", "LichSu", "GDCD"],
+  "C19_2": ["NguVan", "LichSu", "GDKTPL"],
+  "C20": ["NguVan", "DiaLy", "GDCD"],
+  "C20_2": ["NguVan", "DiaLy", "GDKTPL"],
+
+  "D01": ["NguVan", "Toan", "TiengAnh"],
+  "D03": ["NguVan", "Toan", "TiengPhap"],
+  "D07": ["Toan", "HoaHoc", "TiengAnh"],
+  "D09": ["Toan", "SinhHoc", "TiengAnh"],
+  "D14": ["NguVan", "LichSu", "TiengAnh"],
+  "D15": ["NguVan", "DiaLy", "TiengAnh"],
+  "D24": ["Toan", "HoaHoc", "TiengPhap"],
+  "D29": ["Toan", "VatLy", "TiengPhap"],
+  "D44": ["NguVan", "DiaLy", "TiengPhap"],
+  "D64": ["NguVan", "LichSu", "TiengPhap"],
+  "D66": ["NguVan", "GDCD", "GDKTPL"],
+  "D66_2": ["NguVan", "GDCD", "TiengAnh"],
+
+  "M01": ["NguVan", "LichSu", "NK_GDMN"],
+  "M05": ["NguVan", "DiaLy", "NK_GDMN"],
+  "M06": ["NguVan", "Toan", "NK_GDMN"],
+  "M11": ["NguVan", "TiengAnh", "NK_GDMN"],
+
+  "T00": ["Toan", "SinhHoc", "NK_TDTT"],
+  "T01": ["Toan", "NguVan", "NK_TDTT"],
+  "T06": ["Toan", "HoaHoc", "NK_TDTT"],
+  "T10": ["Toan", "TiengAnh", "NK_TDTT"],
+
+  "V00": ["Toan", "VatLy", "NK_VeMT"],
+  "V01": ["Toan", "NguVan", "NK_VeMT"],
+  "V02": ["Toan", "TiengAnh", "NK_VeMT"],
+  "V03": ["Toan", "HoaHoc", "NK_VeMT"],
+
+  "TH1": ["Toan", "VatLy", "TinHoc"],
+  "TH2": ["Toan", "TiengAnh", "TinHoc"],
+  "TH3": ["Toan", "NguVan", "TinHoc"],
+  "TH4": ["Toan", "VatLy", "CNCN"],
+  "TH5": ["Toan", "TiengAnh", "CNCN"],
+  "TH7": ["Toan", "TiengAnh", "CNNN"]
+}

@@ -1,0 +1,107 @@
+[
+   {
+      "content": "10 điểm",
+      "name": "Mark Zuckerberg",
+      "role": "Giám đốc điều hành Meta Platforms",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Xuất sắc 💕💕",
+      "name": "Đỗ Tâm Như",
+      "role": "Sinh viên Trường Kinh tế",
+      "gender": "girl",
+      "showOnMobile": true
+   },
+   {
+      "content": "Giao diện trực quan, dễ sử dụng. Mình đã giới thiệu cho tất cả bạn bè cùng dùng.",
+      "name": "Dương Minh Đức",
+      "role": "Sinh viên Trường CNTT&TT",
+      "gender": "boy",
+      "showOnMobile": false
+   },
+   {
+      "content": "Mình rất hài lòng với công cụ này, mọi thứ đều rõ ràng và dễ sử dụng cho sinh viên.",
+      "name": "Nguyễn Tấn Sang",
+      "role": "Sinh viên Trường Sư phạm",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Công cụ quy đổi điểm học bạ cực kỳ nhanh và chính xác. Mình không còn phải lo lắng về việc tính toán nữa!",
+      "name": "Trần Trọng Phúc",
+      "role": "Thí sinh thi THPT",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Rất hay!",
+      "name": "Đào Quốc Việt",
+      "role": "Sinh viên Khoa Luật",
+      "gender": "boy",
+      "showOnMobile": false
+   },
+   {
+      "content": "Ứng dụng giúp mình tiết kiệm rất nhiều thời gian khi chuẩn bị hồ sơ đăng ký học phần.",
+      "name": "Lê Hoàng Nhi",
+      "role": "Sinh viên Trường Kinh tế",
+      "gender": "boy",
+      "showOnMobile": false
+   },
+   {
+      "content": "Một bộ công cụ hữu ích",
+      "name": "Trần Văn Nghĩa",
+      "role": "Sinh viên Trường Sư phạm",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Mọi thao tác đều rõ ràng, dễ sử dụng. Đây là công cụ mà sinh viên nào cũng nên biết.",
+      "name": "Võ Thành Nam",
+      "role": "Sinh viên Trường CNTT&TT",
+      "gender": "boy",
+      "showOnMobile": false
+   },
+   {
+      "content": "Bộ công cụ rất tiện lợi.",
+      "name": "Dương Hoàng Huynh",
+      "role": "Sinh viên Trường Nông nghiệp",
+      "gender": "boy",
+      "showOnMobile": false
+   },
+   {
+      "content": "Mình đánh giá cao sự chính xác và tốc độ xử lý của ứng dụng này.",
+      "name": "Trương Hồng Nhật",
+      "role": "Sinh viên Khoa Thú Y",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Đây là một trang web trác tuyệt, vừa hữu ích lại vừa thấm đượm giá trị. Giao diện thanh thoát, uyển chuyển như một bản giao hưởng thị giác, nơi sự tinh gọn hòa quyện cùng vẻ duyên dáng, ban tặng cho người dùng một trải nghiệm tinh tế, sang trọng và đầy phẩm chất quý phái",
+      "name": "Nguyễn Nhựt Hào",
+      "role": "Sinh viên Trường ĐH FPT",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Ứng dụng thật sự hữu ích, giao diện hiện đại, phù hợp với mọi sinh viên, không chỉ riêng CTU 🥰",
+      "name": "Đoàn Tài Lộc",
+      "role": "Sinh viên Trường CNTT&TT",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Mặc dù mới ra mắt nhưng mình đánh giá cao công năng của ứng dụng này",
+      "name": "Nguyễn Nguyên Đạt",
+      "role": "Sinh viên Trường Đại học XDMT",
+      "gender": "boy",
+      "showOnMobile": true
+   },
+   {
+      "content": "Rất hữu ích! Giờ đây mình có thể dễ dàng ước tính điểm để xét tuyển mà không cần lo sai sót.",
+      "name": "Nguyễn Ngọc Đức Phát",
+      "role": "Thí sinh thi THPT",
+      "gender": "boy",
+      "showOnMobile": true
+   }
+]

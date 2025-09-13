@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+   <link rel="stylesheet" href="./src/css/base.css">
+   <link rel="stylesheet" href="./src/css/components.css">
+   <link rel="stylesheet" href="./src/css/main.css">
+   <link rel="shortcut icon" href="./public/assets/images/CTU_logo.png" type="image/x-icon">
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <title>Hướng dẫn</title>
+</head>
+
+<body>
+   <div class="sticky top-0 z-[11]">
+      <header id="header" class="shadow-lg"></header>
+   </div>
+   <main class="!p-2 md:!p-4">
+      <div class="guide w-full !p-3 md:!py-6 flex flex-col md:flex-row gap-4 min-h-96">
+         <div class="h-auto md:min-h-full min-w-max">
+            <div class="guide__outline flex flex-col min-w-56 h-fit md:sticky md:top-[15%]">
+               <h2 class="outline__title base-title text-center !py-4">Nội dung chính</h2>
+               <ul class="outline__content h-fit w-full !pb-2">
+                  <li class="flex items-center gap-2 !p-4 ">
+                     <i class="ri-circle-fill"></i>
+                     <a href="#info">Thông tin tổng quan</a>
+                  </li>
+                  <li class="flex items-center gap-2 !p-4">
+                     <i class="ri-circle-fill"></i>
+                     <a href="#hocbaGuide">Cách sử dụng quy đổi điểm học bạ</a>
+                  </li>
+                  <li class="flex items-center gap-2 !p-4">
+                     <i class="ri-circle-fill"></i>
+                     <a href="#vsatGuide">Cách sử dụng quy đổi điểm V-SAT</a>
+                  </li>
+                  <li class="flex items-center gap-2 !p-4 ">
+                     <i class="ri-circle-fill"></i>
+                     <a href="#gpaGuide">Cách sử dụng công cụ tính và dự đoán GPA</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="guide__container !p-4 md:!p-6 w-full">
+            <div class="guide__content flex flex-col justify-center gap-4">
+               <h1
+                  class="guide__title-primary base-title text-2xl md:text-4xl text-center tracking-wide !p-4 !mb-4 border-bottom-cus">
+                  Hướng dẫn sử dụng</h1>
+               <div class="guide__box flex flex-col gap-8">
+                  <div class="box__item !p-4" id="info" data-aos="fade-up">
+                     <div class="!mb-4">
+                        <h2 class="guide__title base-title text-base md:text-xl">Thông tin tổng
+                           quan</h2>
+                     </div>
+                     <ul class="!space-y-2 text-sm md:text-base">
+                        <li>
+                           Bộ công cụ quy đổi điểm sử dụng công thức quy đổi và thang điểm quy đổi do Đại học Cần Thơ
+                           công bố năm 2025.
+                           <ul class="list-disc list-inside !space-y-1 !mt-1 !ml-6 md:!ml-8 links-items">
+                              <li>
+                                 Tham khảo công thức quy đổi
+                                 <a href="https://tuyensinh.ctu.edu.vn/thong-tin-tuyen-sinh/1108-quy-ta-c-quy-doi-diem-trong-tuyen-sinh-dai-hoc-chinh-quy-nam-2025.html"
+                                    target="_blank" class="item-header">tại đây</a>
+                              </li>
+                              <li>
+                                 Tham khảo bảng quy đổi điểm học bạ
+                                 <a href="https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2025/TB2939_Thong-bao-bang-quy-doi-diem-Hoc-ba-nam-2025.pdf"
+                                    target="_blank" class="item-header">tại đây</a>
+                              </li>
+                              <li>
+                                 Tham khảo bảng quy đổi điểm V-SAT
+                                 <a href="https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2025/TB2693_Bng-quy-i-im-V-SAT-nm-2025_V1.pdf"
+                                    target="_blank" class="item-header">tại đây</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           Nội dung của trang sẽ được cập nhật thường xuyên để đảm bảo thông tin luôn chính xác và phù
+                           hợp với những thay đổi mới nhất từ hệ thống của trường.
+                        </li>
+                     </ul>
+                     <div class="hightlight-box !p-4 !space-y-2 !my-4">
+                        <h4 class="hightlight-box__title guide__title base-title text-base md:text-xl">⚠️ Lưu ý</h4>
+                        <div class="hightlight-box__content !space-y-1">
+                           <ul class="list-disc !ml-6 md:!ml-8">
+                              <li>Kết quả quy đổi có tính chất tham khảo</li>
+                              <li>Nên đọc kĩ thông báo lỗi (nếu có) để nhập dữ liệu đúng, một số môn theo phổ điểm sẽ có
+                                 mức điểm tối đa khác nhau</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box__item !p-4" id="hocbaGuide" data-aos="fade-up">
+                     <div class="!mb-4">
+                        <h2 class="guide__title base-title text-base md:text-xl">Cách sử
+                           dụng quy đổi
+                           điểm
+                           học bạ</h2>
+                     </div>
+                     <div class="guide-step__container !space-y-2 text-sm md:text-base">
+                        <div class="step flex items-start gap-4">
+                           <div class="guide-step__number flex items-center justify-center !p-3">1</div>
+                           <div class="guide-step__content">
+                              <h4 class="guide-step__title !mb-2">Truy cập công cụ</h4>
+                              <p class="guide-step__descript">Truy cập công cụ quy đổi điểm học bạ
+                                 <a href="./hocba.html" target="_blank" class="item-header">tại đây</a>
+                              </p>
+                           </div>
+                        </div>
+
+                        <div class="step flex items-start gap-4">
+                           <div class="guide-step__number flex items-center justify-center !p-3">2</div>
+                           <div class="guide-step__content">
+                              <h4 class="guide-step__title !mb-2">Chọn tổ hợp</h4>
+                              <p class="guide-step__descript">Lựa chọn tổ hợp mong muốn mà bạn cần tính và nhập điểm đầy
+                                 đủ</p>
+                           </div>
+                        </div>
+
+                        <div class="step flex items-start gap-4">
+                           <div class="guide-step__number flex items-center justify-center !p-3">3</div>
+                           <div class="guide-step__content">
+                              <h4 class="guide-step__title !mb-2">Xem kết quả</h4>
+                              <p class="guide-step__descript">Sau khi nhấn "Quy đổi điểm", hệ thống sẽ đưa ra kết quả
+                                 điểm quy đổi cho bạn. Đồng thời bạn có thể lưu lại dưới dạng hình ảnh bằng cách click
+                                 vào "Lưu ảnh kết quả"</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box__item !p-4" id="vsatGuide" data-aos="fade-up">
+                     <div class="!mb-4">
+                        <h2 class="guide__title base-title text-base md:text-xl">Cách sử
+                           dụng quy đổi
+                           điểm
+                           V-SAT</h2>
+                     </div>
+                     <div class="guide-step__container !space-y-2 text-sm md:text-base">
+                        <div class="step flex items-start gap-4">
+                           <div class="guide-step__number flex items-center justify-center !p-3">1</div>
+                           <div class="guide-step__content">
+                              <h4 class="guide-step__title !mb-2">Truy cập công cụ</h4>
+                              <p class="guide-step__descript">Truy cập công cụ quy đổi điểm học bạ <a href="./vsat.html"
+                                    target="_blank" class="item-header">tại đây</a></p>
+                           </div>
+                        </div>
+
+                        <div class="step flex items-start gap-4">
+                           <div class="guide-step__number flex items-center justify-center !p-3">2</div>
+                           <div class="guide-step__content">
+                              <h4 class="guide-step__title !mb-2">Chọn tổ hợp</h4>
+                              <p class="guide-step__descript">Lựa chọn tổ hợp mong muốn mà bạn cần tính và nhập điểm đầy
+                                 đủ</p>
+                           </div>
+                        </div>
+
+                        <div class="step flex items-start gap-4">
+                           <div class="guide-step__number flex items-center justify-center !p-3">3</div>
+                           <div class="guide-step__content">
+                              <h4 class="guide-step__title !mb-2">Xem kết quả</h4>
+                              <p class="guide-step__descript">Sau khi nhấn "Quy đổi điểm", hệ thống sẽ đưa ra kết quả
+                                 điểm quy đổi cho bạn. Đồng thời bạn có thể lưu lại dưới dạng hình ảnh bằng cách click
+                                 vào "Lưu ảnh kết quả"</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box__item !p-4" id="gpaGuide" data-aos="fade-up">
+                     <div class="!mb-4">
+                        <h2 class="guide__title base-title text-base md:text-xl">Cách sử dụng công cụ tính và dự đoán
+                           GPA</h2>
+                     </div>
+                     <div class="guide-step__container !space-y-2 text-sm md:text-base">
+                        <div class="step flex items-start gap-4">
+                           <!-- <div class="guide-step__number flex items-center justify-center !p-3">1</div> -->
+                           <div class="guide-step__content">
+                              <h4 class="guide-step__title !mb-2">Nội dung đang được cập nhật :P</h4>
+                              <p class="guide-step__descript"><a href="" target="_blank" class="item-header"></a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+   <footer id="footer"></footer>
+   <div id="toast-box"></div>
+   <script> AOS.init();</script>
+   <script src="./src/js/main.js" type="module"></script>
+   <script src="./src/js/guide.js"></script>
+</body>
+
+</html>

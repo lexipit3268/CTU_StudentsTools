@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="./src/css/base.css">
+   <link rel="stylesheet" href="./src/css/components.css">
+   <link rel="stylesheet" href="./src/css/main.css">
+   <link rel="shortcut icon" href="./public/assets/images/CTU_logo.png" type="image/x-icon">
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <title>Quy đổi điểm học bạ</title>
+</head>
+
+<body>
+   <div class="sticky top-0 z-[11]">
+      <header id="header" class="shadow-lg"></header>
+   </div>
+   <main class="w-full flex flex-col items-center justify-center">
+      <div class="card flex flex-row gap-9">
+         <div class="container__form">
+            <form action="">
+               <div class="form__body flex flex-col justify-center">
+                  <div class="form__select">
+                     <label for="tohop">Chọn tổ hợp</label>
+                     <select name="tohop" id="tohop" class="">
+                        <option selected value="none">--Chọn tổ hợp--</option>
+
+                        <option value="A00">A00: Toán, Vật Lý, Hóa Học</option>
+                        <option value="A01">A01: Toán, Vật Lý, Anh Văn</option>
+                        <option value="A02">A02: Toán, Vật Lý, Sinh Học</option>
+
+                        <option value="B00">B00: Toán, Hóa Học, Sinh Học</option>
+                        <option value="B03">B03: Toán, Sinh Học, Ngữ Văn</option>
+                        <option value="B08">B08: Toán, Sinh Học, Anh Văn</option>
+
+                        <option value="C00">C00: Ngữ Văn, Lịch Sử, Địa Lý</option>
+                        <option value="C01">C01: Ngữ Văn, Toán, Vật Lý</option>
+                        <option value="C02">C02: Ngữ Văn, Toán, Hóa Học</option>
+                        <option value="C04">C04: Ngữ Văn, Toán, Địa Lý</option>
+                        <option value="C14">C14: Ngữ Văn, Toán, GDCD</option>
+                        <option value="C14_2">C14: Ngữ Văn, Toán, GDKTPL</option>
+                        <option value="C19">C19: Ngữ Văn, Lịch Sử, GDCD</option>
+                        <option value="C19_2">C19: Ngữ Văn, Lịch Sử, GDKTPL</option>
+                        <option value="C20">C20: Ngữ Văn, Địa Lý, GDCD</option>
+                        <option value="C20_2">C20: Ngữ Văn, Địa Lý, GDKTPL</option>
+
+                        <option value="D01">D01: Ngữ Văn, Toán, Anh Văn</option>
+                        <option value="D03">D03: Ngữ Văn, Toán, Tiếng Pháp</option>
+                        <option value="D07">D07: Toán, Hóa Học, Anh Văn</option>
+                        <option value="D09">D09: Toán, Sinh Học, Anh Văn</option>
+                        <option value="D14">D14: Ngữ Văn, Lịch Sử, Anh Văn</option>
+                        <option value="D15">D15: Ngữ Văn, Địa Lý, Anh Văn</option>
+                        <option value="D24">D24: Toán, Hóa Học, Tiếng Pháp</option>
+                        <option value="D29">D29: Toán, Vật Lý, Tiếng Pháp</option>
+                        <option value="D44">D44: Ngữ Văn, Địa Lý, Tiếng Pháp</option>
+                        <option value="D64">D64: Ngữ Văn, Lịch Sử, Tiếng Pháp</option>
+                        <option value="D66">D66: Ngữ Văn, GDCD, GDKTPL</option>
+                        <option value="D66_2">D66: Ngữ Văn, GDCD, Anh Văn</option>
+                     </select>
+                  </div>
+                  <div class="form__input" id="subject-inputs"></div>
+                  <div class="button-container flex flex-col items-center gap-2 w-full">
+                     <button id="convert-btn" type="button"
+                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center cursor-pointer">
+                        Quy đổi điểm
+                     </button>
+                     <button id="save-image-button" type="button"
+                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center cursor-pointer">Lưu
+                        ảnh kết quả</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="result-content slideIn flex flex-col gap-2 flex-1" id="result-content">
+            <h1 class="result-header text-xl font-bold text-center">Kết quả quy đổi</h1>
+            <div class="result flex flex-col gap-3" id="result"></div>
+            <div class="result-footer text-center mt-4 text-white">
+               <h5 class="text-sm">Tổng điểm tổ hợp</h5>
+               <h2 class="text-3xl font-bold" id="result-total">28.4</h2>
+               <small>Kết quả chỉ mang tính chất tham khảo</small>
+            </div>
+         </div>
+   </main>
+   <footer id="footer"></footer>
+   <div id="toast-box"></div>
+   <script src="./src/js/main.js" type="module"></script>
+   <script src="./src/js/hocbaConvert.js" type="module"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>

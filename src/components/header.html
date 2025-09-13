@@ -1,0 +1,47 @@
+<nav
+  class=" flex justify-between items-center w-full !p-4 !mx-auto transition-colors duration-300">
+  <div>
+    <a href="./index.html" class="flex items-center gap-2" title="Trang chủ">
+      <img class="w-10 lg:w-14" src="https://www.ctu.edu.vn/images/branding/logo/CTU_logo.png" alt="">
+      <span class="font-semibold lg:text-lg text-sm">CTU Student's Tools</span>
+    </a>
+  </div>
+  <div
+    class="nav-links fixed lg:static bg-gray-700/80 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none lg:min-h-fit min-h-[60vh] lg:translate-x-0 translate-x-full  top-18 right-0 lg:w-auto w-full flex items-center !px-5 !py-2 transition-all duration-300">
+    <ul class="links-items flex lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-12">
+      <li>
+        <a class="item-header" href="./index.html">Trang chủ</a>
+      </li>
+      <li class="relative group">
+        <a class=" cursor-pointer item-header" id="tools-toggle">
+          <span>Công cụ</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </a>
+        <ul id="tools-submenu"
+          class="max-h-0 overflow-hidden flex-col lg:absolute lg:!mt-2 lg:bg-[#1f5ca9] lg:rounded lg:shadow-lg lg:!pl-0 lg:min-w-[180px] transition-all duration-300 ease-in-out">
+          <li class="block !px-4 !py-2 hover:bg-sky-400"><a href="./hocba.html" class="">Quy đổi học bạ</a></li>
+          <li class="block !px-4 !py-2 hover:bg-sky-400"><a href="./vsat.html" class="">Quy đổi V-SAT</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="item-header" href="./huongdan.html">Hướng dẫn</a>
+      </li>
+      <li>
+        <a class="item-header" href="./lienhe.html">Liên hệ</a>
+      </li>
+    </ul>
+  </div>
+  <div class="flex items-center gap-2 lg:gap-5">
+    <button id="login-btn"
+      class="flex items-center justify-center gap-2 bg-[#1f5ca9] lg:!px-5 lg:!py-2 !p-2 h-10 rounded-full hover:bg-sky-400 cursor-pointer transition-all duration-300">
+      <span class="hidden lg:block">Đăng nhập</span>
+      <i class="fa-regular fa-user text-xl"></i>
+    </button>
+    <button id="theme-toggle"
+      class="flex items-center justify-center w-10 h-10 p-2 text-xl rounded-full bg-[#1f5ca9] hover:bg-sky-400 transition cursor-pointer duration-300">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button><i class="flex items-center justify-center ri-menu-line text-2xl cursor-pointer lg:hidden transition-all duration-300"
+        id="nav-toggle-btn"></i></button>
+  </div>
+</nav>
