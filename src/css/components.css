@@ -40,9 +40,11 @@ main section {
 section#hero {
   min-height: 90vh;
   width: 100%;
-  background: var(--bs-section-hero-bg);
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
+  /* background: var(--bs-section-hero-bg); */
+  /* background-size: 400% 400%; */
+  background: var(--bs-geometric-bg);
+  background-size: var(--bs-geometric-bg-size);
+  /* animation: gradient-shift 15s ease infinite; */
 }
 
 section#hero * {
