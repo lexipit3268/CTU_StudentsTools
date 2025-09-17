@@ -5,13 +5,13 @@ footer>div {
 }
 
 /* links-items */
-.item-header {
+.anchor-hover {
   position: relative;
   transition: 0.3s ease;
   font-weight: 600;
 }
 
-.item-header::after {
+.anchor-hover::after {
   content: '';
   width: 0;
   height: 4px;
@@ -22,11 +22,11 @@ footer>div {
   transition: 0.3s ease;
 }
 
-.item-header:hover {
+.anchor-hover:hover {
   color: var(--color-text-hover);
 }
 
-.item-header:hover::after {
+.anchor-hover:hover::after {
   width: 100%;
 }
 
@@ -157,27 +157,17 @@ section#hero lord-icon {
   width: 10px;
   height: 10px;
   position: absolute;
-  border-radius: 100%;
+  border-radius: 50%;
   top: 15px;
   right: 15px;
   background: var(--color-border-section-card-light);
-}
-
-.feature__box .section__box::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background: var(--color-border-section-card-light);
-  position: absolute;
-  border-radius: 100%;
-  top: 15px;
-  right: 15px;
   transition: all 0.5s ease;
-  z-index: -1;
 }
 
-.feature__box .section__box:hover::after {
+.feature__box .section__box:hover .section__dot {
   transform: scale(90);
+  border-radius: 5px;
+  z-index: 0;
 }
 
 .feature__box .section__box:hover {
@@ -588,6 +578,7 @@ ul.outline__content {
   overflow: hidden;
   padding: 20px;
   height: fit-content;
+  z-index: 10;
 }
 
 .toast {
