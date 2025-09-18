@@ -22,31 +22,54 @@
    <div class="sticky top-0 z-[11]">
       <header id="header" class="shadow-lg"></header>
    </div>
-   <main class="">
-      <div>
-         <div>
-            <img src="https://avatars.githubusercontent.com/u/62460969?v=4" alt="">
+   <main class="grid place-content-center !p-4 h-full">
+      <div class="contact-card flex flex-col items-center !p-4 base-text-card gap-2">
+         <div class="info__container flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6">
+            <div class="info__img grid place-content-center relative">
+               <img class="w-[150px] h-[150px] md:w-56 md:h-56 " src="https://avatars.githubusercontent.com/u/62460969?v=4" alt="">
+               <!-- <div class="absolute">Xin chào!</div> -->
+            </div>
+            <div class="info flex flex-col items-center md:items-end gap-4">
+               <div class="info__desc w-auto md:w-[500px] text-center md:text-left ">
+                  <h1 class="base-title text-2xl !mb-2">Nguyễn Phước Lộc</h1>
+                  <p class="text-base md:text-xl flex-wrap">
+                     Xin chào! Mình là Lộc (Lexipit3268), sinh viên Kỹ thuật phần mềm tại
+                     Đại học Cần Thơ.
+                     Đây là dự án cá nhân nhằm hỗ trợ học sinh và sinh viên tính điểm, tra cứu, và quản lý học tập dễ dàng
+                     hơn.
+                  </p>
+               </div>
+               <div class="social__container flex items-center justify-center">
+                  <div class="social__item cursor-pointer grid place-content-center facebook">
+                     <a class="relative w-full !p-3" target="_blank" href="https://www.facebook.com/LEXIPIT3268/">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="text-center">Facebook</span>
+                     </a>
+                  </div>
+                  <div class="social__item cursor-pointer grid place-content-center youtube">
+                     <a class="relative w-full !p-3" target="_blank" href="https://www.youtube.com/@lexipit3268">
+                        <i class="fab fa-youtube"></i>
+                        <span class="text-center">Youtube</span>
+                     </a>
+                  </div>
+                  <div class="social__item cursor-pointer grid place-content-center gmail">
+                     <a class="relative w-full !p-3" target="_blank" href="mailto:locb2303828@student.ctu.vn">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="text-center">Gmail</span>
+                     </a>
+                  </div>
+                  <div class="social__item cursor-pointer grid place-content-center github">
+                     <a class="relative w-full !p-3" target="_blank" href="https://github.com/lexipit3268">
+                        <i class="fab fa-github"></i>
+                        <span class="text-center">Github</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
          </div>
-         <div class="social__container">
-            <div class="social__item">
-               <a href="https://www.facebook.com/LEXIPIT3268/" class="" target="_blank"><i
-                     class="fab fa-facebook-f"></i></a>
-               <span class="">Facebook</span>
-            </div>
-            <div class="social__item">
-               <a href="https://www.youtube.com/@lexipit3268"><i class="fab fa-youtube"></i></a>
-               <span class="">Youtube</span>
-            </div>
-            <div class="social__item">
-               <a href="mailto:locb2303828@student.ctu.vn"><i class="fa-solid fa-envelope"></i></a>
-               <span>Gmail</span>
-            </div>
-            <div class="social__item">
-               <a href="https://github.com/lexipit3268"><i class="fab fa-github"></i></a>
-               <span>Github</span>
-            </div>
-         </div>
-         <div>
+
+
+         <div class="CTA__container">
             <p>Trải nghiệm của bạn với ứng dụng như thế nào? Hãy cho tôi biết
                <a href="" class="anchor-hover">tại đây</a>
             </p>

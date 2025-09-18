@@ -97,42 +97,6 @@ section#hero lord-icon {
   border: 1px solid var(--color-bg);
 }
 
-.flash-btn {
-  position: relative;
-  transition: 0.3s ease;
-  overflow: hidden;
-}
-
-
-.flash-btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -200%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0.5) 50%,
-      transparent 100%);
-  transform: skewX(-30deg);
-  transition: all 0.8s ease;
-  z-index: 1;
-}
-
-.flash-btn:hover::after {
-  left: 200%;
-}
-
-.text-shadow-cus {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.base-title {
-  font-weight: 700;
-  color: var(--color-section-title);
-}
-
 .section__box h3 {
   font-weight: 600;
 }
@@ -565,6 +529,105 @@ ul.outline__content {
 .guide-step__container .guide-step__title {
   font-weight: 600;
 }
+
+/* ===================================== */
+/*               lienhe.html             */
+/* ===================================== */
+main:has(.contact-card) {
+  background: var(--bs-geometric-bg);
+  background-size: var(--bs-geometric-bg-size);
+}
+
+.contact-card {
+  background: var(--bs-color-card);
+  border-radius: 20px;
+  max-width: 1200px;
+  height: 100%;
+  min-height: max-content;
+  box-shadow: var(--bs-box-shadow);
+}
+
+.info__container .info__img {
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--bs-box-shadow);
+  cursor: pointer;
+}
+
+.info__img img {
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--secondary);
+  object-fit: cover;
+}
+
+.info__container .info__img:hover {
+
+}
+
+.social__container {
+  border-radius: 35px;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: var(--bs-box-shadow);
+  color: var(--white);
+}
+
+.social__item {
+  width: 50px;
+  min-height: 100%;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.social__item i {
+  transition: 0.1s ease;
+  font-size: 1.1rem;
+}
+
+.social__item span {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%);
+  width: fit-content;
+}
+
+.social__item:hover {
+  width: 150px;
+}
+
+.social__item:hover i {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.social__item:hover span {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.facebook {
+  background: #1877F2;
+}
+
+.youtube {
+  background: #FF0000;
+}
+
+.gmail {
+  background: #EA4335;
+}
+
+.github {
+  background: #181717;
+}
+
+
+
+
 
 /* ===================================== */
 
