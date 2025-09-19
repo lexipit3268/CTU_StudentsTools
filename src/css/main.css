@@ -2,16 +2,16 @@
    background-color: var(--bs-color-card);
    width: auto;
    padding: 20px;
-   margin: 20px;
-   border-radius: 35px;
+   margin: 10px;
+   border-radius: 20px;
    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card .container__form {
    width: auto;
-   padding: 1.5rem;
+   padding: 1rem 1.5rem;
    background-color: var(--bs-color-bg);
-   border-radius: 35px;
+   border-radius: 20px;
 }
 
 .form__body div {
@@ -97,7 +97,7 @@
    font-size: 1.5rem;
    line-height: 3.5rem;
    color: var(--color-text);
-   margin: 10px 0px;
+   margin-top: 5px;
 }
 
 .result-item {
@@ -136,7 +136,6 @@
 .hocba-input {
    display: flex;
    flex-direction: column;
-   gap: 5px;
 }
 
 

@@ -91,6 +91,22 @@ footer {
   color: var(--color-text-card);
 }
 
+
+.dark-dot-bg {
+  background-color: var(--dark-primary) !important;
+  background-image:
+    radial-gradient(circle, var(--primary) 1px, transparent 1px),
+    radial-gradient(circle, var(--secondary) 1px, transparent 1px),
+    radial-gradient(circle, var(--white) 1px, transparent 1px) !important;
+  background-size: 20px 20px, 40px 40px, 60px 60px !important;
+  background-position: 0 0, 10px 10px, 30px 30px !important;
+}
+
+.grid-gradient-bg {
+  background: var(--bs-geometric-bg);
+  background-size: var(--bs-geometric-bg-size);
+}
+
 :root {
   --primary: #1f5ca9;
   --secondary: #00afef;
@@ -110,10 +126,12 @@ footer {
   --bs-section-hero-bg: #e6f7fb;
   --bs-section-hiw-bg: #caf0f8;
   --bs-section-faq-bg: #F0F4F8;
+  --bs-section-cta-bg: radial-gradient(125% 125% at 50% 10%, #fff 40%, var(--secondary) 100%);
   --primary-color-bg: var(--primary);
   --bg-card-after: var(--gray);
   --bs-geometric-bg: linear-gradient(to right, rgba(229, 231, 235, 0.8) 1px, transparent 1px), linear-gradient(to bottom, rgba(229, 231, 235, 0.8) 1px, transparent 1px), radial-gradient(circle 500px at 20% 80%, #1f5da970, transparent), radial-gradient(circle 500px at 80% 20%, #00afef78, transparent);
   --bs-geometric-bg-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
+
   /* FONT COLOR */
   --color-text: var(--white);
   --color-text-card: #333;
@@ -158,7 +176,8 @@ footer {
   --primary-color-bg: var(--dark-tertiary);
   --bg-card-after: var(--dark-tertiary);
   --bs-geometric-bg: linear-gradient(to right, rgba(71, 85, 105, 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.3) 1px, transparent 1px), radial-gradient(circle at 50% 50%, #00afef4b 0%, transparent 70%);
-  
+  --bs-geometric-bg-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
+
   /* FONT COLOR */
   --color-text: #f6f6f6;
   --color-text-card: var(--white);

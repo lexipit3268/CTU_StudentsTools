@@ -40,11 +40,6 @@ main section {
 section#hero {
   min-height: 90vh;
   width: 100%;
-  /* background: var(--bs-section-hero-bg); */
-  /* background-size: 400% 400%; */
-  background: var(--bs-geometric-bg);
-  background-size: var(--bs-geometric-bg-size);
-  /* animation: gradient-shift 15s ease infinite; */
 }
 
 section#hero * {
@@ -365,13 +360,9 @@ section#faq {
 
 /* SECTION CTA */
 section#cta {
-  background: var(--primary-color-bg);
-  color: var(--color-text);
   position: relative;
-}
-
-section#cta .section__title {
-  color: var(--color-text);
+  background: var(--bs-section-cta-bg);
+  transition: 0.5s ease;
 }
 
 .floatingIcon {
