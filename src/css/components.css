@@ -419,7 +419,7 @@ section#cta {
 
 main .guide {
   background: var(--bs-color-card);
-  border-radius: 35px;
+  border-radius: 20px;
   color: var(--color-text-card);
 }
 
@@ -655,15 +655,15 @@ main:has(.contact-card) {
 .toast i {
   margin: 0 20px;
   font-size: 1.8rem;
-  color: #8ac926;
+  color: var(--color-success-msg);
 }
 
 .toast.error i {
-  color: #ff595e;
+  color: var(--color-error-msg);
 }
 
 .toast.invalid i {
-  color: #ffca3a;
+  color: var(--color-invalid-msg);
 }
 
 .toast::after {
@@ -673,14 +673,14 @@ main:has(.contact-card) {
   bottom: 0;
   width: 100%;
   height: 5px;
-  background-color: #8ac926;
+  background-color: var(--color-success-msg);
   animation: anim 5s linear forwards;
 }
 
 .toast.error::after {
-  background-color: #ff595e;
+  background-color: var(--color-error-msg);
 }
 
 .toast.invalid::after {
-  background-color: #ffca3a;
+  background-color: var(--color-invalid-msg);
 }

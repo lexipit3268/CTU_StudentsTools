@@ -91,7 +91,6 @@ footer {
   color: var(--color-text-card);
 }
 
-
 .dark-dot-bg {
   background-color: var(--dark-primary) !important;
   background-image:
@@ -105,6 +104,25 @@ footer {
 .grid-gradient-bg {
   background: var(--bs-geometric-bg);
   background-size: var(--bs-geometric-bg-size);
+}
+
+.invalid-input {
+  border: 2px solid var(--color-invalid-msg);
+  animation: blinking-border 1.5s ease infinite;
+}
+
+@keyframes blinking-border {
+  0% {
+    border-color: var(--color-border);
+  }
+
+  50% {
+    border-color: var(--color-invalid-msg);
+  }
+
+  100% {
+    border-color: var(--color-border);
+  }
 }
 
 :root {
@@ -137,6 +155,9 @@ footer {
   --color-text-card: #333;
   --color-text-hover: #00b8db;
   --color-section-title: var(--primary);
+  --color-success-msg: #8ac926;
+  --color-error-msg: #ff595e;
+  --color-invalid-msg: #ffca3a;
 
   /* BORDER */
   --color-border: #3d3d3d38;
@@ -183,6 +204,9 @@ footer {
   --color-text-card: var(--white);
   --color-text-hover: #00b8db;
   --color-section-title: var(--secondary);
+  --color-success-msg: #8ac926;
+  --color-error-msg: #ff595e;
+  --color-invalid-msg: #ffca3a;
 
   /* BORDER */
   --color-border: #64748B;
