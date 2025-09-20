@@ -111,19 +111,6 @@ footer {
   animation: blinking-border 1.5s ease infinite;
 }
 
-@keyframes blinking-border {
-  0% {
-    border-color: var(--color-border);
-  }
-
-  50% {
-    border-color: var(--color-invalid-msg);
-  }
-
-  100% {
-    border-color: var(--color-border);
-  }
-}
 
 :root {
   --primary: #1f5ca9;
@@ -318,5 +305,19 @@ footer {
   to {
     opacity: 1;
     transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes blinking-border {
+  0% {
+    border-color: var(--color-border);
+  }
+
+  50% {
+    border-color: var(--color-invalid-msg);
+  }
+
+  100% {
+    border-color: var(--color-border);
   }
 }
