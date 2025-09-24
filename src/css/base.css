@@ -106,11 +106,9 @@ footer {
   background-size: var(--bs-geometric-bg-size);
 }
 
-.invalid-input {
-  border: 2px solid var(--color-invalid-msg);
+.hightlight-input {
   animation: blinking-border 1.5s ease infinite;
 }
-
 
 :root {
   --primary: #1f5ca9;
