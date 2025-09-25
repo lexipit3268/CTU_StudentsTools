@@ -648,9 +648,16 @@ textarea#raw-input::-webkit-scrollbar {
   width: 10px;
 }
 
+textarea#raw-input::-webkit-resizer {
+}
+
 textarea#raw-input:focus {
   border-color: var(--color-border-hover);
 }
+
+textarea#raw-input:focus::-webkit-resizer{
+}
+
 
 .gpa__button {
   padding: 10px 16px;
@@ -663,9 +670,10 @@ textarea#raw-input:focus {
 }
 
 /* gpa__result */
-.gpa__result-content > div > *{
+.gpa__result-content>div>* {
   margin-bottom: 8px;
 }
+
 .gpa__result table {
   text-indent: 0;
   border-color: inherit;
@@ -680,7 +688,7 @@ textarea#raw-input:focus {
   text-align: center;
 }
 
-.table__tenhp{
+.table__tenhp {
   text-align: left !important;
 }
 
@@ -700,7 +708,7 @@ textarea#raw-input:focus {
 }
 
 .gpa__prediction-input:focus {
-  border-color: var(--primary);
+  border-color: var(--color-border-hover);
 }
 
 /* ===================================== */
