@@ -648,15 +648,13 @@ textarea#raw-input::-webkit-scrollbar {
   width: 10px;
 }
 
-textarea#raw-input::-webkit-resizer {
-}
+textarea#raw-input::-webkit-resizer {}
 
 textarea#raw-input:focus {
   border-color: var(--color-border-hover);
 }
 
-textarea#raw-input:focus::-webkit-resizer{
-}
+textarea#raw-input:focus::-webkit-resizer {}
 
 
 .gpa__button {
@@ -774,4 +772,35 @@ textarea#raw-input:focus::-webkit-resizer{
 
 .toast.invalid::after {
   background-color: var(--color-invalid-msg);
+}
+
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6px solid #0000;
+  border-right-color: #00afefad;
+  position: relative;
+  animation: l24 1s infinite linear;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+
+.loader:after {
+  animation-duration: 4s;
+}
+
+@keyframes l24 {
+  100% {
+    transform: rotate(1turn)
+  }
 }
