@@ -27,7 +27,7 @@
          <div class="gpa__input flex flex-col !space-y-2">
             <h2 class="base-title text-base md:text-lg">Bảng điểm thô</h2>
             <div class="flex justify-center items-center">
-               <textarea name="" id="raw-input" placeholder="Dán bảng điểm thô tại đây..."></textarea>
+               <textarea class="text-sm md:text-base" id="raw-input" placeholder="Dán bảng điểm thô tại đây..."></textarea>
             </div>
             <div class="gpa__button-container flex flex-row gap-2">
                <button id="parseBtn" class="gpa__button landing-btn hover-transform-cus rounded-full">Phân tích</button>
@@ -40,12 +40,12 @@
                <span>Đang chờ dữ liệu :P</span>
                <div class="loader"></div>
             </div>
-            <div id="summary" class="flex flex-row gap-4 justify-center items-centers"></div>
-            <div id="terms" class="gpa__result-content !space-y-4"></div>
+            <div id="summary" class="flex flex-row gap-4 justify-center items-centers text-sm md:text-base"></div>
+            <div id="terms" class="gpa__result-content !space-y-4 text-sm md:text-base"></div>
          </div>
          <div class="gpa__prediction !space-y-2">
             <h2 class="base-title text-base md:text-lg">Tính GPA kỳ vọng</h2>
-            <div class="gpa__prediction-form grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="gpa__prediction-form grid grid-cols-1 md:grid-cols-3 gap-4 text-sm md:text-base">
                <div class="gpa__prediction-field flex flex-col gap-2">
                   <label for="">Tổng tín chỉ CTDT</label>
                   <input class="gpa__prediction-input" type="number" placeholder="161" min="0" max="200" step="1">

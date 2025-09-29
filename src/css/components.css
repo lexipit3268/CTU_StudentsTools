@@ -663,7 +663,7 @@ textarea#raw-input:focus::-webkit-resizer {}
 
 .gpa__button#clearBtn {
   background: var(--gray);
-  color: var(--color-text-card);
+  color: #333;
   padding: 10px 24px;
 }
 
