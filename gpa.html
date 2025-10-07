@@ -27,11 +27,12 @@
          <div class="gpa__input flex flex-col !space-y-2">
             <h2 class="base-title text-base md:text-lg">Bảng điểm thô</h2>
             <div class="flex justify-center items-center">
-               <textarea class="text-sm md:text-base" id="raw-input" placeholder="Dán bảng điểm thô tại đây..."></textarea>
+               <textarea class="text-sm md:text-base" id="raw-input"
+                  placeholder="Dán bảng điểm thô tại đây..."></textarea>
             </div>
             <div class="gpa__button-container flex flex-row gap-2">
-               <button id="parseBtn" class="gpa__button landing-btn hover-transform-cus rounded-full">Phân tích</button>
-               <button id="clearBtn" class="gpa__button landing-btn hover-transform-cus rounded-full">Xóa</button>
+               <button id="parseBtn" class="gpa__button primary-btn hover-transform-cus rounded-full">Phân tích</button>
+               <button id="clearBtn" class="gpa__button primary-btn hover-transform-cus rounded-full">Xóa</button>
             </div>
          </div>
          <div class="gpa__result !space-y-4" id="gpa-result">
@@ -44,6 +45,8 @@
             <div id="terms" class="gpa__result-content !space-y-4 text-sm md:text-base"></div>
          </div>
          <div class="gpa__prediction !space-y-2">
+            <button class="back-to-top-btn primary-btn grid place-content-center"><i
+                  class="fa-solid fa-chevron-up"></i></button>
             <h2 class="base-title text-base md:text-lg">Tính GPA kỳ vọng</h2>
             <div class="gpa__prediction-form grid grid-cols-1 md:grid-cols-3 gap-4 text-sm md:text-base">
                <div class="gpa__prediction-field flex flex-col gap-2">
@@ -65,7 +68,7 @@
                   <input class="gpa__prediction-input" type="number" placeholder="3.99" min="1" max="4" step="0.01">
                </div>
             </div>
-            <button class="gpa__button landing-btn hover-transform-cus rounded-full">Dự đoán</button>
+            <button class="gpa__button primary-btn hover-transform-cus rounded-full">Dự đoán</button>
          </div>
       </div>
    </main>

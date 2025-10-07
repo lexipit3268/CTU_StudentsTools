@@ -72,7 +72,7 @@ section#hero lord-icon {
   height: 400px;
 }
 
-.landing-btn {
+.primary-btn {
   padding: 0.8rem 1.2rem;
   background: var(--color-bg);
   color: var(--color-text);
@@ -81,12 +81,12 @@ section#hero lord-icon {
   cursor: pointer;
 }
 
-.landing-btn:hover {
+.primary-btn:hover {
   background: var(--secondary);
   animation: none;
 }
 
-.watch-guide-btn {
+.secondary-btn {
   background: var(--color-text);
   color: var(--color-bg);
   border: 1px solid var(--color-bg);
@@ -691,6 +691,22 @@ textarea#raw-input:focus::-webkit-resizer {}
 }
 
 /* gpa__prediction */
+.gpa__prediction {
+  position: relative;
+  margin-top: 10px;
+}
+
+.back-to-top-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, 100%);
+  top: -55px;
+  left: 50%;
+}
+
 .gpa__prediction .form__select,
 .gpa__prediction .form__input {
   display: inline;
