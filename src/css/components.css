@@ -340,6 +340,7 @@ section#faq {
 
 .accordion-item button {
   padding: 1rem 1.25rem;
+  cursor: pointer;
 }
 
 .accordion-content {
