@@ -486,7 +486,7 @@ ul.outline__content {
 .hightlight-box {
   border: 2px solid var(--color-border-card-blue);
   border-radius: 15px;
-  background: #00035112;
+  background: var(--bg-hightlight-alpha);
 }
 
 .guide__box .box__item {
@@ -724,6 +724,18 @@ textarea#raw-input:focus::-webkit-resizer {}
 
 .gpa__prediction-input:focus {
   border-color: var(--color-border-hover);
+}
+
+.gpa__prediction-samples {
+  border-radius: 10px;
+  background: var(--bs-result-gradient);
+}
+
+.gpa__prediction-samples .samples-container {
+  border-radius: 10px;
+  background: var(--bg-hightlight-alpha);
+  border: 2px solid var(--color-border-card-blue);
+  color: var(--white);
 }
 
 /* ===================================== */

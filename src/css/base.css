@@ -134,6 +134,7 @@ footer {
   --bg-card-after: var(--gray);
   --bs-geometric-bg: linear-gradient(to right, rgba(229, 231, 235, 0.8) 1px, transparent 1px), linear-gradient(to bottom, rgba(229, 231, 235, 0.8) 1px, transparent 1px), radial-gradient(circle 500px at 20% 80%, #1f5da970, transparent), radial-gradient(circle 500px at 80% 20%, #00afef78, transparent);
   --bs-geometric-bg-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
+  --bg-hightlight-alpha: #00035112;
 
   /* FONT COLOR */
   --color-text: var(--white);
@@ -183,6 +184,7 @@ footer {
   --bg-card-after: var(--dark-tertiary);
   --bs-geometric-bg: linear-gradient(to right, rgba(71, 85, 105, 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.3) 1px, transparent 1px), radial-gradient(circle at 50% 50%, #00afef4b 0%, transparent 70%);
   --bs-geometric-bg-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
+  --bg-hightlight-alpha: #00035112;
 
   /* FONT COLOR */
   --color-text: #f6f6f6;
