@@ -726,6 +726,10 @@ textarea#raw-input:focus::-webkit-resizer {}
   border-color: var(--color-border-hover);
 }
 
+/* #prediction-goal-container{
+  display: none;
+} */
+
 .gpa__prediction-samples {
   border-radius: 10px;
   background: var(--bs-result-gradient);

@@ -51,11 +51,11 @@
             <div class="gpa__prediction-form grid grid-cols-1 md:grid-cols-3 gap-4 text-sm md:text-base">
                <div class="gpa__prediction-field flex flex-col gap-2">
                   <label for="">Tổng tín chỉ CTDT</label>
-                  <input class="gpa__prediction-input" type="number" placeholder="161" min="0" max="200" step="1">
+                  <input id="prediction-credits-input" class="gpa__prediction-input" type="number" placeholder="161" min="0" max="200" step="1">
                </div>
                <div class="gpa__prediction-field flex flex-col gap-2">
                   <label for="">Kết quả mong muốn</label>
-                  <select name="" id="" class="gpa__prediction-input">
+                  <select name="" id="prediction-selection-input" class="gpa__prediction-input">
                      <option value="xuat-sac" selected>Xuất sắc (≥ 3.60)</option>
                      <option value="gioi">Giỏi (≥ 3.20)</option>
                      <option value="kha">Khá (≥ 2.50)</option>
@@ -63,13 +63,13 @@
                      <option value="tuy-chinh">Tùy chỉnh...</option>
                   </select>
                </div>
-               <div id="input-predition-gpa" class="gpa__prediction-field flex flex-col gap-2">
+               <div id="prediction-goal-container" class="gpa__prediction-field flex flex-col gap-2">
                   <label for="">Nhập GPA mục tiêu</label>
-                  <input class="gpa__prediction-input" type="number" placeholder="3.99" min="1" max="4" step="0.01">
+                  <input id="prediction-goal-input" class="gpa__prediction-input" type="number" placeholder="3.99" min="1" max="4" step="0.01">
                </div>
             </div>
             <div class="gpa__button-container flex flex-row gap-2">
-               <button class="gpa__button primary-btn hover-transform-cus rounded-full">Dự đoán</button>
+               <button id="prediction-btn" class="gpa__button primary-btn hover-transform-cus rounded-full">Dự đoán</button>
             </div>
             <div class="gpa__prediction-samples flex flex-col gap-2 !my-4 !p-4">
                <h2 class="text-white font-semibold">Mẫu kết quả</h2>
