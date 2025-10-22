@@ -733,15 +733,15 @@ textarea#raw-input:focus::-webkit-resizer {}
 .gpa__prediction-samples {
   border-radius: 10px;
   background: var(--bs-result-gradient);
-}
-
-.gpa__prediction-samples .samples-container {
-  border-radius: 10px;
-  background: var(--bg-hightlight-alpha);
-  border: 2px solid var(--color-border-card-blue);
   color: var(--white);
 }
 
+.gpa__prediction-samples .samples-container,
+.gpa_prediction-output {
+  border-radius: 10px;
+  background: var(--bg-hightlight-alpha);
+  border: 2px solid var(--color-border-card-blue);
+}
 /* ===================================== */
 
 #toast-box {

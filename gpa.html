@@ -51,7 +51,8 @@
             <div class="gpa__prediction-form grid grid-cols-1 md:grid-cols-3 gap-4 text-sm md:text-base">
                <div class="gpa__prediction-field flex flex-col gap-2">
                   <label for="">Tổng tín chỉ CTDT</label>
-                  <input id="prediction-credits-input" class="gpa__prediction-input" type="number" placeholder="161" min="0" max="200" step="1">
+                  <input id="prediction-credits-input" class="gpa__prediction-input" type="number" placeholder="161"
+                     min="0" max="200" step="1">
                </div>
                <div class="gpa__prediction-field flex flex-col gap-2">
                   <label for="">Kết quả mong muốn</label>
@@ -65,14 +66,22 @@
                </div>
                <div id="prediction-goal-container" class="gpa__prediction-field flex flex-col gap-2">
                   <label for="">Nhập GPA mục tiêu</label>
-                  <input id="prediction-goal-input" class="gpa__prediction-input" type="number" placeholder="3.99" min="1" max="4" step="0.01">
+                  <input id="prediction-goal-input" class="gpa__prediction-input" type="number" placeholder="3.99"
+                     min="1" max="4" step="0.01">
                </div>
             </div>
-            <div class="gpa__button-container flex flex-row gap-2">
-               <button id="prediction-btn" class="gpa__button primary-btn hover-transform-cus rounded-full">Dự đoán</button>
+            <div class="gpa__prediction-btn-container flex flex-row gap-2">
+               <button id="prediction-btn" class="gpa__button primary-btn hover-transform-cus rounded-full">Dự
+                  đoán</button>
             </div>
+
             <div class="gpa__prediction-samples flex flex-col gap-2 !my-4 !p-4">
-               <h2 class="text-white font-semibold">Mẫu kết quả</h2>
+               <h2 class="text-lg font-bold">Mẫu kết quả</h2>
+               <div class="gpa_prediction-output !p-4 !space-y-2">
+                  <h3 class="">Kết quả: 3.5</h3>
+                  <p>Bạn hoàn toàn có cơ hội đạt được bằng <span class="font-semibold">xuất sắc</span></p>
+                  <p>Cần GPA trung bình ≥ 3.15/4.00 cho 76 tín chỉ còn lại.</p>
+               </div>
                <div class="grid grid-cols-2 gap-2">
                   <div class="samples-container grid grid-cols-2 md:grid-cols-4 !p-4 text-center">
                      <div>A: 18</div>
