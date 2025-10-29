@@ -734,6 +734,7 @@ textarea#raw-input:focus::-webkit-resizer {}
   border-radius: 10px;
   background: var(--bs-result-gradient);
   color: var(--white);
+  display: none;
 }
 
 .gpa__prediction-samples .samples-container,
