@@ -120,11 +120,11 @@ section#hero lord-icon {
   top: 15px;
   right: 15px;
   background: var(--color-border-section-card-light);
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
 }
 
 .feature__box .section__box:hover .section__dot {
-  transform: scale(90);
+  transform: scale(120);
   border-radius: 5px;
   z-index: 0;
 }
