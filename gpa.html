@@ -30,9 +30,15 @@
                <textarea class="text-sm md:text-base" id="raw-input"
                   placeholder="Dán bảng điểm thô tại đây..."></textarea>
             </div>
-            <div class="gpa__button-container flex flex-row gap-2">
-               <button id="parseBtn" class="gpa__button primary-btn hover-transform-cus rounded-full">Phân tích</button>
-               <button id="clearBtn" class="gpa__button primary-btn hover-transform-cus rounded-full">Xóa</button>
+            <div class="gpa__button-container flex flex-row justify-between items-center gap-2">
+               <div>
+                  <button id="parseBtn" class="gpa__button primary-btn hover-transform-cus rounded-full">Phân
+                     tích</button>
+                  <button id="clearBtn" class="gpa__button primary-btn hover-transform-cus rounded-full">Xóa</button>
+               </div>
+               <div class="box__item">
+                  <a href="./huongdan.html#gpaGuide" target="_blank" class="anchor-hover text-sm">Xem hướng dẫn</a>
+               </div>
             </div>
          </div>
          <div class="gpa__result !space-y-4" id="gpa-result">
