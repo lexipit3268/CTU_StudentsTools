@@ -527,7 +527,7 @@ ul.outline__content {
   position: relative;
 }
 
-.box__item i {
+.box__item > i {
   color: var(--secondary);
 }
 
