@@ -232,7 +232,7 @@ div#testimonials-container>* {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: var(--color-border-section-card-light); */
+  background: var(--bs-person-avt-bg);
   color: var(--color-text);
   overflow: hidden;
 }
