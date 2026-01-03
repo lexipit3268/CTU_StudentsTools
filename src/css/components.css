@@ -714,6 +714,14 @@ textarea#raw-input:focus::-webkit-resizer {}
   text-align: center;
 }
 
+.gpa__result tr{
+  transition: 0.1 ease;
+}
+
+.gpa__result tr:hover{
+  background: var(--bs-tr-hover-bg);
+}
+
 .table__tenhp {
   text-align: left !important;
 }

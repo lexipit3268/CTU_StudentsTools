@@ -136,6 +136,7 @@ footer {
   --bs-geometric-bg-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
   --bg-hightlight-alpha: #00035112;
   --bs-person-avt-bg: #caf0f8;
+  --bs-tr-hover-bg: #cccccc4b;
 
   /* FONT COLOR */
   --color-text: var(--white);
@@ -187,6 +188,7 @@ footer {
   --bs-geometric-bg-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
   --bg-hightlight-alpha: #00035112;
   --bs-person-avt-bg: var(--dark-tertiary);
+  --bs-tr-hover-bg: #cccccc1f;
 
   /* FONT COLOR */
   --color-text: #f6f6f6;
