@@ -1,6 +1,6 @@
 # CTU_StudentsTools
 
-[![Live App](https://img.shields.io/badge/🌐%20Live_App-Visit-blue?style=for-the-badge)](https://lexipit3268.github.io/CTU_StudentsTools/)
+[![Live App](https://img.shields.io/badge/🌐%20Live_App-Visit-blue?style=for-the-badge)](https://ctust.vercel.app/)
 [![GitHub Repo](https://img.shields.io/badge/📦%20GitHub-Repository-blueviolet?style=for-the-badge)](https://github.com/lexipit3268/CTU_StudentsTools)
 [![Made by lexipit3268](https://img.shields.io/badge/👤%20Author-lexipit3268-green?style=for-the-badge)](https://github.com/lexipit3268)
 
@@ -25,7 +25,7 @@
 ### Cách sử dụng
 
 Không cần cài đặt – ứng dụng chạy trực tiếp trên trình duyệt:  
-[https://lexipit3268.github.io/CTU_StudentsTools/](https://lexipit3268.github.io/CTU_StudentsTools/)
+[https://ctust.vercel.app/](https://ctust.vercel.app/)
 
 ---
 
@@ -73,7 +73,7 @@ Mọi quyền được bảo lưu. Mã nguồn này là tài sản riêng và đ
 ### Usage
 
 No installation required – use directly in your browser:  
-[https://lexipit3268.github.io/CTU_StudentsTools/](https://lexipit3268.github.io/CTU_StudentsTools/)
+[https://ctust.vercel.app/](https://ctust.vercel.app/)
 
 ---
 
